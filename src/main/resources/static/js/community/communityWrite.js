@@ -44,7 +44,7 @@ function submitBtn(){
         $submitBtn.attr("disabled", true);
         return;
     }
-    
+
     if(!$content.val()){
         $submitBtn.removeClass("active");
         $submitBtn.attr("disabled", true);

@@ -198,7 +198,7 @@ h1 {
 
 .order_wrap .tip-off {
     padding: 30px;
-    margin-bottom: 30px;   
+    margin-bottom: 30px;
 }
 
 .shop_payment .tip-off {
@@ -265,7 +265,7 @@ h1 {
 .order_wrap:not(.im-hide-deliv) .shop_item_thumb {
     padding: 14px;
     margin: 0;
-    border: 1px solid rgba(33, 33, 33, 0.15); 
+    border: 1px solid rgba(33, 33, 33, 0.15);
 }
 
 .shop_item_thumb > a {
@@ -785,9 +785,9 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
     font-size: 15px;
     left: 4px;
     top: 3px;
-/*     -ms-transform: rotate(314deg);
-    -webkit-transform: rotate(314deg);
-    transform: rotate(314deg); */
+    /*     -ms-transform: rotate(314deg);
+        -webkit-transform: rotate(314deg);
+        transform: rotate(314deg); */
     color: #ccc;
 }
 
@@ -968,7 +968,7 @@ select.form-control option {
     body.doz_sys {
         overflow-y: scroll;
         overflow-x: hidden;
-    } 
+    }
 }
 
 @media (min-width: 992px) {

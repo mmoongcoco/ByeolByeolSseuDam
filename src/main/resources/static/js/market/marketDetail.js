@@ -18,7 +18,6 @@ let $totalPrice = $(".total_price");
 
 /* 상품 드롭 메뉴 열고 닫기 */
 function dropdownMenu(){
-    console.log("들어옴");
     if(check < 0){
         $dropdownMenu.css('display', 'block');
         $("#Layer_1").css('transform', 'rotate(180deg)');
@@ -57,7 +56,6 @@ function addItem(){
     $itemBox.append(text);
     $dropdownMenu.css('display', 'none');
     totalItemCount();
-    totalPrice();
 }
 
 /* 상품 개수 빼기 */
@@ -70,7 +68,6 @@ function minusItemCount(index){
     }else {
         $itemCount.val(parseInt($itemCount.val()) - 1);
         totalItemCount();
-        totalPrice();
     }
 }
 
@@ -80,11 +77,15 @@ function plusItemCount(index){
     let $itemCount = $(identifier);
     $itemCount.val(parseInt($itemCount.val()) + 1);
     totalItemCount();
-    totalPrice();
 }
 
-/* 상품 개수 변경 이벤트 */
+/* 상품 개수 변경 이벤트 - 기존에 있던 input */
 $(".form-control._order_count_mobile").on('change', function(){
+    totalItemCount();
+});
+
+/* 상품 개수 변경 이벤트 - DOM 트리로 추가된 input */
+$(".goods_payment").on('change', '.form-control._order_count_mobile', function(){
     totalItemCount();
 });
 
@@ -101,6 +102,7 @@ function totalItemCount(){
     text += total;
     text += "개)";
     $totalItemCount.html(text);
+    totalPrice();
 }
 
 /* 총 상품 금액 */

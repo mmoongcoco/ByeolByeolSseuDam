@@ -322,7 +322,7 @@ body.shop_mypage a, body.shop_mypage a:hover, .list_popover, .shop_view .modal_p
 
 .mypage .img-view {
     position: relative;
-}    
+}
 
 #s202001038f5e33413dcec .shop-content.mypage .bg-bright a, #s202001038f5e33413dcec .shop-content.mypage .bg-bright p, #s202001038f5e33413dcec .shop-content.mypage .bg-bright span, #s202001038f5e33413dcec .shop-content.mypage .bg-bright div {
     color: #212121;
@@ -566,9 +566,9 @@ body.shop_mypage a, body.shop_mypage a:hover, .list_popover, .shop_view .modal_p
 
 .lp_table .table>tbody>tr.active>td {
     background-color: rgba(0,145,58,0.05);
-/*     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0c0014558,endColorstr=#0c0014558);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0c0014558,endColorstr=#0c0014558);
-    zoom: 1; */
+    /*     -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0c0014558,endColorstr=#0c0014558);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0c0014558,endColorstr=#0c0014558);
+        zoom: 1; */
 }
 
 #s202001038f5e33413dcec .shop-content.mypage .bg-bright a, #s202001038f5e33413dcec .shop-content.mypage .bg-bright p, #s202001038f5e33413dcec .shop-content.mypage .bg-bright span, #s202001038f5e33413dcec .shop-content.mypage .bg-bright div {
@@ -880,7 +880,7 @@ body.shop_mypage a, body.shop_mypage a:hover, .list_popover, .shop_view .modal_p
 @media (min-width: 992px){
     .col-md-2 {
         width: 16.66666667%;
-    } 
+    }
 }
 
 @media (min-width: 992px){

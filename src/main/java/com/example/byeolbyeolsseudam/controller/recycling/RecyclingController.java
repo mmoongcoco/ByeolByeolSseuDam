@@ -21,4 +21,6 @@ public class RecyclingController {
         return "app/Recycling/recyclingIntro";
     }
 
+    @GetMapping("/question")
+    public String question(){return "app/question/QuestionIntro";}
 }

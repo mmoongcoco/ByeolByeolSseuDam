@@ -55,13 +55,13 @@
                                                                                         type="button" class="btn btn-secondary"><span data-v-46650077=""> 서비스 가격
                                 <!---->
                                         </span></button></li>
-                            <li data-v-46650077="" id="nav-explanation" class="explanation"><button
+                            <li data-v-46650077="" id="nav-explanation" class="explanation active"><button
                                     data-v-46650077="" type="button" class="btn btn-secondary"><span
                                     data-v-46650077=""> 상품 설명
                                 <!---->
                                         </span></button></li>
-                            <li data-v-46650077="" id="nav-refund" class="refund active"><button data-v-46650077=""
-                                                                                                 type="button" class="btn btn-secondary"><span data-v-46650077=""> 리뷰
+                            <li data-v-46650077="" id="nav-refund" class="refund"><button data-v-46650077=""
+                                                                                          type="button" class="btn btn-secondary"><span data-v-46650077=""> 리뷰
                                 <!---->
                                         </span></button></li>
                         </ul>
@@ -211,6 +211,34 @@
                                         </svg>
                                     <div class="inline-blocked">포토 구매평만 보기</div>
                                 </a>
+                            </div>
+                            <div class="comment_textarea" onclick="event.cancelBubble = true;">
+                                <form id="_accordion_review_form_c202206217f7c30ccb91ca">
+                                    <input type="hidden" name="prod_code" value="s202109163d3fa45186ceb">
+                                    <input type="hidden" name="parent_code" value="c202206217f7c30ccb91ca">
+                                    <input type="hidden" name="review_comment_token"
+                                           value="TInRex1/D9VTWV4fHL/SeDuga8+er1EraFQHAhLGsxLQqb37ORZvjtYK1wiJdQ8GUE3UY2rEPpFTcLIqC1tK3FpnkTLskp2TrDItQzPVc/JsjqeO6oV2EqhDPkqXSooH">
+                                    <input type="hidden" name="review_comment_token_key" value="6619">
+                                    <div class="postmeta comment-comment">
+                                        <!--댓글에 댓글을 입력할 경우-->
+                                        <div class="textarea_block">
+                                                <textarea placeholder="구매평을 작성하세요." name="body"
+                                                          id="review_comment_body"></textarea>
+                                            <div class="file-add-block margin-bottom-xl" style="display: none;"
+                                                 id="review_comment_image_box_c202206217f7c30ccb91ca"></div>
+                                            <a href="javascript:" class="btn btn-brand btn-sm _style"
+                                               onclick="SHOP_REVIEW_COMMENT.submit($(this),'main')">등록</a>
+                                            <div class="inline-blocked holder icon-wrap">
+                                                <i class="icon-picture icon vertical-middle holder">
+                                                    <input type="hidden" name="use_secret_review"
+                                                           id="use_secret_review" value="N">
+                                                    <input type="file" multiple="" class="comment_image_upload"
+                                                           id="review_image_upload_btn_c202206217f7c30ccb91ca">
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
 
                             <ul class="list_review_wrap">
@@ -664,7 +692,46 @@
                                         <i aria-hidden="true" class="icon-arrow-right"></i></a></li>
                                 </ul>
                             </nav>
+                            <script>
+                                $(function () {
+                                    var $body = $('body');
+                                    var $container = $body.find('._show_more_review');
+                                    var review_max_height = 0;
+                                    var more_height = 0;
 
+                                    $container.off('click').on('click', function () {
+                                        var $this = $(this);
+                                        if ($this.hasClass('active')) {
+                                            $this.removeClass('active');
+                                        } else {
+                                            $this.addClass('active');
+                                        }
+                                        if ($body.hasClass('modal-open')) {
+                                            $this.removeClass('active');
+                                        }
+                                    }).each(function (k, v) {
+                                        var $this = $(this);
+                                        var $txt = $this.find('._txt');
+                                        if (review_max_height <= 0) {
+                                            // 더미를 사용해 7줄의 높이값 계산
+                                            var $dummy = $txt.find('._dummy');
+                                            review_max_height = $dummy.height();
+                                        }
+                                        var current_height = $txt.height();
+                                        if (review_max_height < current_height) {
+                                            // 더보기 추가
+                                            $this.addClass('overflow');
+                                            $txt.css('max-height', review_max_height + 'px');
+                                            var $more_inline = $txt.find('._more_inline');
+                                            if ($more_inline.length > 0 && more_height <= 0) {
+                                                // 더보기 높이값 계산
+                                                more_height = $more_inline.height();
+                                            }
+                                            $more_inline.css('margin-top', (review_max_height - more_height) + 'px');
+                                        }
+                                    });
+                                });
+                            </script>
                         </div>
                     </section>
                     <!---->
@@ -864,9 +931,8 @@
                                                                 <a class="dropdown-toggle "
                                                                    href="javascript:dropdownMenu();" role="button"
                                                                    data-toggle="dropdown" aria-haspopup="true"
-                                                                   aria-expanded="false" '="">
+                                                                   aria-expanded="false">
                                                                 틴케이스&nbsp;추가구매 (선택)
-                                                                <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC ' -//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
                                                                 <svg enable-background="new 0 0 50 50"
                                                                      height="20px" id="Layer_1"
                                                                      style="float: right;" version="1.1"
@@ -942,10 +1008,30 @@
                     <section class="buy-button pb-0" data-v-08563466="">
                         <!---->
                         <div class="sticky-btn-group" data-v-08563466=""><button type="button"
-                                                                                 class="btn btn-qna btn-none btn-block" data-v-fa78c050="" data-v-08563466=""><span
-                                data-v-fa78c050="" data-v-08563466="">문의</span></button><button
-                                data-testid="purchase-btn" type="button" class="btn btn-buy btn-primary"
-                                data-v-08563466="">
+                                                                                 class="btn btn-qna btn-none btn-block" data-v-fa78c050="" data-v-08563466="">
+                                    <span data-v-fa78c050="" data-v-08563466="">
+                                        <?xml version="1.0" ?><svg viewBox="0 0 32 32"
+                                                                   xmlns="http://www.w3.org/2000/svg" style="width:35px; height:35px;">
+                                            <defs>
+                                                <style>
+                                                    .cls-1 { fill: #00c7ae; }
+                                                </style>
+                                            </defs>
+                                            <title />
+                                            <g data-name="Layer 61" id="Layer_61">
+                                                <path class="cls-1"
+                                                      d="M10,20a1,1,0,0,1-1-.8L6.66,7.41A3,3,0,0,0,3.72,5H2A1,1,0,0,1,2,3H3.72a5,5,0,0,1,4.9,4L11,18.8A1,1,0,0,1,10.2,20Z" />
+                                                <path class="cls-1"
+                                                      d="M11,27H9.14a4.14,4.14,0,0,1-.38-8.26l18.41-1.67L28.78,9H8A1,1,0,0,1,8,7H30a1,1,0,0,1,.77.37A1,1,0,0,1,31,8.2l-2,10a1,1,0,0,1-.89.8L8.94,20.74A2.13,2.13,0,0,0,9.14,25H11a1,1,0,0,1,0,2Z" />
+                                                <path class="cls-1"
+                                                      d="M26,30a4,4,0,1,1,4-4A4,4,0,0,1,26,30Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,26,24Z" />
+                                                <path class="cls-1"
+                                                      d="M14,30a4,4,0,1,1,4-4A4,4,0,0,1,14,30Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,14,24Z" />
+                                                <path class="cls-1" d="M23,27H17a1,1,0,0,1,0-2h6a1,1,0,0,1,0,2Z" />
+                                            </g>
+                                        </svg>
+                                    </span></button><button data-testid="purchase-btn" type="button"
+                                                            class="btn btn-buy btn-primary" style="font-size: 16px;" data-v-08563466="">
                             주문하기 </button></div>
                     </section>
                     <figure class="guarantee-banner" data-v-4df1822e="" data-v-08563466=""><img alt="숨고보증"
@@ -965,6 +1051,22 @@
             <!---->
             <div class="v-portal" style="display:none;" data-v-08563466=""></div>
         </article>
+    </div>
+</div>
+<div tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" class="modal in modal_site_alert" style="display: block;" id="shop_detail_add_cart_alarm">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="layer_pop">
+                <div class="container-fluid">
+                    <p class="text-center" style="margin-bottom: 0; font-size: 15px;" id="cart_add_result_msg">
+                        선택하신 상품을 장바구니에 담았습니다.						</p>
+                </div>
+                <div class="btn-group-justified">
+                    <a href="javascript:" class="btn" onclick="SITE_SHOP_DETAIL.hideAddCartAlarm();">계속쇼핑</a>
+                    <a href="javascript:" class="btn right" onclick="SITE_SHOP_DETAIL.moveCart();">장바구니</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>

@@ -49,7 +49,7 @@
 }
 
 .bt-arrow-left:before {
-    content: "\f146";
+    content: "❮";
 }
 
 .im-ico-minus-solid:before {

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/fix/font.css">
+    <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/login/login.css">
 </head>
 <body class="login">
@@ -22,11 +22,11 @@
                                     id="__BVID__74__BV_label_">이메일</legend>
                             <div><input data-v-149435f8="" name="email" type="email"
                                         placeholder="example@soomgo.com" autocomplete="off"
-                                        class="text-input form-control is-invalid invalid" data-testid="login-email"
+                                        class="text-input form-control is-invalid" data-testid="login-email"
                                         x-autocompletetype="off" autocorrect="off" spellcheck="false"
                                         autocapitalize="off" data-vv-validate-on="blur" aria-invalid="true"
-                                        id="__BVID__75">
-                                <div data-v-149435f8="" class="invalid-feedback">이메일 주소를 입력해주세요.</div>
+                                        id="__BVID__75" autofocus>
+                                <div data-v-149435f8="" class="invalid-feedback" style="display: none">이메일 주소를 입력해주세요.</div>
                             </div>
                         </fieldset>
                     </div>
@@ -36,10 +36,10 @@
                                     id="__BVID__76__BV_label_">비밀번호</legend>
                             <div><input data-v-149435f8="" name="password" type="password"
                                         placeholder="비밀번호를 입력해주세요." autocomplete="off"
-                                        class="text-input form-control is-invalid invalid" data-testid="login-password"
+                                        class="text-input form-control is-invalid" data-testid="login-password"
                                         x-autocompletetype="off" autocorrect="off" spellcheck="false"
                                         autocapitalize="off" data-vv-validate-on="blur" aria-invalid="true"
-                                        id="__BVID__77"><small data-v-149435f8="" class="form-text text-invalid">비밀번호를
+                                        id="__BVID__77"><small data-v-149435f8="" class="form-text text-invalid" style="display: none">비밀번호를
                                 입력해주세요.</small>
                             </div>
                         </fieldset>
@@ -117,5 +117,88 @@
     </div>
 </div> -->
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+// 이메일 유효성 검사하는 js
+    $("#__BVID__75").on("blur", function () {
+        let $inputId = $("#__BVID__75");
 
+        if(!$inputId.val()){
+            $(".invalid-feedback").text("이메일 주소를 입력해주세요.");
+            $(".invalid-feedback").css("display", "block");
+            $inputId.addClass("invalid");
+        }else if(!$inputId.val().includes("@")||!$inputId.val().includes(".com")){
+            $(".invalid-feedback").text("올바른 이메일 주소를 입력해주세요.");
+            $(".invalid-feedback").css("display", "block");
+            $inputId.addClass("invalid");
+        }else{
+            $(".invalid-feedback").css("display", "none");
+            $inputId.removeClass("invalid");
+        };
+    })
+// 비밀번호 유효성 검사하는 js
+    $("#__BVID__77").on("blur", function () {
+        let $inputPw = $("#__BVID__77");
+
+        if(!$inputPw.val()){
+            $(".text-invalid").text("비밀번호를 입력해주세요.");
+            $(".text-invalid").css("display", "block");
+            $inputPw.addClass("invalid");
+        }else if(!(/^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$/.test($inputPw.val()))){
+            $(".text-invalid").text("영문+숫자 조합 8자리 이상 입력해주세요.");
+            $(".text-invalid").css("display", "block");
+            $inputPw.addClass("invalid");
+        }else{
+            $(".text-invalid").css("display", "none");
+            $inputPw.removeClass("invalid");
+        };
+    })
+//이메일 로그인 눌렀을 때 유효성 검사하는 js
+    $(".btn-primary").on("click",function (e) {
+        let email = false;
+        let pw = false;
+
+        $(".btn-primary").attr("type", "button");
+
+        let $inputId = $("#__BVID__75");
+
+        if(!$inputId.val()){
+            $(".invalid-feedback").text("이메일 주소를 입력해주세요.");
+            $(".invalid-feedback").css("display", "block");
+            $inputId.addClass("invalid");
+        }else if(!$inputId.val().includes("@")||!$inputId.val().includes(".com")){
+            $(".invalid-feedback").text("올바른 이메일 주소를 입력해주세요.");
+            $(".invalid-feedback").css("display", "block");
+            $inputId.addClass("invalid");
+        }else{
+            $(".invalid-feedback").css("display", "none");
+            $inputId.removeClass("invalid");
+            email = !email;
+        };
+
+        let $inputPw = $("#__BVID__77");
+
+        if(!$inputPw.val()){
+            $(".text-invalid").text("비밀번호를 입력해주세요.");
+            $(".text-invalid").css("display", "block");
+            $inputPw.addClass("invalid");
+        }else if(!(/^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$/.test($inputPw.val()))){
+            $(".text-invalid").text("영문+숫자 조합 8자리 이상 입력해주세요.");
+            $(".text-invalid").css("display", "block");
+            $inputPw.addClass("invalid");
+        }else{
+            $(".text-invalid").css("display", "none");
+            $inputPw.removeClass("invalid");
+            pw = !pw;
+        };
+
+        if(email && pw){
+            $(".btn-primary").attr("type", "submit");
+        }
+    })
+
+//    로그인 실패 모달 띄우는 js 만들기
+
+
+</script>
 </html>

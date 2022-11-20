@@ -5,22 +5,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/pickup")
+@RequestMapping("/pickup/*")
 public class PickupController {
 
-    @GetMapping("/pickDetail")
+
+    @GetMapping("/pickmain")
+    public String pickMain(){
+        return "/app/pickup/pickMain";
+    }
+    @GetMapping("/pickdetail")
     public String pickDetail(){
         return "/app/pickup/pickDetail";
     }
-    @GetMapping("/pickWantedList")
+    @GetMapping("/pickwantedlist")
     public String pickWantedList(){
         return "/app/pickup/pickWantedList";
     }
-    @GetMapping("/pickAcceptedList")
+    @GetMapping("/pickacceptedlist")
     public String pickAcceptedList(){
         return "/app/pickup/pickAcceptedList";
     }
-    @GetMapping("/pickFinishedList")
+    @GetMapping("/pickfinishedlist")
     public String pickFinishedList(){
         return "/app/pickup/pickFinishedList";
     }

@@ -9,7 +9,6 @@
 </head>
 <body>
 <header th:replace="/app/admin/adminSideBar.html :: sidebar"></header>
-
 <div id="wrapper">
     <div class="flexroot">
         <div class="app_page flex_column">
@@ -26,7 +25,7 @@
                                         <div class="brand-holder">
                                             <a href="javascript:void(0)" target="_blank"
                                                class="location_text margin-right-lg"> <span
-                                                    class="text-gray">배너 관리</span>
+                                                    class="text-gray">줍깅 관리</span>
                                             </a>
                                         </div>
                                     </li>
@@ -58,7 +57,7 @@
                                                                     class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                                                                 <h1
                                                                         class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-                                                                    배너 추가</h1>
+                                                                    배지 추가</h1>
                                                             </div>
                                                         </div>
                                                     </div><!--/ 관련 제목 입력 부분-->
@@ -81,50 +80,48 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    <!--end::Card title-->
 
+                                                                    <!--begin::Card toolbar-->
+
+                                                                    <!--end::Card toolbar-->
                                                                 </div>
+                                                                <!--end::Card header-->
 
+                                                                <!--begin::Card body-->
                                                                 <div class="card-body pt-0">
+                                                                    <!--begin::Table-->
                                                                     <div id="kt_ecommerce_products_table_wrapper"
                                                                          class="dataTables_wrapper dt-bootstrap4 no-footer">
                                                                         <div class="table-responsive">
 
                                                                         </div>
 
-                                                                        <div style="width: 60%; margin: 0 auto 0 auto;">
+
+                                                                        <div style="width: 60%; margin: 0 auto 48px auto;">
                                                                             <div class="card-toolbar flex-row-fluid justify-content-end gap-5"
                                                                                  style="float: right; margin-left: 10px; height: 36px;margin-top: 7px;">
-                                                                                <div class="w-100 mw-150px" style="margin-bottom: 9px;">
-                                                                                    <a href="javascript:void(0)"
-                                                                                       class="btn btn-primary" >저장</a>
-                                                                                </div>
                                                                                 <div class="w-100 mw-150px">
-                                                                                    <a href="javascript:void(0)"
+                                                                                    <a href="http://localhost:10001/admin/adminjubjubbadge" style="padding: 9px 20px 9px 20px;"
+                                                                                       class="btn btn-primary">저장 하기</a>
+                                                                                    <!--<a href="javascript:void(0)"
                                                                                        class="btn btn-primary"
-                                                                                       style="background: #009ef7;">수정</a>
+                                                                                       style="background: #009ef7 ; margin-left: 10px;">수정</a>-->
                                                                                 </div>
                                                                             </div>
                                                                             <div class="dataTables_wrapper dt-bootstrap4 no-footer">
                                                                                 <div class="d-flex align-items-center position-relative my-1">
+                                                                                    <input type="text"
+                                                                                           data-kt-ecommerce-product-filter="search"
+                                                                                           class="form-control form-control-solid w-250px ps-14"
+                                                                                           placeholder="배지 이름"
+                                                                                           style="width: 100%;">
                                                                                 </div>
-                                                                                <!-- 날짜 입력 -->
-                                                                                                <!--<div class="d-flex align-items-center position-relative my-1">
-                                                                                                    <input type="datetime-local"
-                                                                                                           data-kt-ecommerce-product-filter="search"
-                                                                                                           class="form-control form-control-solid w-250px ps-14"
-                                                                                                           placeholder=""
-                                                                                                           style="width: 50%;"
-                                                                                                           value="2023-07-22 15:00">~
-                                                                                                    <input type="datetime-local"
-                                                                                                           data-kt-ecommerce-product-filter="search"
-                                                                                                           class="form-control form-control-solid w-250px ps-14"
-                                                                                                           placeholder=""
-                                                                                                           style="width: 50%;"
-                                                                                                           value="2023-07-22 17:00">
-                                                                                                </div>-->
-                                                                                <!-- / 날짜 입력 -->
-                                                                                <div class="d-flex align-items-center position-relative my-1"
-                                                                                     style="background-color: #f5f8fa;
+
+                                                                                <div class="d-flex align-items-center position-relative my-1">
+                                                                                    <div class="d-flex align-items-center position-relative my-1"
+                                                                                         style="width:100%;
+                                                                                            background-color: #f5f8fa;
                                                                                             border-color: #f5f8fa;
                                                                                             color: #5E6278;
                                                                                             transition: color 0.2s ease;
@@ -133,19 +130,21 @@
                                                                                             padding: 8px;
                                                                                             box-shadow: none;
                                                                                             margin-bottom: 10px;">
-                                                                                    <label style=" margin: 0 auto; width: 100%; height: 239px;">
-                                                                                        <input type="file" id="icon_img"
-                                                                                               data-kt-ecommerce-product-filter="search"
-                                                                                               class="form-control form-control-solid w-250px ps-14"
-                                                                                               placeholder=""
-                                                                                               name="bannerName"
-                                                                                               accept="image/jpeg, image/jpg, image/png, image/gif, image/svg+xml"
-                                                                                               style="display:none;margin: 0 auto;">
-                                                                                        <img src="/images/admin/02.png"
-                                                                                             id="thumbnail"
-                                                                                             style="width: 100%; height: 100%; ">
-                                                                                    </label>
+                                                                                        <label style=" margin: 0 auto; width: 130px; height: 130px;">
+                                                                                            <input type="file" id="icon_img"
+                                                                                                   data-kt-ecommerce-product-filter="search"
+                                                                                                   class="form-control form-control-solid w-250px ps-14"
+                                                                                                   placeholder=""
+                                                                                                   name="bannerName"
+                                                                                                   accept="image/jpeg, image/jpg, image/png, image/gif, image/svg+xml"
+                                                                                                   style="display:none;margin: 0 auto;">
+                                                                                            <img src="/images/admin/003.png"
+                                                                                                 id="thumbnail" style="width: 100%; height: 100%;">
+                                                                                        </label>
+                                                                                    </div>
                                                                                 </div>
+
+
                                                                             </div>
 
 
@@ -159,11 +158,14 @@
                                                                 <!--end::Products-->
                                                             </div>
                                                             <!--end::Content container-->
+
+
                                                         </div><!-- /관련 내용 입력 부분 -->
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </section>
                             </div>
                         </div>

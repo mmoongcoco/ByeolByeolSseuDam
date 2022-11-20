@@ -1,3 +1,4 @@
+<!-- ###############  관리자 사이드바 프래그먼트 ############### -->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -5,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>별별쓰담 - 관리자 페이지</title>
-    <style>
-
-    </style>
-    <link rel="stylesheet" href="/css/admin/admin.css">
+    <link rel="stylesheet" href="/css/admin/adminCssAll.css">
 </head>
 <body>
 
@@ -90,7 +88,7 @@
                                             </span>
                                         </span>
                         <span class="sidebar_menu_title">
-                                            <a href="javascript:void(0)">회원관리</a>
+                                            <a href="http://localhost:10001/admin/adminusermanage">회원관리</a>
                                 </span>
                     </div>
                 </div>
@@ -119,15 +117,15 @@
                     <div class="app_sidebar_submenu">
                         <!-- sidebar _ A4 주문 관리 _ a1 상품 목록 -->
                         <div class="app_sidebar_submenu_item">
-                            <a href="javascript:void(0)">상품 목록</a>
+                            <a href="http://localhost:10001/admin/adminproductlist">상품 목록</a>
                         </div>
                         <!-- sidebar _ A4 주문 관리 _ a2 주문 목록 -->
                         <div class="app_sidebar_submenu_item">
-                            <a href="javascript:void(0)">주문 목록</a>
+                            <a href="http://localhost:10001/admin/adminorderlist">주문 목록</a>
                         </div>
                         <!-- sidebar _ A4 주문 관리 _ a3 리뷰 관리 -->
                         <div class="app_sidebar_submenu_item">
-                            <a href="javascript:void(0)">리뷰 관리</a>
+                            <a href="http://localhost:10001/admin/adminreviewlist">리뷰 관리</a>
                         </div>
                     </div>
                 </div>
@@ -161,7 +159,7 @@
                     <div class="app_sidebar_submenu">
                         <!-- sidebar _ A5 프로그램 관리 a1 프로그램 목록-->
                         <div class="app_sidebar_submenu_item">
-                            <a href="javascript:void(0)">프로그램 목록</a>
+                            <a href="http://localhost:10001/admin/adminprogram">프로그램 목록</a>
                         </div>
                         <!-- sidebar _ A5 프로그램 관리 a2 수강신청 관리 -->
                         <div class="app_sidebar_submenu_item">
@@ -191,12 +189,17 @@
                                         </span>
                     </div>
                     <div class="app_sidebar_submenu">
-                        <!-- sidebar _ A6 줍깅 관리 a1 코스 관리-->
+                        <!-- sidebar _ A6 줍깅 관리 a1 코스 목록-->
                         <div class="app_sidebar_submenu_item">
-                            <a href="javascript:void(0)">코스 관리</a>
+                            <a href="http://localhost:10001/admin/adminjubjubcourse">코스 목록</a>
                         </div>
+                        <!-- sidebar _ A6 줍깅 관리 a2 스팟 목록-->
                         <div class="app_sidebar_submenu_item">
-                            <a href="javascript:void(0)">배지 관리</a>
+                            <a href="http://localhost:10001/admin/adminjubjubspot">스팟 목록</a>
+                        </div>
+                        <!-- sidebar _ A6 줍깅 관리 a3 배지 관리-->
+                        <div class="app_sidebar_submenu_item">
+                            <a href="http://localhost:10001/admin/adminjubjubbadge">배지 관리</a>
                         </div>
                     </div>
                 </div>
@@ -217,7 +220,7 @@
                                             </span>
                                         </span>
                         <span class="sidebar_menu_title">
-                                            <a href="javascript:void(0)">수거서비스</a>
+                                            <a href="http://localhost:10001/admin/admincollectservice">수거서비스</a>
                                         </span>
                     </div>
                 </div>
@@ -244,11 +247,11 @@
                     <div class="app_sidebar_submenu">
                         <!-- sidebar _ A8 게시판 관리 _ a1 게시판 목록 -->
                         <div class="app_sidebar_submenu_item">
-                            <a href="javascript:void(0)">게시판 목록</a>
+                            <a href="http://localhost:10001/admin/admincommunitymanage">게시판 목록</a>
                         </div>
                         <!-- sidebar _ A8 게시판 관리 _ a2 댓글 목록 -->
                         <div class="app_sidebar_submenu_item">
-                            <a href="javascript:void(0)">댓글 목록</a>
+                            <a href="http://localhost:10001/admin/admincomment">댓글 목록</a>
                         </div>
                     </div>
                 </div>
@@ -274,7 +277,7 @@
                     </div>
                     <div class="app_sidebar_submenu">
                         <div class="app_sidebar_submenu_item">
-                            <a href="javascript:void(0)">공지사항</a>
+                            <a href="http://localhost:10001/admin/adminnotice">공지사항</a>
                         </div>
                     </div>
                 </div>
@@ -302,11 +305,7 @@
                     <div class="app_sidebar_submenu">
                         <!-- sidebar _ A10 배너 관리 a1 배너 목록 -->
                         <div class="app_sidebar_submenu_item">
-                            <a href="javascript:void(0)">배너 목록</a>
-                        </div>
-                        <!-- sidebar _ A10 배너 관리 a1 배너 추가 -->
-                        <div class="app_sidebar_submenu_item">
-                            <a href="javascript:void(0)">배너 추가</a>
+                            <a href="http://localhost:10001/admin/adminbannerlist">배너 목록</a>
                         </div>
                     </div>
                 </div>
@@ -321,84 +320,7 @@
 </header>
 <!-- / 좌측 메뉴 sidebar -->
 
-
-<div id="wrapper">
-    <div class="flexroot">
-        <div class="app_page flex_column">
-            <!--우측 Contents-->
-            <div class="app_wrapper">
-                <!--우측 HEADER -->
-                <header class="app_header">
-                    <div class="header_wrapper">
-                        <div class="headerbar">
-                            <div class="headerbar-left">
-                                <ul class="header-nav header-nav-options">
-                                    <li class="header-nav-brand">
-                                        <div class="brand-holder">
-                                            <a href="javascript:void(0)" target="_blank"
-                                               class="location_text margin-right-lg"> <span
-                                                    class="text-gray">제목입력부분</span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-
-                <!--메인 페이지 -->
-                <main class="app_main flex_column">
-                    <div class="app_main_context">
-                        <div class="app_main_context_container">
-                            <div id="content" class="dashboard_main">
-                                <div id="alertBox" class="alert__wrap"></div>
-                                <section>
-                                    <div class="clearfix area_wrap">
-                                        <div class="section-body float_l">
-                                            <div class="app-main flex-column flex-row-fluid"
-                                                 id="kt_app_main">
-                                                <div class="d-flex flex-column flex-column-fluid">
-                                                    <!--관련 제목 입력 부분-->
-                                                    <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6"
-                                                         data-select2-id="select2-data-kt_app_toolbar">
-                                                        <div id="kt_app_toolbar_container"
-                                                             class="app-container container-xxl d-flex flex-stack"
-                                                             data-select2-id="select2-data-kt_app_toolbar_container">
-                                                            <div
-                                                                    class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
-                                                                <h1 style="background: salmon"
-                                                                    class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-                                                                    제목입력부분</h1>
-                                                            </div>
-                                                        </div>
-                                                    </div><!--/ 관련 제목 입력 부분-->
-
-                                                    <!-- 관련 내용 입력 부분 -->
-                                                    <div id="kt_app_content" style="background: sandybrown"
-                                                         class="app-content flex-column-fluid">
-
-
-                                                    </div><!-- /관련 내용 입력 부분 -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-        </div>
-    </div>
-</div>
-
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/admin/admin.js"></script>
-<script>
-    //리스트 체크박스
-    var $checkboxes = $(".form-check-input.checkbox");
-</script>
 </html>

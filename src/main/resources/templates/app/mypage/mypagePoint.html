@@ -5,16 +5,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마이페이지 주문조회</title>
+    <title>마이페이지 | 포인트</title>
     <link rel="stylesheet" href="/css/fix/font.css">
-    <link rel="stylesheet" href="/css/mypage/myPageOrderList.css">
+    <link rel="stylesheet" href="/css/mypage/mypageOrderList.css">
+    <link rel="stylesheet" href="/css/mypage/mypagePoint.css">
 </head>
-<body class="doz_sys _body_menu_m20200103e566d1814daef  shop_mypage  fixed-menu-on new_fixed_menu_on new_header_site  loggedin" id="doz_body"></body>
+<body
+        class="doz_sys _body_menu_m20200103e566d1814daef  shop_mypage  fixed-menu-on new_fixed_menu_on new_header_site  loggedin"
+        id="doz_body">
+<!-- Code injected by live-server -->
+<script>
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+        (function () {
+            function refreshCSS() {
+                var sheets = [].slice.call(document.getElementsByTagName("link"));
+                var head = document.getElementsByTagName("head")[0];
+                for (var i = 0; i < sheets.length; ++i) {
+                    var elem = sheets[i];
+                    var parent = elem.parentElement || head;
+                    parent.removeChild(elem);
+                    var rel = elem.rel;
+                    if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                        var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                        elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                    }
+                    parent.appendChild(elem);
+                }
+            }
+            var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+            var address = protocol + window.location.host + window.location.pathname + '/ws';
+            var socket = new WebSocket(address);
+            socket.onmessage = function (msg) {
+                if (msg.data == 'reload') window.location.reload();
+                else if (msg.data == 'refreshcss') refreshCSS();
+            };
+            if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                console.log('Live reload enabled.');
+                sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+            }
+        })();
+    }
+    else {
+        console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+</script>
+
 <div doz_type="section"
      class="section_wrap  pc_section    section_first _section_first   mobile_section_first    side_basic grid_gutter_0 grid_v_gutter_0   "
-     id="s202001038f5e33413dcec" " doz_change_mobile="N" doz_aside="N" doz_side_width="200"
-doz_side_margin="0" doz_extend="N" doz_mobile_section="N" doz_mobile_hide="N" doz_header_repeat="N"
-doz_footer_repeat="N" doz_category="default">
+     id="s202001038f5e33413dcec" "="" doz_change_mobile=" N" doz_aside="N" doz_side_width="200" doz_side_margin="0"
+doz_extend="N" doz_mobile_section="N" doz_mobile_hide="N" doz_header_repeat="N" doz_footer_repeat="N"
+doz_category="default">
 <div class="section_bg _section_bg _interactive_bg   "
      style="   background-size:cover; background-repeat: no-repeat; position: absolute;left: 0;top: 0;right: 0; bottom: 0;">
 </div>
@@ -101,6 +143,7 @@ doz_footer_repeat="N" doz_category="default">
                                                 <a href="javascript:;"
                                                    onclick="SITE_MEMBER.editProfile('L3Nob3BfbXlwYWdl');"
                                                    class="text-gray-dark _fade_link">정보수정 / 탈퇴</a>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="col-md-10 col-sm-12">
@@ -126,7 +169,8 @@ doz_footer_repeat="N" doz_category="default">
                                                                             data-placement="bottom"
                                                                             data-popover-content="#list-popover"
                                                                             data-original-title=""
-                                                                            title="">등급혜택</a></span> <span>성은지 님
+                                                                            title="">등급혜택</a></span>
+                                                            <span>성은지 님
                                                                         안녕하세요.</span>
 
 
@@ -142,7 +186,8 @@ doz_footer_repeat="N" doz_category="default">
                                                                          class="list_popover">
                                                                         <div
                                                                                 class="lp_header_wrap hidden-lg hidden-md hidden-sm">
-                                                                            <h6 class="no-margin">회원 등급별 혜택 안내
+                                                                            <h6 class="no-margin">회원 등급별 혜택
+                                                                                안내
                                                                             </h6>
                                                                             <a href="javascript:"
                                                                                onclick="$('.popover.in').popover('hide');"
@@ -155,7 +200,8 @@ doz_footer_repeat="N" doz_category="default">
                                                                                 성은지 님의 회원등급은<br><span
                                                                                     class="text-brand">기본</span>
                                                                                 입니다. </div>
-                                                                            <div class="lp_title">누적 구매금액: 0원
+                                                                            <div class="lp_title">누적 구매금액:
+                                                                                0원
                                                                             </div>
                                                                             <div
                                                                                     class="text-center hidden-lg hidden-md hidden-sm text-14 lp_summary">
@@ -172,10 +218,13 @@ doz_footer_repeat="N" doz_category="default">
                                                                                         <thead>
                                                                                         <tr>
                                                                                             <th>등급명</th>
-                                                                                            <th>등급기준</th>
-                                                                                            <th>포인트 추가 적립
+                                                                                            <th>등급기준
                                                                                             </th>
-                                                                                            <th>적립조건</th>
+                                                                                            <th>포인트 추가
+                                                                                                적립
+                                                                                            </th>
+                                                                                            <th>적립조건
+                                                                                            </th>
                                                                                         </tr>
                                                                                         </thead>
                                                                                         <tbody>
@@ -186,7 +235,8 @@ doz_footer_repeat="N" doz_category="default">
                                                                                             <td></td>
                                                                                         </tr>
                                                                                         <tr class="">
-                                                                                            <td>Saver</td>
+                                                                                            <td>Saver
+                                                                                            </td>
                                                                                             <td>100,000원
                                                                                             </td>
                                                                                             <td>1% (최대
@@ -195,7 +245,8 @@ doz_footer_repeat="N" doz_category="default">
                                                                                             <td>10원</td>
                                                                                         </tr>
                                                                                         <tr class="">
-                                                                                            <td>Less Waster
+                                                                                            <td>Less
+                                                                                                Waster
                                                                                             </td>
                                                                                             <td>300,000원
                                                                                             </td>
@@ -205,7 +256,8 @@ doz_footer_repeat="N" doz_category="default">
                                                                                             <td>10원</td>
                                                                                         </tr>
                                                                                         <tr class="">
-                                                                                            <td>Zero Waster
+                                                                                            <td>Zero
+                                                                                                Waster
                                                                                             </td>
                                                                                             <td>500,000원
                                                                                             </td>
@@ -215,7 +267,8 @@ doz_footer_repeat="N" doz_category="default">
                                                                                             <td>10원</td>
                                                                                         </tr>
                                                                                         <tr class="">
-                                                                                            <td>Earth Lover
+                                                                                            <td>Earth
+                                                                                                Lover
                                                                                             </td>
                                                                                             <td>10,000,000원
                                                                                             </td>
@@ -230,21 +283,30 @@ doz_footer_repeat="N" doz_category="default">
 
                                                                                 <div
                                                                                         class="text-12 margin-top-xxl">
-                                                                                    <p class="no-margin">최근 3개월
+                                                                                    <p class="no-margin">최근
+                                                                                        3개월
                                                                                         구매금액에 대해 산정됩니다.</p>
                                                                                     <p
                                                                                             class="no-margin text-danger">
-                                                                                        구매금액이 적립조건을 만족할 때 포인트 추가
+                                                                                        구매금액이 적립조건을 만족할 때
+                                                                                        포인트 추가
                                                                                         적립이 적용됩니다.</p>
-                                                                                    <p class="no-margin">등급 조건
-                                                                                        달성시 등급 변경은 매월 1일에 반영됩니다.
+                                                                                    <p class="no-margin">등급
+                                                                                        조건
+                                                                                        달성시 등급 변경은 매월 1일에
+                                                                                        반영됩니다.
                                                                                     </p>
-                                                                                    <p class="no-margin">구매혜택
-                                                                                        조건은 실결제 기준(쿠폰, 적립금, 회원혜택
-                                                                                        적용 후 배송비를 제외한 결제금액)으로
+                                                                                    <p class="no-margin">
+                                                                                        구매혜택
+                                                                                        조건은 실결제 기준(쿠폰, 적립금,
+                                                                                        회원혜택
+                                                                                        적용 후 배송비를 제외한
+                                                                                        결제금액)으로
                                                                                         적용됩니다.</p>
-                                                                                    <p class="no-margin">구매금액
-                                                                                        반영은 배송완료 후 7일 이후에 반영됩니다.
+                                                                                    <p class="no-margin">
+                                                                                        구매금액
+                                                                                        반영은 배송완료 후 7일 이후에
+                                                                                        반영됩니다.
                                                                                     </p>
                                                                                 </div>
                                                                             </div>
@@ -264,174 +326,55 @@ doz_footer_repeat="N" doz_category="default">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="im-body-size-140 im-line-height-120 text-bold hidden-xs">주문
-                                            조회</div>
-                                        <div class="table-wrap" id="shop_mypage_orderlist" style="">
-                                            <table class="table no-margin shop-table shop-table2">
-                                                <!-- 주문별 반복구간 -->
+                                        <div class="table-wrap no-padding-top-m">
+                                            <h6 class="hidden-sm hidden-xs">
+                                                <span>포인트</span><!-- 적립금 명칭으로 출력 -->
+                                            </h6>
+                                            <div class="hidden-lg hidden-md bg-brand text-center text-bright"
+                                                 style="margin:-20px -15px 0; padding:24px 15px; line-height: normal;">
+                                                <div>포인트</div>
+                                                <div class="point_amount">3,000</div>
+                                            </div>
+                                            <div style="padding: 70px; text-align: center; display: none;"
+                                                 id="shop_mypage_pointlist_empty">
+                                                <div class="body_font_color_40" style="font-size:15px;">적립 내역이
+                                                    없습니다.</div>
+                                            </div>
+                                            <table class="table no-margin shop-table shop-point-table"
+                                                   id="shop_mypage_pointlist_table" style="">
                                                 <colgroup>
+                                                    <col style="width:200px">
                                                     <col>
-                                                    <col class="width-6">
+                                                    <col style="width:150px">
                                                 </colgroup>
-                                                <thead class="item-subject">
+                                                <thead class="item-subject hidden-sm hidden-xs">
                                                 <tr>
-                                                    <th class="hidden-xs hidden-sm im-body-size">
-                                                        <div class="im-flex im-items-center">
-                                                            <span class="margin-right-xl">주문번호</span>
-                                                            <span class="margin-right-lg"></span>
-                                                            <a class="text-primary"
-                                                               href="/shop_mypage/?m2=order&amp;idx=94638288">2022111223848
-                                                                <i
-                                                                        class="im-icon im-ico-circle-arrow-right"></i></a>
-                                                        </div>
-                                                    </th>
-                                                    <th class="text-right text-gray-bright no-padding-x im-body-size im-xs-body-size"
-                                                        colspan="2">
-                                                        <span class="hidden-xs hidden-sm">주문일자 </span>
-                                                        <span class="im-xs-bold">2022-11-12</span>
-                                                        <a href="/shop_mypage/?m2=order&amp;idx=94638288"
-                                                           class="text-brand hidden-lg hidden-md">주문 상세보기
-                                                            <i
-                                                                    class="im-icon im-ico-circle-arrow-right"></i></a>
-                                                    </th>
+                                                    <th>날짜</th>
+                                                    <th class="item-info">사유/내용</th>
+                                                    <th class="pay text-right">포인트 내역</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody style="background: #fff;" id="">
+                                                <tbody id="shop_mypage_pointlist">
                                                 <tr class="content">
-                                                    <!-- 리스트 반복구간 시작 -->
-                                                    <td class="im-xs-align-top">
-                                                        <a class="im-flex im-justify-between"
-                                                           href="/shop_mypage/?m2=order&amp;idx=94638288"
-                                                           target="_blank">
-                                                            <div class="im-flex">
-                                                                <img src="https://cdn.imweb.me/thumbnail/20220117/6a329ba1bf9e7.jpg"
-                                                                     class="margin-right-xxl" alt="주문상품 이미지">
-                                                                <div>
-                                                                                <span
-                                                                                        class="im-body-size im-body-line-height text-bold">[지구샵]
-                                                                                    대나무칫솔</span>
-                                                                    <div
-                                                                            class="im-body-size-90 im-body-line-height">
-                                                                                    <span class="blocked opacity-70">
-                                                                                        성인용(19cm) </span>
-                                                                        <span class="blocked price">
-                                                                                        2,800원 / 1 개 </span>
-                                                                        <span
-                                                                                class="text-default opacity-70 im-body-size im-body-line-height text-bold hidden-lg hidden-md hidden-sm"
-                                                                                style="margin-bottom: 5px;">취소완료</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div
-                                                                    class="order_title text-bold text-center hidden-xs">
-                                                                            <span
-                                                                                    class="text-default opacity-70 im-body-size im-body-line-height">취소완료</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="cart-btn-tools text-right">
-                                                        <div class="im-inline-flex im-flex-col-reverse im-xs-flex im-xs-flex-row-reverse im-xs-flex-wrap-reverse _btn_tool_row"
-                                                             style="width: 87px;">
-                                                            <a class="btn btn-order-cancel im-flex-1"
-                                                               href="javascript:;"
-                                                               onclick="SITE_SHOP_MYPAGE.showCancelDetail(96538853)">취소상세</a>
-                                                        </div>
-                                                    </td>
-                                                </tr><!-- 리스트 반복구간 종료 -->
+                                                    <td class="point-date">2022-11-06</td>
+                                                    <td>신규회원 쇼핑지원금</td>
+                                                    <td class="text-right text-success point-change">+3,000
+                                                        포인트</td>
+                                                </tr>
                                                 </tbody>
-                                                <tbody id="shop_mypage_orderlist_empty" style="display: none">
-                                                <tr style="background: transparent; padding: 0">
-                                                    <td colspan="2"
-                                                        style="padding: 70px; text-align: center;">
-                                                        <div style="font-size:18px;"
-                                                             class="body_font_color_40"></div>
+                                                <tbody id="shop_mypage_pointlist_more" style="display: none;">
+                                                <tr class="content more">
+                                                    <td colspan="3" class="text-center">
+                                                        <a href="javascript:;"
+                                                           onclick="SITE_SHOP_MYPAGE.getPointList()">더보기 <i
+                                                                aria-hidden="true" style="margin-left:2px"
+                                                                class="btm bt-plus-circle"></i></a>
                                                     </td>
                                                 </tr>
                                                 </tbody>
-                                            </table><!-- 주문별 반복구간 종 -->
-                                            <table class="table no-margin shop-table shop-table2">
-                                                <!-- 주문별 반복구간 -->
-                                                <colgroup>
-                                                    <col>
-                                                    <col class="width-6">
-                                                </colgroup>
-                                                <thead class="item-subject">
-                                                <tr>
-                                                    <th class="hidden-xs hidden-sm im-body-size">
-                                                        <div class="im-flex im-items-center">
-                                                            <span class="margin-right-xl">주문번호</span>
-                                                            <span class="margin-right-lg"></span>
-                                                            <a class="text-primary"
-                                                               href="/shop_mypage/?m2=order&amp;idx=93984774">2022110458411
-                                                                <i
-                                                                        class="im-icon im-ico-circle-arrow-right"></i></a>
-                                                        </div>
-                                                    </th>
-                                                    <th class="text-right text-gray-bright no-padding-x im-body-size im-xs-body-size"
-                                                        colspan="2">
-                                                        <span class="hidden-xs hidden-sm">주문일자 </span>
-                                                        <span class="im-xs-bold">2022-11-04</span>
-                                                        <a href="/shop_mypage/?m2=order&amp;idx=93984774"
-                                                           class="text-brand hidden-lg hidden-md">주문 상세보기
-                                                            <i
-                                                                    class="im-icon im-ico-circle-arrow-right"></i></a>
-                                                    </th>
-                                                </tr>
-                                                </thead>
-                                                <tbody style="background: #fff;" id="">
-                                                <tr class="content">
-                                                    <!-- 리스트 반복구간 시작 -->
-                                                    <td class="im-xs-align-top">
-                                                        <a class="im-flex im-justify-between"
-                                                           href="/shop_mypage/?m2=order&amp;idx=93984774"
-                                                           target="_blank">
-                                                            <div class="im-flex">
-                                                                <img src="https://cdn.imweb.me/thumbnail/20221102/26dbfa98df359.jpg"
-                                                                     class="margin-right-xxl" alt="주문상품 이미지">
-                                                                <div>
-                                                                                <span
-                                                                                        class="im-body-size im-body-line-height text-bold">[탄소창고]
-                                                                                    혀클리너</span>
-                                                                    <div
-                                                                            class="im-body-size-90 im-body-line-height">
-                                                                                    <span class="blocked opacity-70">
-                                                                                        골든옐로우 </span>
-                                                                        <span class="blocked price">
-                                                                                        2,000원 / 1 개 </span>
-                                                                        <span
-                                                                                class="text-default opacity-70 im-body-size im-body-line-height text-bold hidden-lg hidden-md hidden-sm"
-                                                                                style="margin-bottom: 5px;">취소완료</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div
-                                                                    class="order_title text-bold text-center hidden-xs">
-                                                                            <span
-                                                                                    class="text-default opacity-70 im-body-size im-body-line-height">취소완료</span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td class="cart-btn-tools text-right">
-                                                        <div class="im-inline-flex im-flex-col-reverse im-xs-flex im-xs-flex-row-reverse im-xs-flex-wrap-reverse _btn_tool_row"
-                                                             style="width: 87px;">
-                                                            <a class="btn btn-order-cancel im-flex-1"
-                                                               href="javascript:;"
-                                                               onclick="SITE_SHOP_MYPAGE.showCancelDetail(95608757)">취소상세</a>
-                                                        </div>
-                                                    </td>
-                                                </tr><!-- 리스트 반복구간 종료 -->
-                                                </tbody>
-                                                <tbody id="shop_mypage_orderlist_empty" style="display: none">
-                                                <tr style="background: transparent; padding: 0">
-                                                    <td colspan="2"
-                                                        style="padding: 70px; text-align: center;">
-                                                        <div style="font-size:18px;"
-                                                             class="body_font_color_40"></div>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table><!-- 주문별 반복구간 종 -->
+                                            </table>
                                         </div>
+
                                         <div style="font-size: 15px; padding: 70px; text-align: center; display: none;"
                                              class="body_font_color_40" id="shop_mypage_orderlist_empty">
                                             loading...</div>
@@ -457,6 +400,7 @@ doz_footer_repeat="N" doz_category="default">
     </div>
 </main>
 </div>
+<!-- Code injected-->
 </body>
 
 </html>

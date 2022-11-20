@@ -64,8 +64,8 @@
     <section data-v-158066f9="" class="form-contents">
         <div data-v-158066f9="" data-name="request-form-wrap">
 
-            <!-- from -->
-            <form data-v-a27bfd4a="" data-v-158066f9="" data-testid="request-form" class="request-form container-fluid">
+            <!-- form -->
+            <form data-v-a27bfd4a="" data-v-158066f9="" id data-testid="request-form" class="request-form container-fluid">
                 <div data-v-158bbf04="" data-v-a27bfd4a="" class="request-form-progress-bar">
                     <div data-v-158bbf04="" class="progress-wrapper">
                             <div data-v-158bbf04="" class="progress">
@@ -113,7 +113,7 @@
                                 <div data-v-c169ef14="" class="extra-area text">
 
                                         <!-- 1 input -->
-                                    <input data-v-c169ef14="" name="requestExtraText" type="text" placeholder=" ex) 최소 개수 : 5" class="form-control" maxlength="255" data-vv-name="requestExtraText" data-vv-validate-on="blur" aria-invalid="false" id="__BVID__163">
+                                    <input data-v-c169ef14="" name="requestExtraText" type="number" placeholder=" ex) 두 종류 합의 최소 개수 : 10 " class="form-control" maxlength="255" data-vv-name="requestExtraText" data-vv-validate-on="blur" aria-invalid="false" id="petCount" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" >
 
 
                                     <span data-v-c169ef14="" class="validation" style="display: none;">
@@ -130,7 +130,7 @@
     
                                         <label data-v-c169ef14="" for="checkbox-text-5" class="inputtext">
                                                 <div data-v-c169ef14="" class="text-area">
-                                                    <div data-v-c169ef14="" class="text">유리병 캔 개수
+                                                    <div data-v-c169ef14="" class="text">유리병 개수
                                                     </div>
                                                         <div data-v-c169ef14="" class="text-desc">
                                             </div>
@@ -141,7 +141,7 @@
                                     <div data-v-c169ef14="" class="extra-area text">
     
                                             <!-- 2 input -->
-                                        <input data-v-c169ef14="" name="" type="text" placeholder="ex) 최소 개수 : 5" class="form-control" maxlength="255" data-vv-name="requestExtraText" data-vv-validate-on="blur" aria-invalid="false" id="__BVID__163">
+                                        <input data-v-c169ef14="" name="" type="number" placeholder="ex) 두 종류 합의 최소 개수 : 10" class="form-control" maxlength="255" data-vv-name="requestExtraText" data-vv-validate-on="blur" aria-invalid="false" id="glassCount" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
     
     
                                         <span data-v-c169ef14="" class="validation" style="display: none;">
@@ -168,7 +168,7 @@
                                         <div data-v-c169ef14="" class="extra-area text">
         
                                                 <!-- 3 input -->
-                                            <input data-v-c169ef14="" name="" type="text" placeholder="직접 입력" class="form-control" maxlength="255" data-vv-name="requestExtraText" data-vv-validate-on="blur" aria-invalid="false" id="__BVID__163">
+                                            <input data-v-c169ef14="" th:id="userName" name="" type="text" placeholder="직접 입력" class="form-control" maxlength="255" data-vv-name="requestExtraText" data-vv-validate-on="blur" aria-invalid="false" id="__BVID__163">
         
         
                                             <span data-v-c169ef14="" class="validation" style="display: none;">
@@ -196,7 +196,7 @@
                                             <div data-v-c169ef14="" class="extra-area text">
             
                                                     <!-- 4 input -->
-                                                <input data-v-c169ef14="" name="" type="text" placeholder="직접 입력" class="form-control" maxlength="255" data-vv-name="requestExtraText" data-vv-validate-on="blur" aria-invalid="false" id="__BVID__163">
+                                                <input data-v-c169ef14="" th:id="userAddress" name="" type="text" placeholder="직접 입력" class="form-control" maxlength="255" data-vv-name="requestExtraText" data-vv-validate-on="blur" aria-invalid="false" id="__BVID__163">
             
             
                                                 <span data-v-c169ef14="" class="validation" style="display: none;">
@@ -249,10 +249,10 @@
                             </span>
                         </div>
                         <div data-v-a27bfd4a="" class="button-wrapper"><!---->
-                            <button data-v-a27bfd4a="" type="button" data-testid="request-next-btn" class="step-btn color-teal" id="nextli" style="cursor:pointer"> 다음 </button>
+                            <button data-v-a27bfd4a="" type="button" data-testid="request-next-btn" class="step-btn color-teal" id="nextli" onclick="countCheck();" style="cursor:pointer"> 다음 </button>
                         </div>
                         <div data-v-a27bfd4a="" class="button-wrapper" id="submit"><!---->
-                            <button data-v-a27bfd4a="" type="button" data-testid="request-next-btn" class="step-btn color-teal" id="" style="cursor:pointer"> 완료 </button>
+                            <button data-v-a27bfd4a="" type="button" data-testid="request-next-btn" class="step-btn color-teal" id="" style="cursor:pointer" onclick="formCheck();"> 완료 </button>
                         </div>
                     </div>
 
@@ -555,13 +555,18 @@
                                                                                                                                     <!-- write -->
 
                                                                                                                                 </path></g></g></g></g></svg></div></div>
-                                                                                                                                <h1 data-v-8154a686="" class="title" style="color: black;">작성하신 요청에 맞는<br data-v-8154a686="">기사님을 찾고 있습니다.</h1>
+                                                                                                                                <h1 data-v-8154a686="" class="title" style="color: black;">수거가 신청 되었습니다 <br data-v-8154a686=""></h1>
                                                                                                                                 <div data-v-8154a686="" class="vue-portal-target"><section data-v-8154a686="" class="desc">
                                                                                                                                     <p data-v-8154a686="" class="font-weight-medium"><span data-v-8154a686="" class="text-primary">48시간</span> 내에 기사님에게 견적을 보내드립니다.</p>
                                                                                                                                     <p data-v-8154a686="" class="desc-sub">견적이 도착하면 알림을 통해 알려드릴게요.</p>
-                                                                                                                                    <button data-testid="purchase-btn" type="button" class="btn btn-buy btn-primary"
-                                                                                                                                    style="background: #00c7ae; border-radius: 0.25rem;">
-                                                                                                                                    돌아가기 </button>
+                                                                                                                                    <div style="display: flex;justify-content: space-around;">
+                                                                                                                                        <button data-testid="purchase-btn" type="button" class="btn btn-buy btn-primary"
+                                                                                                                                                style="background: #00c7ae; border-radius: 0.25rem;">
+                                                                                                                                            확인하기 </button>
+                                                                                                                                        <button data-testid="purchase-btn" type="button" class="btn btn-buy btn-primary"
+                                                                                                                                                style="background: #00c7ae; border-radius: 0.25rem;">
+                                                                                                                                            돌아가기 </button>
+                                                                                                                                    </div>
                                                                                                                                 </section>
                                                                                                                                 </div><!----></section><!----><!---->
                                                                                                                                 <div data-v-8154a686="" class="v-portal" style="display: none;"></div><!----></article>
@@ -589,5 +594,5 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="/js/Recycling/recycling.js"></script>
+<script src="/js/recycling/recycling.js"></script>
 </html>

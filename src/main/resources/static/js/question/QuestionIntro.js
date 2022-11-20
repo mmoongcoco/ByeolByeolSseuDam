@@ -1,11 +1,30 @@
-$(function(){ 
+$(function(){
 
     $("#launcher").click(function(){
-      $(".modal").fadeIn();
+        $(".modal").fadeIn();
+        $("#ch-plugin").fadeOut();
     });
-    
-    $(".modal_content").click(function(){
-      $(".modal").fadeOut();
+
+    $(".close").click(function(){
+        $(".modal").fadeOut();
+        $(".modal2").fadeOut();
+        $("#ch-plugin").fadeIn();
     });
-    
-  });
+
+});
+
+$(function(){
+
+    $("#launcher2").click(function(){
+        $(".modal").fadeOut();
+        $(".modal2").fadeIn();
+    });
+
+    $(".pre").click(function(){
+        $(".modal2").fadeOut();
+        $(".modal").fadeIn();
+
+    });
+
+
+});

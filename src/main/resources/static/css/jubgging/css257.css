@@ -1,5 +1,5 @@
 #operation[data-v-d92feee2] {
-    padding: 3.125rem 0;
+    padding: 5.125rem 0;
     text-align: center;
 }
 #operation h2[data-v-d92feee2],
@@ -38,7 +38,7 @@
 }
 #people[data-v-6e7535bb] {
     background-color: #f9f9f9;
-    padding: 3.125rem 0;
+    padding: 4.125rem 0;
     text-align: center;
 }
 #people .headline[data-v-6e7535bb],
@@ -583,7 +583,7 @@ p[data-name="profile-link"] {
     .clip-row[data-v-2682acfc] {
         -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-        -ms-grid-rows: (20.125rem) [6];
+        -ms-grid-rows:(20.125rem)[6];
         grid-template-rows: repeat(6, 20.125rem);
     }
 }
@@ -775,7 +775,7 @@ p[data-name="profile-link"] {
     background-repeat: no-repeat;
     background-color: #57d4c5;
     /* background-image: url(https://assets.cdn.soomgo.com/images/provider-join/hero-signup-pro-web.png); */
-    background-image: url("/static/images/jubgging/flogging2.png");
+    background-image: url(/spring/img/flogging2.png);
     background-position: 50%;
     background-size: 61.125rem 24.375rem;
 }
@@ -783,7 +783,7 @@ p[data-name="profile-link"] {
     .hero-image-container[data-v-593ade4e] {
         height: 31.1875rem;
         background-color: #57d4c5;
-        background-image: url("/static/images/jubgging/flogging2.png");
+        background-image: url(/spring/img/flogging2.png);
         background-size: 45rem 31.1875rem;
     }
 }

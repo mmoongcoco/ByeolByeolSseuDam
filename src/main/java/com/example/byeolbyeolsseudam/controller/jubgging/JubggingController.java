@@ -10,8 +10,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/test/*")
 public class JubggingController {
 
+    @GetMapping("/jubgging-intro")
+    public String programIntro(){
+        return "/app/jubgging/jubggingIntro";
+    }
+
     @GetMapping("/jubgging")
     public String program(){
         return "/app/jubgging/jubgging";
+    }
+
+    @GetMapping("/jubgging-qr")
+    public String programQr(){
+        return "/app/jubgging/jubggingqr";
     }
 }

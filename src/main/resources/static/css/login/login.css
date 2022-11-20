@@ -874,7 +874,12 @@ label {
     color: #545454;
     font-size: 1em;
 }
-
+.text-input.form-control.is-invalid:focus {
+    box-shadow: 0px 0px 2px 2px #00c7acf5;
+}
+.text-input.form-control.is-invalid.invalid:focus{
+    box-shadow: 0px 0px 2px 2px #fa5963;
+}
 
 
 

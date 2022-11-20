@@ -13,13 +13,13 @@ public class LoginController {
         return "/app/login/login";
     }
 
-    @GetMapping("/find_password")
+    @GetMapping("/findpassword")
     public String findPassword(){
-        return "/app/login/find_password";
+        return "/app/login/findPassword";
     }
 
-    @GetMapping("/find_password_done")
+    @GetMapping("/findpassworddone")
     public String findPasswordDone(){
-        return "/app/login/find_password_done";
+        return "/app/login/findPasswordDone";
     }
 }

@@ -363,6 +363,15 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     left: -1.625rem;
     background: url(https://assets.cdn.soomgo.com/icons/icon-pro-navi-tip.svg) no-repeat;
 }
+.Layer_1{
+    margin-left: 88%;
+}
+@media(max-width: 768px){
+    .Layer_1{
+        margin-left: 92%;
+    }
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -416,7 +425,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 .request-card[data-v-05822788] {
     display: flex;
     flex-direction: column;
-    height: 15.5rem;
+    height: 13.5rem;
 }
 }
 .align-items-center {

@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PickupController {
 
 
+    @GetMapping("/pickintro")
+    public String pickIntro(){
+        return "/app/pickup/pickIntro";
+    }
+
     @GetMapping("/pickmain")
     public String pickMain(){
         return "/app/pickup/pickMain";

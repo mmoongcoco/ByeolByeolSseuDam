@@ -133,7 +133,7 @@
 
                         <div class="acd_row  ">
 
-                            <div class="acd_heading" id="collapse_header_4266375">
+                            <div class="acd_heading" >
                                 <h4 class="acd_title" style="margin: 10px 0 10px">
                                     <a class="tabled full-width holder">
                                         <div class="number" style="
@@ -157,7 +157,7 @@
                                 </h4>
                             </div>
 
-                            <div class="acd_collapse collapse" id="collapse_4266375"
+                            <div class="acd_collapse collapse" 
                                  data-code="p20200718753a06c1de2a1">
                                 <div class="acd_body">
 
@@ -175,7 +175,7 @@
 
                         <div class="acd_row  ">
 
-                            <div class="acd_heading" id="collapse_header_4266375">
+                            <div class="acd_heading" >
                                 <h4 class="acd_title" style="margin: 10px 0 10px">
                                     <a class="tabled full-width holder">
                                         <div class="number" style="
@@ -199,7 +199,7 @@
                                 </h4>
                             </div>
 
-                            <div class="acd_collapse collapse " id="collapse_4266375"
+                            <div class="acd_collapse collapse " 
                                  data-code="p20200718753a06c1de2a1">
                                 <div class="acd_body">
 
@@ -217,7 +217,7 @@
 
                         <div class="acd_row  ">
 
-                            <div class="acd_heading" id="collapse_header_4266375">
+                            <div class="acd_heading" >
                                 <h4 class="acd_title" style="margin: 10px 0 10px">
                                     <a class="tabled full-width holder">
                                         <div class="number" style="
@@ -241,7 +241,7 @@
                                 </h4>
                             </div>
 
-                            <div class="acd_collapse collapse " id="collapse_4266375"
+                            <div class="acd_collapse collapse " 
                                  data-code="p20200718753a06c1de2a1">
                                 <div class="acd_body">
 
@@ -259,7 +259,7 @@
 
                         <div class="acd_row  ">
 
-                            <div class="acd_heading" id="collapse_header_4266375">
+                            <div class="acd_heading" >
                                 <h4 class="acd_title" style="margin: 10px 0 10px">
                                     <a class="tabled full-width holder">
                                         <div class="number" style="
@@ -283,7 +283,7 @@
                                 </h4>
                             </div>
 
-                            <div class="acd_collapse collapse " id="collapse_4266375"
+                            <div class="acd_collapse collapse " 
                                  data-code="p20200718753a06c1de2a1">
                                 <div class="acd_body">
 
@@ -301,7 +301,7 @@
 
                         <div class="acd_row  ">
 
-                            <div class="acd_heading" id="collapse_header_4266375">
+                            <div class="acd_heading" >
                                 <h4 class="acd_title" style="margin: 10px 0 10px">
                                     <a class="tabled full-width holder">
                                         <div class="number" style="
@@ -325,7 +325,7 @@
                                 </h4>
                             </div>
 
-                            <div class="acd_collapse collapse " id="collapse_4266375"
+                            <div class="acd_collapse collapse " 
                                  data-code="p20200718753a06c1de2a1">
                                 <div class="acd_body">
 
@@ -343,7 +343,7 @@
 
                         <div class="acd_row  ">
 
-                            <div class="acd_heading" id="collapse_header_4266375">
+                            <div class="acd_heading" >
                                 <h4 class="acd_title" style="margin: 10px 0 10px">
                                     <a class="tabled full-width holder">
                                         <div class="number" style="
@@ -367,7 +367,7 @@
                                 </h4>
                             </div>
 
-                            <div class="acd_collapse collapse " id="collapse_4266375"
+                            <div class="acd_collapse collapse " 
                                  data-code="p20200718753a06c1de2a1">
                                 <div class="acd_body">
 
@@ -385,7 +385,7 @@
 
                         <div class="acd_row  ">
 
-                            <div class="acd_heading" id="collapse_header_4266375">
+                            <div class="acd_heading" >
                                 <h4 class="acd_title" style="margin: 10px 0 10px">
                                     <a class="tabled full-width holder">
                                         <div class="number" style="
@@ -409,7 +409,7 @@
                                 </h4>
                             </div>
 
-                            <div class="acd_collapse collapse " id="collapse_4266375"
+                            <div class="acd_collapse collapse " 
                                  data-code="p20200718753a06c1de2a1">
                                 <div class="acd_body">
 
@@ -485,15 +485,17 @@
     $(".accordion").on("click", function(){
         let $collapse = $(this).find(".acd_collapse.collapse");
 
-
         if(!$collapse.hasClass("in")){
             $collapse.addClass("in")
-
+            $(this).siblings(".accordion").find(".acd_collapse.collapse").removeClass("in")
+            $(this).siblings(".accordion").find(".acd_collapse.collapse").attr("style", "height: 1px")
+            
             $collapse.attr("style", `height:` + getHeight() + `px`)
         }else{
             $collapse.removeClass("in");
 
             $collapse.attr("style", "height: 1px")
+
         }
 
     })

@@ -20,6 +20,9 @@ public class AdminController {
 
     /* ############################### 대시 보드  ############################### */
 
+    /* 대시보드 */
+    @GetMapping("adminmain")
+    public String adminMain(){ return "/app/admin/adminMain.html"; }
 
     /* ############################### 회원 관리  ############################### */
 
@@ -71,8 +74,11 @@ public class AdminController {
         return "/app/admin/adminProgramModify.html";
     }
 
-    /* 프로그램 - 신청 세부 내역 */
-
+    /* 프로그램 - 프로그램 세부 내역 */
+    @GetMapping("adminprogramdetail")
+    public String adminProgramDetail(){
+        return "/app/admin/adminProgramDetail.html";
+    }
 
     /* ############################### 줍깅 관리 ################################ */
     /* 줍깅 관리 - 코스 목록 */

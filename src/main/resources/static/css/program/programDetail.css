@@ -1127,7 +1127,7 @@ section.no-space[data-v-08563466] {
 }
 
 .btn-primary, .btn.btn-primary, .design_setting_view .btn-primary:hover {
-    background-color: #00913a;
+    background-color: #00c7ae;
     border-color: #07913a;
     color: #fff;
     padding-left: 30px;
@@ -1140,7 +1140,7 @@ section.no-space[data-v-08563466] {
     margin-bottom: 0;
     text-align: center;
     vertical-align: middle;
-    background-color: #00913a;
+    background-color: #00c7ae;
     border-color: #07913a;
     color: #fff;
     touch-action: manipulation;
@@ -1298,7 +1298,7 @@ section.no-space[data-v-08563466] {
 }
 
 .text-brand {
-    color: #00913a !important;
+    color: #00c7ae !important;
 }
 
 .list_review_inner .fold.cmt {
@@ -1826,7 +1826,7 @@ a:focus, a:hover, a:active {
 }
 
 .shop-content .total_price {
-    color: #00913a !important;
+    color: #00c7ae !important;
     font-size: 16px;
     font-weight: normal;
 }

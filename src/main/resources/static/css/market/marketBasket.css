@@ -755,9 +755,9 @@ div[doz_type="grid"] {
     text-align: right;
 }
 
-.bt-question-circle:before {
+/* .bt-question-circle:before {
     content: "\f044";
-}
+} */
 
 .margin-bottom-lg {
     margin-bottom: 4px;
@@ -1410,13 +1410,13 @@ div[doz_type="grid"] {
 }
 
 .form-select-wrap:before {
-    content: '\f2f2';
+    content: '▼';
     display: block;
     position: absolute;
     font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
     text-rendering: auto;
     z-index: 11;
-    font-size: 24px;
+    font-size: 15px;
     vertical-align: middle;
     right: 14px;
     top: 50%;
@@ -1578,7 +1578,7 @@ strong {
 }
 
 .bt-times-circle:before {
-    content: "\f00d";
+    content: "☒";
 }
 
 .option_btn_tools {
@@ -1607,7 +1607,11 @@ strong {
 }
 
 .bt-minus:before {
-    content: "\f021";
+    content: "─";
+}
+
+.bt-plus:before {
+    content: "╂";
 }
 
 .form-control {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -99,20 +99,20 @@
             <div class="Padded-sc-1mbfr4n-0 KOZEV">
                 <h1 font-size="20px" class="Left__LeftPageTitle-sc-12djr3w-0 cqeeCQ">카테고리</h1>
                 <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
-                    <div class="CategoryList__Wrapper-l9zk8m-0 hWBKQy"><a href="/category/outdoor"
+                    <div class="CategoryList__Wrapper-l9zk8m-0 hWBKQy"><a href="http://localhost:10001/pickup/pickwantedlist"
                                                                           class="CategoryItem__A-sc-7y9o4v-0 gePshk">
                         <div class="CategoryItem__Category-sc-7y9o4v-1 dXlPAQ">
                             <div class="CategoryItem__BackgroundDeemed-sc-7y9o4v-2 dVWsbF"></div>
                             <div class="CategoryItem__TextDeemed-sc-7y9o4v-3 fjwRlv"></div><span>수거 신청 목록</span>
                         </div>
-                    </a><a href="/category/fitness" class="CategoryItem__A-sc-7y9o4v-0 gePshk">
+                    </a><a href="http://localhost:10001/pickup/pickacceptedlist" class="CategoryItem__A-sc-7y9o4v-0 gePshk">
                         <div class="CategoryItem__Category-sc-7y9o4v-1 lkwiLY">
                             <div class="CategoryItem__BackgroundDeemed-sc-7y9o4v-2 dVWsbF" style="
     opacity: .6;
 "></div>
                             <div class="CategoryItem__TextDeemed-sc-7y9o4v-3 fjwRlv"></div><span>수거 현황</span>
                         </div>
-                    </a><a href="/category/craftanddiy" class="CategoryItem__A-sc-7y9o4v-0 gePshk">
+                    </a><a href="http://localhost:10001/pickup/pickfinishedlist" class="CategoryItem__A-sc-7y9o4v-0 gePshk">
                         <div class="CategoryItem__Category-sc-7y9o4v-1 hgfmjb">
                             <div class="CategoryItem__BackgroundDeemed-sc-7y9o4v-2 dVWsbF" style="
     opacity: 1;
@@ -431,6 +431,7 @@
         </div>
     </div>
 </div>
+<!--<footer th:replace="/app/fix/footer.html :: footer"></footer>-->
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,9 +11,16 @@
     <link rel="stylesheet" href="/css/jubgging/css339.css">
     <link rel="stylesheet" href="/css/jubgging/letpel.css">
     <link rel="stylesheet" href="/css/jubgging/jtbc.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
 </head>
 
 <body>
+<header th:replace="/app/fix/header.html :: header"></header>
 <div id="app-sticky-nav" class="vue-portal-target"></div>
 <div id="app-body">
     <div data-v-4a092108="" data-testid="categories" class="categories">

@@ -7,10 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판</title>
     <link rel="stylesheet" href="/css/fix/font.css">
-    <link rel="stylesheet" href="/css/community/CommunityMain.css">
+    <link rel="stylesheet" href="/css/community/communityMain.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
 </head>
 
 <body>
+<header th:replace="/app/fix/header.html :: header"></header>
 <div id="app-body">
     <div data-v-b31e1ebe="" class="community-container container">
         <div data-v-54d1e5f9="" data-v-b31e1ebe="" class="soomgo-life-container">
@@ -21,7 +28,7 @@
                         <h1 data-v-daea50a6="" data-v-e0e63576="" data-testid="community-main"
                             class="community-title">커뮤니티</h1>
                         <div data-v-daea50a6="" data-v-e0e63576="">
-                            <div data-v-3db8ff2e="" class="write-button-desktop"><button data-v-3db8ff2e=""
+                            <div data-v-3db8ff2e="" class="write-button-desktop"><button data-v-3db8ff2e="" onclick="location.href='http://localhost:10001/community/write'"
                                                                                          type="button" class="btn write-button btn-primary"> 글쓰기 <i data-v-3db8ff2e=""
                                                                                                                                                     class="write"></i></button></div>
                         </div>
@@ -32,7 +39,7 @@
                     <li data-v-6e81a396="" data-v-85114aa8="" data-testid="category-soomgo-life"
                         class="sg-text-subhead4 sg-font-bold lg:sg-text-subhead2 lg:sg-font-bold sg-text-gray-900 selected">
                         <a data-v-6e81a396="" href="/community/soomgo-life/" class="link-text router-link-active">
-                            숨고생활 </a>
+                            쓰담생활 </a>
                     </li>
                 </ul>
                 <div data-v-daea50a6="" class="community-layout">
@@ -59,7 +66,8 @@
                                                           class="sg-text-subhead4 sg-font-bold sg-text-gray-900">최근
                                                         검색어</span><span data-v-1cd7c933=""
                                                                         class="sg-text-body2 sg-font-regular sg-text-gray-500">전체
-                                                        삭제</span></div>
+                                                        삭제</span>
+                                            </div>
                                             <ul data-v-1cd7c933="" class="search-history-list">
                                                 <li data-v-b8232c54="" data-v-1cd7c933=""
                                                     class="sg-text-body2 sg-font-regular sg-text-gray-900"
@@ -169,7 +177,7 @@
                         <section data-v-2064f17f="" data-v-daea50a6="" class="curation">
                             <div data-v-2064f17f="" class="curation-header">
                                 <h2 data-v-2064f17f="" class="sg-text-headline sg-font-bold sg-text-gray-900">지금 가장
-                                    뜨거운 숨고픽🔥</h2><span data-v-2064f17f="" class="curation-page">1/2</span>
+                                    뜨거운 쓰담픽🔥</h2><!-- <span data-v-2064f17f="" class="curation-page">1/2</span> -->
                             </div>
                             <div data-v-3d1a4f76="" data-v-55917fe8="" data-v-2064f17f="" dir="ltr"
                                  class="slick-slider slick-initialized"><button data-v-21137603="" data-v-3d1a4f76=""
@@ -191,10 +199,10 @@
                                                         공지사항</p>
                                                     <h3 data-v-0e0856ba=""
                                                         class="sg-text-subhead2 sg-font-bold sg-text-gray-900">
-                                                        올바른 커뮤니티 사용법 숨고생활 가이드 ✏️</h3>
+                                                        올바른 커뮤니티 사용법 쓰담생활 가이드 ✏️</h3>
                                                     <p data-v-0e0856ba=""
                                                        class="manager sg-text-description sg-font-regular sg-text-white">
-                                                        Soomgo</p>
+                                                        SseuDam</p>
                                                 </div>
                                             </a></div>
                                         </div>
@@ -295,32 +303,32 @@
                                             </a></div>
                                         </div>
                                         <!-- <div data-v-e4caeaf8="" tabindex="-1" data-index="5" aria-hidden="true"
-                                            class="slick-slide" style="outline: none; width: 204px;">
-                                            <div data-v-e4caeaf8=""><a data-v-0e0856ba="" data-v-2064f17f=""
-                                                    href="/community/soomgo-life/posts/63675ecef81b009d143f9ba1-%EC%8B%B1%ED%81%AC%EB%8C%80-%ED%95%98%EB%B6%80%EC%9E%A5-%EB%B2%BD-%EA%B2%B0%EB%A1%9C%ED%98%84%EC%83%81%EC%9C%BC%EB%A1%9C-%EC%BD%98%EC%84%BC%ED%8A%B8%EC%97%90-%EB%AC%BC%EB%A7%BA%ED%98%80%EC%9A%94?from=curation"
-                                                    class="" data-testid="curation-item" tabindex="-1"
-                                                    data-v-e4caeaf8="" style="width: 100%; display: inline-block;">
-                                                    <div data-v-0e0856ba="" class="curation-item">
+                                        class="slick-slide" style="outline: none; width: 204px;">
+                                        <div data-v-e4caeaf8=""><a data-v-0e0856ba="" data-v-2064f17f=""
+                                                href="/community/soomgo-life/posts/63675ecef81b009d143f9ba1-%EC%8B%B1%ED%81%AC%EB%8C%80-%ED%95%98%EB%B6%80%EC%9E%A5-%EB%B2%BD-%EA%B2%B0%EB%A1%9C%ED%98%84%EC%83%81%EC%9C%BC%EB%A1%9C-%EC%BD%98%EC%84%BC%ED%8A%B8%EC%97%90-%EB%AC%BC%EB%A7%BA%ED%98%80%EC%9A%94?from=curation"
+                                                class="" data-testid="curation-item" tabindex="-1"
+                                                data-v-e4caeaf8="" style="width: 100%; display: inline-block;">
+                                                <div data-v-0e0856ba="" class="curation-item">
+                                                    <p data-v-0e0856ba=""
+                                                        class="topic sg-text-subhead7 sg-font-medium sg-text-gray-500">
+                                                        궁금해요</p>
+                                                    <h3 data-v-0e0856ba=""
+                                                        class="sg-text-subhead2 sg-font-bold sg-text-gray-900">
+                                                        싱크대 하부장 벽 결로현상으로 콘센트에 물맺혀요</h3>
+                                                    <div data-v-0e0856ba="" class="react-items">
                                                         <p data-v-0e0856ba=""
-                                                            class="topic sg-text-subhead7 sg-font-medium sg-text-gray-500">
-                                                            궁금해요</p>
-                                                        <h3 data-v-0e0856ba=""
-                                                            class="sg-text-subhead2 sg-font-bold sg-text-gray-900">
-                                                            싱크대 하부장 벽 결로현상으로 콘센트에 물맺혀요</h3>
-                                                        <div data-v-0e0856ba="" class="react-items">
-                                                            <p data-v-0e0856ba=""
-                                                                class="like sg-text-description sg-font-regular sg-text-gray-300">
-                                                                0</p>
-                                                            <p data-v-0e0856ba=""
-                                                                class="comment sg-text-description sg-font-regular sg-text-gray-300">
-                                                                22</p>
-                                                        </div>
+                                                            class="like sg-text-description sg-font-regular sg-text-gray-300">
+                                                            0</p>
+                                                        <p data-v-0e0856ba=""
+                                                            class="comment sg-text-description sg-font-regular sg-text-gray-300">
+                                                            22</p>
                                                     </div>
-                                                </a></div>
-                                        </div> -->
+                                                </div>
+                                            </a></div>
+                                    </div> -->
                                     </div>
-                                </div><button data-v-21137603="" data-v-3d1a4f76="" type="button" data-role="none"
-                                              class="slick-arrow slick-next" style="display: block;">Next</button>
+                                </div><!-- <button data-v-21137603="" data-v-3d1a4f76="" type="button" data-role="none"
+                                        class="slick-arrow slick-next" style="display: block;">Next</button> -->
                             </div>
                             <div data-v-2064f17f="" class="mobile-curation-list d-md-none"><a data-v-0e0856ba=""
                                                                                               data-v-2064f17f=""
@@ -330,10 +338,10 @@
                                     <p data-v-0e0856ba=""
                                        class="topic sg-text-subhead7 sg-font-medium sg-text-gray-500">공지사항</p>
                                     <h3 data-v-0e0856ba=""
-                                        class="sg-text-subhead2 sg-font-bold sg-text-gray-900">올바른 커뮤니티 사용법 숨고생활
+                                        class="sg-text-subhead2 sg-font-bold sg-text-gray-900">올바른 커뮤니티 사용법 쓰담생활
                                         가이드 ✏️</h3>
                                     <p data-v-0e0856ba=""
-                                       class="manager sg-text-description sg-font-regular sg-text-white">Soomgo
+                                       class="manager sg-text-description sg-font-regular sg-text-white">SseuDam
                                     </p>
                                 </div>
                             </a><a data-v-0e0856ba="" data-v-2064f17f=""
@@ -430,7 +438,7 @@
                         <article data-v-7206b48f="" data-v-daea50a6="">
                             <ul data-v-7206b48f="" class="feed-list">
                                 <li data-v-95718dd0="" data-v-7206b48f="" class="feed-item"><a data-v-95718dd0=""
-                                                                                               href="/community/soomgo-life/posts/636f2ce9d7334c72676ba078-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%B2%B4%ED%97%98%EB%8B%A8-%ED%95%98%EB%8A%94-%EA%B0%9C%EC%9D%B8%EB%B8%94%EB%A1%9C%EA%B1%B0%EC%9E%85%EB%8B%88%EB%8B%A4--"
+                                                                                               href="http://localhost:10001/community/read"
                                                                                                class="" data-testid="soomgo-life-feed-item">
                                     <p data-v-95718dd0="" data-testid="soomgo-life-topic-name"
                                        class="topic-name sg-text-description sg-font-regular sg-text-gray-500">
@@ -829,9 +837,9 @@
                     </div>
                 </div>
                 <!-- <a data-v-fe1c7b0a="" data-v-daea50a6="" id="top-btn" role="button" aria-label="위로 가기 버튼"
-                    class="top-btn" style="display: none; right: 142px;"><img data-v-fe1c7b0a=""
-                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEgyNFYyNEgweiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMyMy4wMDAwMDAsIC02ODAuMDAwMDAwKSB0cmFuc2xhdGUoMzExLjAwMDAwMCwgNjY4LjAwMDAwMCkgdHJhbnNsYXRlKDEyLjAwMDAwMCwgMTIuMDAwMDAwKSIvPgogICAgICAgICAgICAgICAgICAgIDxnIHN0cm9rZT0iI0I1QjVCNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik03IDBMNyAxNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMyMy4wMDAwMDAsIC02ODAuMDAwMDAwKSB0cmFuc2xhdGUoMzExLjAwMDAwMCwgNjY4LjAwMDAwMCkgdHJhbnNsYXRlKDEyLjAwMDAwMCwgMTIuMDAwMDAwKSB0cmFuc2xhdGUoNS4wMDAwMDAsIDQuNTAwMDAwKSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNMCA3TDcgMCAxNCA3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzIzLjAwMDAwMCwgLTY4MC4wMDAwMDApIHRyYW5zbGF0ZSgzMTEuMDAwMDAwLCA2NjguMDAwMDAwKSB0cmFuc2xhdGUoMTIuMDAwMDAwLCAxMi4wMDAwMDApIHRyYW5zbGF0ZSg1LjAwMDAwMCwgNC41MDAwMDApIi8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
-                        alt="위로 가기"></a> -->
+                class="top-btn" style="display: none; right: 142px;"><img data-v-fe1c7b0a=""
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAgMEgyNFYyNEgweiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMyMy4wMDAwMDAsIC02ODAuMDAwMDAwKSB0cmFuc2xhdGUoMzExLjAwMDAwMCwgNjY4LjAwMDAwMCkgdHJhbnNsYXRlKDEyLjAwMDAwMCwgMTIuMDAwMDAwKSIvPgogICAgICAgICAgICAgICAgICAgIDxnIHN0cm9rZT0iI0I1QjVCNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik03IDBMNyAxNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMyMy4wMDAwMDAsIC02ODAuMDAwMDAwKSB0cmFuc2xhdGUoMzExLjAwMDAwMCwgNjY4LjAwMDAwMCkgdHJhbnNsYXRlKDEyLjAwMDAwMCwgMTIuMDAwMDAwKSB0cmFuc2xhdGUoNS4wMDAwMDAsIDQuNTAwMDAwKSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNMCA3TDcgMCAxNCA3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzIzLjAwMDAwMCwgLTY4MC4wMDAwMDApIHRyYW5zbGF0ZSgzMTEuMDAwMDAwLCA2NjguMDAwMDAwKSB0cmFuc2xhdGUoMTIuMDAwMDAwLCAxMi4wMDAwMDApIHRyYW5zbGF0ZSg1LjAwMDAwMCwgNC41MDAwMDApIi8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+                    alt="위로 가기"></a> -->
                 <!---->
                 <!---->
             </section>
@@ -841,6 +849,44 @@
         <!---->
     </div>
 </div>
+<div class="swal2-container swal2-center sg-swal swal2-shown" style="overflow-y: auto;">
+    <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show"
+         tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="width: 320px; display: flex;">
+        <div class="swal2-header">
+            <ul class="swal2-progress-steps" style="display: none;"></ul>
+            <div class="swal2-icon swal2-error" style="display: none;"><span class="swal2-x-mark"><span
+                    class="swal2-x-mark-line-left"></span><span class="swal2-x-mark-line-right"></span></span>
+            </div>
+            <div class="swal2-icon swal2-question" style="display: none;"></div>
+            <div class="swal2-icon swal2-warning" style="display: none;"></div>
+            <div class="swal2-icon swal2-info" style="display: none;"></div>
+            <div class="swal2-icon swal2-success" style="display: none;">
+                <div class="swal2-success-circular-line-left"></div><span class="swal2-success-line-tip"></span>
+                <span class="swal2-success-line-long"></span>
+                <div class="swal2-success-ring"></div>
+                <div class="swal2-success-fix"></div>
+                <div class="swal2-success-circular-line-right"></div>
+            </div><img class="swal2-image" style="display: none;">
+            <h2 class="swal2-title" id="swal2-title" style="display: flex;">로그인 필요</h2><button type="button"
+                                                                                               class="swal2-close" aria-label="Close this dialog" style="display: none;">×</button>
+        </div>
+        <div class="swal2-content">
+            <div id="swal2-content" style="display: block;">로그인 후 서비스를 이용할 수 있습니다.</div><input class="swal2-input"
+                                                                                               style="display: none;"><input type="file" class="swal2-file" style="display: none;">
+            <div class="swal2-range" style="display: none;"><input type="range"><output></output></div><select
+                class="swal2-select" style="display: none;"></select>
+            <div class="swal2-radio" style="display: none;"></div><label for="swal2-checkbox" class="swal2-checkbox"
+                                                                         style="display: none;"><input type="checkbox"><span class="swal2-label"></span></label><textarea
+                class="swal2-textarea" style="display: none;"></textarea>
+            <div class="swal2-validation-message" id="swal2-validation-message"></div>
+        </div>
+        <div class="swal2-actions"><button type="button" class="swal2-confirm btn" aria-label=""
+                                           style="display: inline-block;">로그인/회원가입</button><button type="button" class="swal2-cancel btn"
+                                                                                                   aria-label="" style="display: inline-block;">취소</button></div>
+        <div class="swal2-footer" style="display: none;"></div>
+    </div>
+</div>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/community/communityMain.js"></script>
 </html>

@@ -459,6 +459,51 @@ body {
     margin: auto;
 }
 
+.editor-image-list-wrapper[data-v-7d0a628e] {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0.75rem;
+}
+
+.editor-image-list-wrapper .editor-image-list[data-v-7d0a628e] {
+    display: flex;
+    align-items: center;
+}
+
+.editor-image-list-wrapper .editor-image-list .image-preview[data-v-7d0a628e] {
+    display: inline-block;
+    position: relative;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.editor-image-list-wrapper .editor-image-list .image-preview .delete-badge[data-v-7d0a628e] {
+    position: absolute;
+    top: -0.375rem;
+    right: -0.375rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.125rem;
+    border-radius: 16px;
+    background-color: #ff5861;
+    cursor: pointer;
+}
+
+.editor-image-list-wrapper .editor-image-list .image-preview .view[data-v-7d0a628e] {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 0.75rem;
+    border-radius: 8px;
+    border: 0.0625rem solid #f4f4f4;
+    background-color: #f4f4f4;
+    background-repeat: repeat;
+}
+
+.editor-image-list-wrapper .editor-image-list .image-preview .view[data-v-7d0a628e]:last-child {
+    margin-right: 0;
+}
+
 .editor-contents[data-v-486b7620] {
     width: 60.625rem;
     min-height: 22.5rem;
@@ -778,6 +823,15 @@ button.close {
 @media (min-width: 768px){
     .divider-wrapper[data-v-33cf7b62] {
         width: 60.625rem;
+    }
+}
+
+@media (min-width: 768px){
+    .editor-image-list-wrapper .editor-image-list[data-v-7d0a628e] {
+        display: inline-flex;
+        flex-flow: row wrap;
+        width: 60.625rem;
+        padding-top: 0.75rem;
     }
 }
 

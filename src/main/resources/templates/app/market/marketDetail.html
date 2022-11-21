@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,17 @@
     <title>제품상세</title>
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/market/marketDetail.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
+    <link rel="stylesheet" href="/css/fix/footer1.css">
+    <link rel="stylesheet" href="/css/fix/footer2.css">
 </head>
-
 <body>
+<header th:replace="/app/fix/header.html :: header"></header>
 <div id="app-body">
     <div class="instant-purchase-container">
         <article class="instant-purchase-product-detail no-recent-view" data-v-08563466="">
@@ -178,12 +186,9 @@
                             <div class="text-13 body_font_color_70 margin-bottom-xl">
                                 상품을 구매하신 분들이 작성한 리뷰입니다. </div>
 
-                            <a class="btn btn-primary" role="button" style="float: right;"
-                               onclick="window.location.href = '/login?back_url=L2JhdGhyb29tLz9pZHg9Mzg3&amp;used_login_btn=N';">구매평
-                                작성</a>
+                            <a class="btn btn-primary" role="button" style="float: right;">구매평 작성</a>
                             <div class="review_top margin-top-xxxl margin-bottom-xl" id="review_top">
-                                <a class="text-14" href="javascript:;" style="color: rgba(100,100,100,0.6);"
-                                   onclick="SITE_SHOP_DETAIL.getOnlyPhotoReview('Y','N','N');">
+                                <a class="text-14" href="javascript:;" style="color: rgba(100,100,100,0.6);">
                                     <svg id="Layer_1" style="enable-background:new 0 0 64 64;" version="1.1"
                                          viewBox="0 5 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                                          xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18">
@@ -212,7 +217,7 @@
                                     <div class="inline-blocked">포토 구매평만 보기</div>
                                 </a>
                             </div>
-                            <div class="comment_textarea" onclick="event.cancelBubble = true;">
+                            <div class="comment_textarea">
                                 <form id="_accordion_review_form_c202206217f7c30ccb91ca">
                                     <input type="hidden" name="prod_code" value="s202109163d3fa45186ceb">
                                     <input type="hidden" name="parent_code" value="c202206217f7c30ccb91ca">
@@ -226,8 +231,7 @@
                                                           id="review_comment_body"></textarea>
                                             <div class="file-add-block margin-bottom-xl" style="display: none;"
                                                  id="review_comment_image_box_c202206217f7c30ccb91ca"></div>
-                                            <a href="javascript:" class="btn btn-brand btn-sm _style"
-                                               onclick="SHOP_REVIEW_COMMENT.submit($(this),'main')">등록</a>
+                                            <a href="javascript:" class="btn btn-brand btn-sm _style">등록</a>
                                             <div class="inline-blocked holder icon-wrap">
                                                 <i class="icon-picture icon vertical-middle holder">
                                                     <input type="hidden" name="use_secret_review"
@@ -242,8 +246,7 @@
                             </div>
 
                             <ul class="list_review_wrap">
-                                <li class="list_review_inner _show_more_review _comment_c20221106fbfb68ae0a11a"
-                                    onclick="SHOP_REVIEW_COMMENT.getReviewCommentHtml('c20221106fbfb68ae0a11a','accordion',$(this)); event.cancelBubble = true;">
+                                <li class="list_review_inner _show_more_review _comment_c20221106fbfb68ae0a11a">
                                     <div class="tabled full-width">
                                         <div class="table-cell vertical-top txt_wrap">
                                             <div class="interlock_star_point inline-blocked">
@@ -282,8 +285,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="list_review_inner _show_more_review _comment_c20221026f4b83064cf607"
-                                    onclick="SHOP_REVIEW_COMMENT.getReviewCommentHtml('c20221026f4b83064cf607','accordion',$(this)); event.cancelBubble = true;">
+                                <li class="list_review_inner _show_more_review _comment_c20221026f4b83064cf607">
                                     <div class="tabled full-width">
                                         <div class="table-cell vertical-top txt_wrap">
                                             <div class="interlock_star_point inline-blocked">
@@ -322,8 +324,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="list_review_inner _show_more_review _comment_c2022101412a71a0b7767b"
-                                    onclick="SHOP_REVIEW_COMMENT.getReviewCommentHtml('c2022101412a71a0b7767b','accordion',$(this)); event.cancelBubble = true;">
+                                <li class="list_review_inner _show_more_review _comment_c2022101412a71a0b7767b">
                                     <div class="tabled full-width">
                                         <div class="table-cell vertical-top txt_wrap">
                                             <div class="interlock_star_point inline-blocked">
@@ -363,8 +364,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="list_review_inner _show_more_review _comment_c20220903d85799544f0e9"
-                                    onclick="SHOP_REVIEW_COMMENT.getReviewCommentHtml('c20220903d85799544f0e9','accordion',$(this)); event.cancelBubble = true;">
+                                <li class="list_review_inner _show_more_review _comment_c20220903d85799544f0e9">
                                     <div class="tabled full-width">
                                         <div class="table-cell vertical-top txt_wrap">
                                             <div class="interlock_star_point inline-blocked">
@@ -404,8 +404,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="list_review_inner _show_more_review _comment_c20220903de66bede44675"
-                                    onclick="SHOP_REVIEW_COMMENT.getReviewCommentHtml('c20220903de66bede44675','accordion',$(this)); event.cancelBubble = true;">
+                                <li class="list_review_inner _show_more_review _comment_c20220903de66bede44675">
                                     <div class="tabled full-width">
                                         <div class="table-cell vertical-top txt_wrap">
                                             <div class="interlock_star_point inline-blocked">
@@ -444,8 +443,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="list_review_inner _show_more_review _comment_c20220831dcc7a2c93c02b"
-                                    onclick="SHOP_REVIEW_COMMENT.getReviewCommentHtml('c20220831dcc7a2c93c02b','accordion',$(this)); event.cancelBubble = true;">
+                                <li class="list_review_inner _show_more_review _comment_c20220831dcc7a2c93c02b">
                                     <div class="tabled full-width">
                                         <div class="table-cell vertical-top txt_wrap">
                                             <div class="interlock_star_point inline-blocked">
@@ -484,8 +482,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="list_review_inner _show_more_review _comment_c202208097bdf30e583318"
-                                    onclick="SHOP_REVIEW_COMMENT.getReviewCommentHtml('c202208097bdf30e583318','accordion',$(this)); event.cancelBubble = true;">
+                                <li class="list_review_inner _show_more_review _comment_c202208097bdf30e583318">
                                     <div class="tabled full-width">
                                         <div class="table-cell vertical-top txt_wrap">
                                             <div class="interlock_star_point inline-blocked">
@@ -524,8 +521,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="list_review_inner _show_more_review _comment_c202207226eebcfb801068"
-                                    onclick="SHOP_REVIEW_COMMENT.getReviewCommentHtml('c202207226eebcfb801068','accordion',$(this)); event.cancelBubble = true;">
+                                <li class="list_review_inner _show_more_review _comment_c202207226eebcfb801068">
                                     <div class="tabled full-width">
                                         <div class="table-cell vertical-top txt_wrap">
                                             <div class="interlock_star_point inline-blocked">
@@ -579,8 +575,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="list_review_inner _show_more_review _comment_c202206292f297db839bfe"
-                                    onclick="SHOP_REVIEW_COMMENT.getReviewCommentHtml('c202206292f297db839bfe','accordion',$(this)); event.cancelBubble = true;">
+                                <li class="list_review_inner _show_more_review _comment_c202206292f297db839bfe">
                                     <div class="tabled full-width">
                                         <div class="table-cell vertical-top txt_wrap">
                                             <div class="interlock_star_point inline-blocked">
@@ -638,8 +633,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="list_review_inner _show_more_review _comment_c2022062326a2c16eff9fe"
-                                    onclick="SHOP_REVIEW_COMMENT.getReviewCommentHtml('c2022062326a2c16eff9fe','accordion',$(this)); event.cancelBubble = true;">
+                                <li class="list_review_inner _show_more_review _comment_c2022062326a2c16eff9fe">
                                     <div class="tabled full-width">
                                         <div class="table-cell vertical-top txt_wrap">
                                             <div class="interlock_star_point inline-blocked">
@@ -932,17 +926,17 @@
                                                                    href="javascript:dropdownMenu();" role="button"
                                                                    data-toggle="dropdown" aria-haspopup="true"
                                                                    aria-expanded="false">
-                                                                틴케이스&nbsp;추가구매 (선택)
-                                                                <svg enable-background="new 0 0 50 50"
-                                                                     height="20px" id="Layer_1"
-                                                                     style="float: right;" version="1.1"
-                                                                     viewBox="0 0 50 50" width="15px"
-                                                                     xml:space="preserve"
-                                                                     xmlns="http://www.w3.org/2000/svg"
-                                                                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                    틴케이스&nbsp;추가구매 (선택)
+                                                                    <svg enable-background="new 0 0 50 50"
+                                                                         height="20px" id="Layer_1"
+                                                                         style="float: right;" version="1.1"
+                                                                         viewBox="0 0 50 50" width="15px"
+                                                                         xml:space="preserve"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         xmlns:xlink="http://www.w3.org/1999/xlink">
                                                                             <rect fill="none" height="50" width="50" />
-                                                                    <polygon
-                                                                            points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 " />
+                                                                        <polygon
+                                                                                points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 " />
                                                                         </svg></a>
                                                                 <div class="dropdown-menu">
                                                                     <div class="dropdown-item"><a class="blocked "
@@ -1007,7 +1001,7 @@
                     </section>
                     <section class="buy-button pb-0" data-v-08563466="">
                         <!---->
-                        <div class="sticky-btn-group" data-v-08563466=""><button type="button"
+                        <div class="sticky-btn-group" data-v-08563466=""><button type="button" onclick="basketModalOpen();"
                                                                                  class="btn btn-qna btn-none btn-block" data-v-fa78c050="" data-v-08563466="">
                                     <span data-v-fa78c050="" data-v-08563466="">
                                         <?xml version="1.0" ?><svg viewBox="0 0 32 32"
@@ -1030,7 +1024,7 @@
                                                 <path class="cls-1" d="M23,27H17a1,1,0,0,1,0-2h6a1,1,0,0,1,0,2Z" />
                                             </g>
                                         </svg>
-                                    </span></button><button data-testid="purchase-btn" type="button"
+                                    </span></button><button data-testid="purchase-btn" type="button" onclick="location.href='http://localhost:10001/market/payment'"
                                                             class="btn btn-buy btn-primary" style="font-size: 16px;" data-v-08563466="">
                             주문하기 </button></div>
                     </section>
@@ -1053,7 +1047,7 @@
         </article>
     </div>
 </div>
-<div tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" class="modal in modal_site_alert" style="display: block;" id="shop_detail_add_cart_alarm">
+<div tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" class="modal in modal_site_alert" id="shop_detail_add_cart_alarm">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="layer_pop">
@@ -1062,13 +1056,14 @@
                         선택하신 상품을 장바구니에 담았습니다.						</p>
                 </div>
                 <div class="btn-group-justified">
-                    <a href="javascript:" class="btn" onclick="SITE_SHOP_DETAIL.hideAddCartAlarm();">계속쇼핑</a>
-                    <a href="javascript:" class="btn right" onclick="SITE_SHOP_DETAIL.moveCart();">장바구니</a>
+                    <a href="javascript:basketModalClose();" class="btn modal-close-btn">계속쇼핑</a>
+                    <a href="http://localhost:10001/market/basket" class="btn right cart-btn">장바구니</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/market/marketDetail.js"></script>

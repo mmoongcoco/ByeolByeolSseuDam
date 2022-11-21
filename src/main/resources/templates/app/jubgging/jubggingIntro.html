@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,9 +16,16 @@
     <link rel="stylesheet" href="/css/jubgging/css75.css" />
     <link rel="stylesheet" href="/css/jubgging/css76.css" />
     <link rel="stylesheet" href="/css/jubgging/kmong.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
 </head>
 
 <body>
+<header th:replace="/app/fix/header.html :: header"></header>
 <div id="app-body">
     <div data-v-593ade4e="" class="pro">
         <div data-v-593ade4e="" class="hero-image-container">
@@ -368,7 +375,7 @@
                         </figure>
                     </div>
                     <div data-v-d92feee2="" class="col-12">
-                        <a data-v-d92feee2="" href="" class="btn btn-primary btn-lg" target="_self" style="margin-top: 70px;">참여하기</a>
+                        <a data-v-d92feee2="" href="http://localhost:10001/test/jubgging" class="btn btn-primary btn-lg" target="_self" style="margin-top: 70px;">참여하기</a>
                     </div>
                 </div>
             </div>

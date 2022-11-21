@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>별별쓰담 - 관리자 페이지</title>
     <link rel="stylesheet" href="/css/admin/adminCssAll.css">
+    <style>
+        .specialDiv {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <header th:replace="/app/admin/adminSideBar.html :: sidebar"></header>
@@ -175,13 +180,35 @@
                                                                                            class="form-control form-control-solid w-250px ps-14"
                                                                                            placeholder="소요시간"
                                                                                            style="width: 33.3%; margin: 0 10px 10px 10px;">
-                                                                                    <select class="form-control form-control-solid"
+                                                                                    <select class="form-control form-control-solid courseRank"
                                                                                             style="width: 33.3%;">
                                                                                         <option value="" disabled selected hidden>난이도</option>
                                                                                         <option value="초급">초급</option>
                                                                                         <option value="중급">중급</option>
                                                                                         <option value="고급">고급</option>
+                                                                                        <option value="Special">Special</option>
                                                                                     </select>
+                                                                                </div>
+                                                                                <div class="specialDiv"
+                                                                                     id="specialDiv">
+
+                                                                                    <!-- flex <-> none 변경가능해야함 -->
+                                                                                    <div class="form-control form-control-solid"
+                                                                                         style="width: 10%;">시작일
+                                                                                    </div>
+                                                                                    <input type="datetime-local"
+                                                                                           class="form-control form-control-solid"
+                                                                                           placeholder="시작일"
+                                                                                           style="width: 40%;margin: 0 9px 9px 9px;"
+                                                                                           value="2023-07-22 15:00">
+                                                                                    <div class="form-control form-control-solid"
+                                                                                         style="width: 10%;">마감일
+                                                                                    </div>
+                                                                                    <input type="datetime-local"
+                                                                                           class="form-control form-control-solid"
+                                                                                           placeholder=""
+                                                                                           style="width: 40%;margin: 0 0 9px 9px;"
+                                                                                           value="2023-07-22 17:00">
                                                                                 </div>
                                                                                 <div class="d-flex align-items-center position-relative my-1">
                                                                                     <input type="text"
@@ -193,29 +220,6 @@
                                                                                            placeholder="도착지"
                                                                                            style="width: 50%;margin-left: 9px;">
                                                                                 </div>
-                                                                                <!--<div class="d-flex align-items-center position-relative my-1">
-                                                                                    <div class="form-control form-control-solid w-250px ps-14"
-                                                                                         style="width: 10%;">시작일</div>
-                                                                                    <input type="datetime-local"
-                                                                                           data-kt-ecommerce-product-filter="search"
-                                                                                           class="form-control form-control-solid w-250px ps-14"
-                                                                                           placeholder="시작일"
-                                                                                           style="width: 40%;margin: 0 9px 9px 9px;"
-                                                                                           value="2023-07-22 15:00">
-                                                                                    <div class="form-control form-control-solid w-250px ps-14"
-                                                                                         style="width: 10%;">마감일</div>
-                                                                                    <input type="datetime-local"
-                                                                                           data-kt-ecommerce-product-filter="search"
-                                                                                           class="form-control form-control-solid w-250px ps-14"
-                                                                                           placeholder=""
-                                                                                           style="width: 40%;margin: 0 0 9px 9px;"
-                                                                                           value="2023-07-22 17:00">
-                                                                                </div>-->
-                                                                                <!--<div class="d-flex align-items-center position-relative my-1">
-                                                                                    <textarea class="form-control form-control-solid"
-                                                                                           placeholder="상세 설명"
-                                                                                           style="width: 100%; height: 200px;"></textarea>
-                                                                                </div>-->
                                                                                 <div class="d-flex align-items-center position-relative my-1"
                                                                                      style="background-color: #f5f8fa;
                                                                                             border-color: #f5f8fa;
@@ -275,5 +279,17 @@
 <script>
     //리스트 체크박스
     var $checkboxes = $(".form-check-input.checkbox");
+
+    $(document).ready(function () {
+        $('.courseRank').change(function () {
+            var check = $('.courseRank option:selected').val();
+            if(check == "Special"){
+                $('.specialDiv').css("display", "flex");
+            } else {
+                $('.specialDiv').hide();
+            }
+
+        })
+    })
 </script>
 </html>

@@ -42,6 +42,38 @@ $("#icon_img").on('change', function(e) {
 	}
 });
 
+// 이미지 2개 _ 이미지1 첨부 시 썸네일 변경
+$("#icon_img1").on('change', function(e) {
+	var reader1 = new FileReader();
+	let type1 = e.target.files[0].type;
+	reader1.readAsDataURL(e.target.files[0]);
+
+	reader1.onload = function(e) {
+		let url1 = e.target.result;
+		if (type1.includes('image')) {
+			$("#thumbnail1").attr('src', url1);
+		} else {
+			$("#thumbnail1").attr('src', "../images/no-image.JPG");
+		}
+	}
+});
+
+// 이미지 2개_ 이미지2 첨부 시 썸네일 변경
+$("#icon_img2").on('change', function(e) {
+	var reader2 = new FileReader();
+	let type2 = e.target.files[0].type;
+	reader2.readAsDataURL(e.target.files[0]);
+
+	reader2.onload = function(e) {
+		let url2 = e.target.result;
+		if (type2.includes('image')) {
+			$("#thumbnail2").attr('src', url2);
+		} else {
+			$("#thumbnail2").attr('src', "../images/no-image.JPG");
+		}
+	}
+});
+
 // 등록 모달창 열기
 $("div.card-toolbar > div > button:nth-child(1)").on("click", function() {
 	var $value = $("#kt-toolbar-filter").css('display');

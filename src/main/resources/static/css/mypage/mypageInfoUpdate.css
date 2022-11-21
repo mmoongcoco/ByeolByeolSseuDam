@@ -300,7 +300,7 @@ section[data-v-2825a58e] {
 }
 
 .invalid-feedback {
-    /* display: none; */
+    display: none;
     width: 100%;
     margin-top: 0.25rem;
     font-size: 80%;
@@ -437,7 +437,7 @@ section[data-v-2825a58e] {
     border: none;
 }
 
-.current-password .invalid-feedback[data-v-5135e8da] {
+/* .current-password .invalid-feedback[data-v-5135e8da] {
     display: block;
     width: auto;
     font-size: .875rem;
@@ -445,7 +445,7 @@ section[data-v-2825a58e] {
     font-weight: 400;
     line-height: normal;
     letter-spacing: normal;
-}
+} */
 
 .form-row>.col, .form-row>[class*=col-], .modal .modal-footer .form-row>.btn {
     padding-right: 0.3125rem;
@@ -598,7 +598,83 @@ section[data-v-2825a58e] {
     margin: 0;
     padding-top: 0.25rem;
     color: #fa5963;
+    font-size: 90%;
 }
+
+.input-group .answer-input.complete-phone-auth[data-v-84480e04] {
+    pointer-events: none;
+    color: #b5b5b5;
+    border-radius: 0.25rem;
+    background-color: #f2f2f2;
+}
+
+.authentication[data-v-84480e04] {
+    margin: 0;
+    padding-top: 0.25rem;
+    color: #00c7ae;
+}
+
+.send-button[data-v-84480e04] {
+    width: 4.5rem;
+    height: 1.75rem;
+    z-index: 3;
+    font-size: .875rem;
+    border: none;
+    border-radius: 4px!important;
+    padding: 0.1875rem 0.625rem;
+    color: #fff;
+    background-color: #00c7ae;
+    outline: none;
+}
+
+.input-label[data-v-84480e04] {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #323232;
+    margin: 0;
+    padding-bottom: 0.375rem;
+}
+
+.input-group .answer-input[data-v-84480e04] {
+    border-radius: 0.125rem;
+    padding: 0.75rem 5.75rem 0.75rem 0.75rem;
+    border: 0.0625rem solid #e1e1e1;
+    border-radius: 0.25rem;
+    background: none;
+}
+
+.input-group .answer-input.error[data-v-84480e04] {
+    border-color: #fa5963;
+}
+
+.input-group .answer-input[data-v-84480e04]:focus{
+    border-color: #00c7ae;
+}
+
+.validation-msg-wrapper[data-v-84480e04] {
+    font-size: .875rem;
+    font-weight: 400;
+    box-shadow: none;
+}
+
+.validation-msg-wrapper.phone-validation{
+    display: none;
+}
+
+.validation[data-v-84480e04] {
+    margin: 0;
+    padding-top: 0.25rem;
+    color: #fa5963;
+}
+
+#__BVID__88 {
+    display: none;
+}
+
+.validation-msg-wrapper.auth-key{
+    display: none;
+}
+
 
 /* 휴대전화번호 end */
 
@@ -1361,6 +1437,27 @@ input[type=checkbox], input[type=radio] {
 }
 
 /* 탈퇴 확인 모달 end */
+
+/* 정보 수정 모달 start */
+
+.modify-info-modal{
+    display: none;
+}
+
+.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal {
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/* 정보 수정 모달 end */
 
 
 /* 미디어쿼리 */

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,20 @@
     <title>결제</title>
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/market/marketPayment.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
+    <link rel="stylesheet" href="/css/fix/footer1.css">
+    <link rel="stylesheet" href="/css/fix/footer2.css">
 </head>
 
 <body
         class="doz_sys  _body_menu_m202001030f7c4943b091a  shop_payment  fixed-menu-on new_fixed_menu_on new_header_site  loggedin new_fixed_header_active"
         id="doz_body">
+<header th:replace="/app/fix/header.html :: header"></header>
 <div doz_type="section"
      class="section_wrap  pc_section    section_first _section_first   mobile_section_first    side_ static_section"
      id="s202001037c5d53c2ffaa5" doz_change_mobile="N" doz_aside="N" doz_side_width="230"
@@ -83,11 +92,11 @@
                                             <div class="order_detail">
                                                 <h6>주문자 정보</h6>
                                                 <div class="row no-padding _orderer_preview_wrap">
-                                                    <div class="col-xs-12">
-                                                        <div class="text-15 margin-bottom-lg">성은지</div>
-                                                        <div class="text-14 text-gray">01065559107</div>
-                                                        <div class="text-14 text-gray">sejjes07@gmail.com</div>
-                                                        <a onclick="void(0);" href="javascript:"
+                                                    <div class="col-xs-12 ordererInfo">
+                                                        <div class="info text-14 text-gray">성은지</div>
+                                                        <div class="info text-14 text-gray">01065559107</div>
+                                                        <div class="info text-14 text-gray">sejjes07@gmail.com</div>
+                                                        <a href="javascript:modifyOrdererInfo();"
                                                            class="btn-primary btn btn-sm-padding text-13 btn_top_right _btn_orderer_edit"
                                                            role="button">수정</a>
                                                     </div>
@@ -143,25 +152,22 @@
                                                         <div id="paymentShippingWrap" data-mode="default"
                                                              data-member="member" data-list_count="1" data-code=""
                                                              data-type="default">
-                                                            <div class="col-xs-12 _deliv_preview_wrap" style="">
+                                                            <div class="col-xs-12 _deliv_preview_wrap">
                                                                 <div class="_shipping_preview_wrap">
-                                                                    <input type="hidden"
+                                                                    <!-- <input type="hidden"
                                                                            name="deliv_address_code[default]"
-                                                                           value="a20221104cc895ebec17a3">
-                                                                    <div class="text-15 margin-bottom-lg">성은지
-                                                                    </div>
+                                                                           value="a20221104cc895ebec17a3"> -->
+                                                                    <div class="text-14 margin-bottom-lg text-gray">성은지</div>
+                                                                    <div class="text-14 margin-bottom-lg text-gray">01065559107</div>
                                                                     <div class="text-14 margin-bottom-lg text-gray">
-                                                                        01065559107</div>
-                                                                    <div class="text-15 margin-bottom-lg">
-                                                                        <p class="no-margin">서울 강남구 테헤란로 지하 156
-                                                                            (역삼동, 역삼역)</p>
+                                                                        <p class="no-margin">서울 강남구 테헤란로 지하 156(역삼동, 역삼역)</p>
                                                                         <p class="no-margin">401호</p>
                                                                         <p class="no-margin">(06236)</p>
                                                                     </div>
                                                                 </div>
-                                                                <a href="javascript:;"
+                                                                <a href="javascript: modifyShippingInfo();"
                                                                    class="btn btn-primary btn-sm-padding text-13 btn_top_right _btn_modify_shipping"
-                                                                   role="button">변경</a>
+                                                                   role="button">수정</a>
                                                             </div>
                                                             <div class="col-xs-12 _deliv_edit_wrap"
                                                                  style="display: none;">
@@ -327,7 +333,7 @@
                                                 <div class="row _deliv_memo_wrap no-padding margin-top-xxxl">
                                                     <div class="col-xs-12">
                                                         <p class="text-14">배송메모</p>
-                                                        <div class="form-select-wrap">
+                                                        <div class="form-select-wrap memo-select-wrap">
                                                             <select class="form-control" name="deliv_memo"
                                                                     title="memo" data-group="shipping" style="outline: none;">
                                                                 <option value="">배송메모를 선택해 주세요.</option>
@@ -337,7 +343,7 @@
                                                                 </option>
                                                                 <option value="부재시 전화나 문자를 남겨주세요.">부재시 전화나 문자를
                                                                     남겨주세요.</option>
-                                                                <option value="custom">직접입력</option>
+                                                                <option value="custom">직접 입력할게요.</option>
                                                             </select>
                                                         </div>
                                                         <div style="display: none"
@@ -377,15 +383,15 @@
                                                                href="javascript:"><i
                                                                     class="btl bt-times-circle"></i></a>
                                                         </div>
-                                                        <a href="javascript:"
+                                                        <a href="javascript:useMypoint();"
                                                            class="btn btn-primary btn-sm disabled _btn_point_all_use">전액사용
                                                         </a><!-- 비활성화시 disabled 추가-->
                                                     </div>
-                                                    <p class="text-13 margin-top-xl no-margin-bottom">
-                                                        보유 포인트 <strong>0</strong>
+                                                    <p class="text-13 margin-top-xl no-margin-bottom holding-mypoint">
+                                                        보유 포인트 <strong>3000</strong>
                                                     </p>
-                                                    <p class="no-margin text-gray text-13">1,000 포인트 이상 보유 및
-                                                        10,000원 이상 구매시<br> 사용 가능</p>
+                                                    <!-- <p class="no-margin text-gray text-13">1,000 포인트 이상 보유 및
+                                                        10,000원 이상 구매시<br> 사용 가능</p> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -579,7 +585,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="javascript:"
+                                        <a href="http://localhost:10001/market/paid"
                                            class="btn_start_payment text-16 text-bold btn bg-brand to-order blocked btn-lg margin-bottom-xl _btn_start_payment">결제하기</a>
                                     </div>
                                     <div class="spacer"
@@ -614,6 +620,8 @@
         </div>
     </main>
 </div>
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/market/marketPayment.js"></script>
 </html>

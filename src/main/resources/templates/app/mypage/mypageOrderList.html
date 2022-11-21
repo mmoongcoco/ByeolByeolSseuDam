@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,20 @@
     <title>마이페이지 주문조회</title>
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/mypage/myPageOrderList.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
+    <link rel="stylesheet" href="/css/fix/footer1.css">
+    <link rel="stylesheet" href="/css/fix/footer2.css">
 </head>
-<body class="doz_sys _body_menu_m20200103e566d1814daef  shop_mypage  fixed-menu-on new_fixed_menu_on new_header_site  loggedin" id="doz_body"></body>
+<body class="doz_sys _body_menu_m20200103e566d1814daef  shop_mypage  fixed-menu-on new_fixed_menu_on new_header_site  loggedin" id="doz_body">
+<header th:replace="/app/fix/header.html :: header"></header>
 <div doz_type="section"
      class="section_wrap  pc_section    section_first _section_first   mobile_section_first    side_basic grid_gutter_0 grid_v_gutter_0   "
-     id="s202001038f5e33413dcec" " doz_change_mobile="N" doz_aside="N" doz_side_width="200"
+     id="s202001038f5e33413dcec" doz_change_mobile="N" doz_aside="N" doz_side_width="200"
 doz_side_margin="0" doz_extend="N" doz_mobile_section="N" doz_mobile_hide="N" doz_header_repeat="N"
 doz_footer_repeat="N" doz_category="default">
 <div class="section_bg _section_bg _interactive_bg   "
@@ -80,11 +89,11 @@ doz_footer_repeat="N" doz_category="default">
                                                 <a href="/shop_mypage/?m2=cancel"
                                                    class="text-gray-dark _fade_link">주문취소</a>
                                             </li>
-                                            <li class="">
+                                            <!-- <li class="">
                                                 <a href="/shop_mypage/?m2=wish_list"
                                                    class="text-gray-dark _fade_link"><span
                                                         class="hidden-xs">장바구니</span></a>
-                                            </li>
+                                            </li> -->
                                             <li class="">
                                                 <a href="/shop_mypage/?m2=cancel"
                                                    class="text-gray-dark _fade_link">수거신청내역</a>
@@ -296,12 +305,12 @@ doz_footer_repeat="N" doz_category="default">
                                                     </th>
                                                 </tr>
                                                 </thead>
-                                                <tbody style="background: #fff;" id="">
+                                                <tbody style="background: #fff;">
                                                 <tr class="content">
                                                     <!-- 리스트 반복구간 시작 -->
                                                     <td class="im-xs-align-top">
                                                         <a class="im-flex im-justify-between"
-                                                           href="/shop_mypage/?m2=order&amp;idx=94638288"
+                                                           href="http://localhost:10001/mypage/orderdetail"
                                                            target="_blank">
                                                             <div class="im-flex">
                                                                 <img src="https://cdn.imweb.me/thumbnail/20220117/6a329ba1bf9e7.jpg"
@@ -333,8 +342,7 @@ doz_footer_repeat="N" doz_category="default">
                                                         <div class="im-inline-flex im-flex-col-reverse im-xs-flex im-xs-flex-row-reverse im-xs-flex-wrap-reverse _btn_tool_row"
                                                              style="width: 87px;">
                                                             <a class="btn btn-order-cancel im-flex-1"
-                                                               href="javascript:;"
-                                                               onclick="SITE_SHOP_MYPAGE.showCancelDetail(96538853)">취소상세</a>
+                                                               href="http://localhost:10001/mypage/orderdetail">주문상세</a>
                                                         </div>
                                                     </td>
                                                 </tr><!-- 리스트 반복구간 종료 -->
@@ -415,13 +423,12 @@ doz_footer_repeat="N" doz_category="default">
                                                         <div class="im-inline-flex im-flex-col-reverse im-xs-flex im-xs-flex-row-reverse im-xs-flex-wrap-reverse _btn_tool_row"
                                                              style="width: 87px;">
                                                             <a class="btn btn-order-cancel im-flex-1"
-                                                               href="javascript:;"
-                                                               onclick="SITE_SHOP_MYPAGE.showCancelDetail(95608757)">취소상세</a>
+                                                               href="javascript:;">주문상세</a>
                                                         </div>
                                                     </td>
                                                 </tr><!-- 리스트 반복구간 종료 -->
                                                 </tbody>
-                                                <tbody id="shop_mypage_orderlist_empty" style="display: none">
+                                                <tbody style="display: none"><!--id="shop_mypage_orderlist_empty"-->
                                                 <tr style="background: transparent; padding: 0">
                                                     <td colspan="2"
                                                         style="padding: 70px; text-align: center;">
@@ -433,7 +440,7 @@ doz_footer_repeat="N" doz_category="default">
                                             </table><!-- 주문별 반복구간 종 -->
                                         </div>
                                         <div style="font-size: 15px; padding: 70px; text-align: center; display: none;"
-                                             class="body_font_color_40" id="shop_mypage_orderlist_empty">
+                                             class="body_font_color_40"> <!--id="shop_mypage_orderlist_empty"-->
                                             loading...</div>
 
                                         <div style="font-size:15px; padding: 15px;"
@@ -457,6 +464,7 @@ doz_footer_repeat="N" doz_category="default">
     </div>
 </main>
 </div>
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/pickup/pickWantedList.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
+    <link rel="stylesheet" href="/css/fix/footer1.css">
+    <link rel="stylesheet" href="/css/fix/footer2.css">
 </head>
 
 <body class="sent-requests" data-modal-open-count="0" style>
+<header th:replace="/app/fix/header.html :: header"></header>
 <div id="app" data-browser="Chrome" data-is-loaded="true" class>
 
     <div id="app-body">
@@ -328,6 +337,7 @@
         </article>
     </div>
 </div>
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
 
 </html>

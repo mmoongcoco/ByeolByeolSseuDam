@@ -1816,7 +1816,7 @@ a:focus, a:hover, a:active {
 }
 
 .bt-minus::before {
-    content: "－";
+    content: "─";
 }
 
 .sr-only {
@@ -1900,7 +1900,7 @@ a:focus, a:hover, a:active {
 }
 
 .bt-plus::before {
-    content: "＋";
+    content: "┼";
 }
 
 .absolute {
@@ -1997,7 +1997,7 @@ a:focus, a:hover, a:active {
     bottom: 0;
     left: 0;
     z-index: 1050;
-    /* display: none; */
+    display: none;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
     outline: 0;

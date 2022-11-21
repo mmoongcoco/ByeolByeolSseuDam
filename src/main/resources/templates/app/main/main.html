@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>숨고 메인</title>
+    <title>별별쓰담</title>
     <style type="text/css">
         .resize-observer[data-v-b329ee4c] {
             position: absolute;
@@ -44,9 +43,18 @@
     <link rel="stylesheet" href="/css/main/main200.css">
     <link rel="stylesheet" href="/css/main/main199.css">
     <link rel="stylesheet" href="/css/main/main201.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
+    <link rel="stylesheet" href="/css/fix/footer1.css">
+    <link rel="stylesheet" href="/css/fix/footer2.css">
 </head>
 
 <body>
+<header th:replace="/app/fix/header.html :: header"></header>
 <div id="app-body">
     <div class="home" data-v-1346aca8="">
 
@@ -741,9 +749,9 @@
                                     <a data-v-2caa2ac0="" data-v-58af04c6="" href="/profile/users/2885276?from=main_best_pro" class="" tabindex="-1" data-v-e4caeaf8=""  style="width: 100%; display: inline-block;">
                                         <div data-v-2caa2ac0="" data-testid="main-pro-card" class="main-pro-card">
                                             <section data-v-2caa2ac0="" class="header">
-                                                <div data-v-2caa2ac0="" class="thumb" data-src="https://dmmj3ljielax6.cloudfront.net/upload/profile/d9a169e3-ff36-4af1-9d64-624638410c3b.jpg" lazy="loaded" style="background-image: url(&quot;https://dmmj3ljielax6.cloudfront.net/upload/profile/d9a169e3-ff36-4af1-9d64-624638410c3b.jpg&quot;);"></div>
+                                                <div data-v-2caa2ac0="" class="thumb" data-src="https://dmmj3ljielax6.cloudfront.net/upload/profile/d9a169e3-ff36-4af1-9d64-624638410c3b.jpg" lazy="loaded" style="background-image: url(&quot;https://dmmj3ljielax6.cloudfront.net/upload/profile/d9a169e3-ff36-4af1-9d64-624638410c3b.jpg&qu)"></div>
                                                 <div data-v-2caa2ac0="" class="review">
-                                                    <img data-v-2caa2ac0=""src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im03LjQ5NiAxLjU5NiAxLjQwNyAyLjc0MiAzLjE0NS40NGMuOTEuMTI3IDEuMjc1IDEuMjA0LjYxNSAxLjgyMmwtMi4yNzYgMi4xMzQuNTM4IDMuMDE1Yy4xNTUuODcyLS43OTcgMS41MzgtMS42MTIgMS4xMjZMNi41IDExLjQ1MmwtMi44MTMgMS40MjNjLS44MTUuNDEyLTEuNzY3LS4yNTQtMS42MTItMS4xMjZsLjUzOC0zLjAxNUwuMzM3IDYuNmMtLjY2LS42MTgtLjI5Ni0xLjY5NS42MTUtMS44MjJsMy4xNDUtLjQ0IDEuNDA3LTIuNzQyQzUuOTEyLjggNy4wODguOCA3LjQ5NiAxLjU5NiIgZmlsbD0iI0ZGQ0UyMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=">
+                                                    <img data-v-2caa2ac0="" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im03LjQ5NiAxLjU5NiAxLjQwNyAyLjc0MiAzLjE0NS40NGMuOTEuMTI3IDEuMjc1IDEuMjA0LjYxNSAxLjgyMmwtMi4yNzYgMi4xMzQuNTM4IDMuMDE1Yy4xNTUuODcyLS43OTcgMS41MzgtMS42MTIgMS4xMjZMNi41IDExLjQ1MmwtMi44MTMgMS40MjNjLS44MTUuNDEyLTEuNzY3LS4yNTQtMS42MTItMS4xMjZsLjUzOC0zLjAxNUwuMzM3IDYuNmMtLjY2LS42MTgtLjI5Ni0xLjY5NS42MTUtMS44MjJsMy4xNDUtLjQ0IDEuNDA3LTIuNzQyQzUuOTEyLjggNy4wODguOCA3LjQ5NiAxLjU5NiIgZmlsbD0iI0ZGQ0UyMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=">
                                                     <span data-v-2caa2ac0="" class="rate">4.9</span>
                                                 </div>
                                             </section>
@@ -1699,6 +1707,7 @@
     <!---->
 </div>
 </div>
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
 <script>
 

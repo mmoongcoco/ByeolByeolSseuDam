@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>장바구니</title>
+    <title>별별쓰담 | 장바구니</title>
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/market/marketBasket.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
+    <link rel="stylesheet" href="/css/fix/footer1.css">
+    <link rel="stylesheet" href="/css/fix/footer2.css">
 </head>
-
 <body class="doz_sys  _body_menu_m2020010384a0229905583  shop_cart  fixed-menu-on new_fixed_menu_on new_header_site"
-      id="doz_body"></body>
+      id="doz_body">
+<header th:replace="/app/fix/header.html :: header"></header>
 <div doz_type="section"
      class="section_wrap  pc_section    section_first _section_first   mobile_section_first    side_basic     "
      id="s202001034d12264e5bce8" doz_change_mobile="N" doz_aside="N" doz_side_width="200" doz_side_margin="0"
@@ -22,9 +30,6 @@
     </div>
     <div class="section_bg_color _section_bg_color"
          style="background-color:#ffffff;  position: absolute;left: 0;top: 0;right: 0; bottom: 0;"></div>
-
-
-
     <main>
         <div doz_type="inside" class="inside">
             <div doz_type="row" doz_grid="12" class="doz_row">
@@ -108,7 +113,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="im-cart-img-wrap im-grow im-xs-flex im-xs-flex-col">
-                                                        <a class="cart-item-wrap" href="/kitchen/?idx=147">
+                                                        <a class="cart-item-wrap" href="http://localhost:10001/market/detail">
                                                             <div class="cart-item-img">
                                                                 <img src="https://cdn.imweb.me/thumbnail/20201125/a1f4cba207bf1.jpg"
                                                                      alt="cart item">
@@ -492,7 +497,7 @@
                                            style="display: flex;">주문하기</a>
 
                                     </div>
-                                    <a href="./" class="cart-ctn ctn _fade_link">계속 쇼핑하기</a>
+                                    <a href="javascript:basketModalClose();" class="cart-ctn ctn _fade_link">계속 쇼핑하기</a>
                                 </div>
                                 <div class="im-cart-info hidden-lg hidden-md hidden-sm">
                                     <p class="no-margin-bottom">결제 시 추가 할인 적용에 따라 배송비가 변경될 수 있습니다.</p>
@@ -509,7 +514,7 @@
                                             <div class="top-block">
                                                 <div class="set-tit text-center">옵션 변경</div>
                                                 <a href="javascript:;" data-dismiss="modal"
-                                                   class="bt-close bt bt-flat bt-default _modal_close_btn"><i
+                                                   class="bt-close bt bt-flat bt-default btn-cancel _modal_close_btn"><i
                                                         class="btl bt-times"></i></a>
                                             </div>
                                             <div class="container-fluid" style="max-height: 570px; overflow-y: auto;">
@@ -603,6 +608,7 @@
         </div>
     </main>
 </div>
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/market/marketBasket.js"></script>

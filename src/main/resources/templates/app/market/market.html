@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마켓</title>
+    <title>별별쓰담 | 별별마켓</title>
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/market/market.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
 </head>
-
 <body>
+<header th:replace="/app/fix/header.html :: header"></header>
 <div id="app-body">
     <div class="instant-purchase-container">
         <main data-v-72c8052a="" data-testid="ip-product-list" class="ip-product-list">
             <div data-v-e0e63576="" data-v-193e7af6="" data-v-72c8052a="" class="observer-container">
                 <header data-v-193e7af6="" data-v-e0e63576="" data-observe="page-heading" class="page-heading"
                         id="page-heading">
-                    <h1 data-v-193e7af6="" data-v-e0e63576="" class="page-title">마켓</h1>
+                    <h1 data-v-193e7af6="" data-v-e0e63576="" class="page-title">별별마켓</h1>
                 </header>
                 <!---->
             </div>
@@ -46,15 +52,15 @@
                         <!---->
                         <div data-v-78206d9f="" class="keyword-box">
                             <ul data-v-78206d9f="">
-                                <li data-v-78206d9f="" class="title">추천 서비스</li>
-                                <li data-v-78206d9f="" class=""> 로고 디자인 </li>
-                                <li data-v-78206d9f="" class=""> 보컬 레슨 </li>
-                                <li data-v-78206d9f="" class=""> 사진 촬영 </li>
-                                <li data-v-78206d9f="" class=""> PPT 디자인 </li>
-                                <li data-v-78206d9f="" class=""> 영상 제작 </li>
-                                <li data-v-78206d9f="" class=""> 자소서 </li>
-                                <li data-v-78206d9f="" class=""> 일러스트 </li>
-                                <li data-v-78206d9f="" class=""> 상세페이지 제작 </li>
+                                <li data-v-78206d9f="" class="title">추천 상품</li>
+                                <li data-v-78206d9f="" class=""> 대나무 칫솔 </li>
+                                <li data-v-78206d9f="" class=""> 실리콘 빨대 </li>
+                                <li data-v-78206d9f="" class=""> 고체 치약 </li>
+                                <li data-v-78206d9f="" class=""> 나무 스푼 </li>
+                                <li data-v-78206d9f="" class=""> 유기농 수건 </li>
+                                <li data-v-78206d9f="" class=""> 설거지바 </li>
+                                <li data-v-78206d9f="" class=""> 세탁비누 </li>
+                                <li data-v-78206d9f="" class=""> 다회용 배변패드 </li>
                             </ul>
                         </div>
                         <!---->
@@ -68,25 +74,25 @@
                                               class="btn router-link-active btn-link" target="_self"> 홈 </a></li>
                     <li data-v-e052d09c="" id="group-1" data-testid="group-filter"><a data-v-e052d09c=""
                                                                                       href="/ip/products?group_slug=%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4" class="btn btn-link"
-                                                                                      target="_self"> 비즈니스 </a></li>
+                                                                                      target="_self"> 생활 </a></li>
                     <li data-v-e052d09c="" id="group-2" data-testid="group-filter"><a data-v-e052d09c=""
                                                                                       href="/ip/products?group_slug=%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC"
-                                                                                      class="btn btn-link router-link-exact-active" target="_self"> 라이프스타일 </a></li>
+                                                                                      class="btn btn-link router-link-exact-active" target="_self"> 주방 </a></li>
                     <li data-v-e052d09c="" id="group-3" data-testid="group-filter"><a data-v-e052d09c=""
                                                                                       href="/ip/products?group_slug=%EB%AF%B8%EB%94%94%EC%96%B4" class="btn btn-link"
-                                                                                      target="_self"> 미디어 </a></li>
+                                                                                      target="_self"> 욕실 </a></li>
                     <li data-v-e052d09c="" id="group-4" data-testid="group-filter"><a data-v-e052d09c=""
                                                                                       href="/ip/products?group_slug=%EC%B7%A8%EB%AF%B8" class="btn btn-link" target="_self">
-                        취미 </a></li>
+                        식품 </a></li>
                     <li data-v-e052d09c="" id="group-5" data-testid="group-filter"><a data-v-e052d09c=""
                                                                                       href="/ip/products?group_slug=%EC%8B%A4%EB%AC%B4" class="btn btn-link" target="_self">
-                        실무 </a></li>
+                        취미 </a></li>
                     <li data-v-e052d09c="" id="group-6" data-testid="group-filter"><a data-v-e052d09c=""
                                                                                       href="/ip/products?group_slug=%ED%95%99%EC%97%85" class="btn btn-link" target="_self">
-                        학업 </a></li>
+                        문구 </a></li>
                     <li data-v-e052d09c="" id="group-7" data-testid="group-filter"><a data-v-e052d09c=""
                                                                                       href="/ip/products?group_slug=%EA%B3%B5%EB%8F%99%EA%B5%AC%EB%A7%A4" class="btn btn-link"
-                                                                                      target="_self"> 공동구매 </a></li>
+                                                                                      target="_self"> 반려동물 </a></li>
                 </ul>
             </section>
             <section data-v-72c8052a="" class="page-content">
@@ -99,7 +105,7 @@
                             </section>
                             <div data-v-18e85706="" class="product-list responsive">
                                 <article data-v-85c61b32="" data-v-18e85706="" class="product-list-item responsive">
-                                    <a data-v-85c61b32="" href="/ip/products/636261e61511bf6f50ce7101" class=""
+                                    <a data-v-85c61b32="" href="http://localhost:10001/market/detail" class=""
                                        data-testid="product-list-item">
                                         <div data-v-85c61b32="" class="item-image">
                                             <article data-v-1a98b297="" data-v-85c61b32="" class="preview-image">

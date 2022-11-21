@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/login/login.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
+    <link rel="stylesheet" href="/css/fix/footer1.css">
+    <link rel="stylesheet" href="/css/fix/footer2.css">
 </head>
 <body class="login">
+<header th:replace="/app/fix/header.html :: header"></header>
 <div id="app-body">
     <div data-testid="login-page" class="login-page" data-v-7feb86a2="">
         <h2 data-v-7feb86a2="">로그인</h2>
@@ -55,7 +64,7 @@
                                     </div>
                                 </span></button></div>
                     <div data-v-149435f8="" class="reset-password-or-signup-wrapper col-12">
-                        <div data-v-149435f8=""><a data-v-149435f8="" href="/find-password/" class="">비밀번호 찾기</a>
+                        <div data-v-149435f8=""><a data-v-149435f8="" href="http://localhost:10001/login/findpassword" class="">비밀번호 찾기</a>
                             <div data-v-149435f8="" class="line"></div><a data-v-149435f8=""
                                                                           href="/sign-up?from=loginpage" class="">회원가입</a>
                         </div>
@@ -116,6 +125,7 @@
         <div class="swal2-footer" style="display: none;"></div>
     </div>
 </div> -->
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>

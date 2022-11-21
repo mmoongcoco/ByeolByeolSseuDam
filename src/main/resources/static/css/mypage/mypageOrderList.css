@@ -846,6 +846,219 @@ body.shop_mypage a, body.shop_mypage a:hover, .list_popover, .shop_view .modal_p
     word-break: break-all;
 }
 
+/* 취소 상세 모달 start */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.modal {
+    text-align: center;
+    z-index: 17000;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    margin: 80px auto;
+}
+
+.doz_sys .modal-dialog {
+    margin-bottom: 80px;
+    margin: 15% 30%;
+}
+
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgb(0 0 0 / 50%);
+    box-shadow: 0 3px 9px rgb(0 0 0 / 50%);
+    outline: 0;
+}
+
+.doz_sys .modal-content {
+    border-radius: 3px;
+    color: #212121;
+    -webkit-box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
+    box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
+    border: none;
+}
+
+.layer_pop {
+    -webkit-transition: left 0.7s ease;
+    -o-transition: left 0.7s ease;
+    transition: left 0.7s ease;
+}
+
+.layer_pop .top-block {
+    position: relative;
+    font-size: 13px;
+    padding: 14px 20px;
+    height: 50px;
+    text-align: right;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.set-tit {
+    position: absolute;
+    font-size: 16px;
+    line-height: 24px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.doz_sys .text-brand {
+    color: #00c7ae !important;
+}
+
+.shop_mypage a {
+    color: #212121;
+}
+
+.btl {
+    display: inline-block;
+    font: normal normal normal 14px/1 "Black Tie";
+    font-family: 'Black Tie'!important;
+    font-size: inherit;
+    vertical-align: -14.28571429%;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0,0);
+}
+
+.btl {
+    font-weight: 200;
+}
+
+.bt-times:before {
+    content: "✕";
+}
+
+.layer_pop .body-block {
+    padding: 24px;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.tabled {
+    display: table;
+}
+
+.body-block .prod_preview {
+    padding: 20px 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.width-2, .size-2 {
+    width: 80px;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.vertical-middle {
+    vertical-align: middle;
+}
+
+.text-15 {
+    font-size: 15px !important;
+}
+
+.text-13 {
+    font-size: 13px !important;
+}
+
+.text-gray-bright {
+    color: #757575 !important;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.body-block .prod_detail {
+    padding: 25px 15px 0;
+}
+
+.doz_sys .form-group {
+    margin-bottom: 25px;
+}
+
+.margin-bottom-xl {
+    margin-bottom: 8px !important;
+}
+
+.inline-blocked {
+    display: inline-block;
+}
+
+.text-bold {
+    font-weight: 600 !important;
+}
+
+.body-block .prod_detail .tabled {
+    padding: 5px 0;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #e5e5e5;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.width-3, .size-3 {
+    width: 120px;
+}
+
+.body-block .prod_detail .tabled .table-cell {
+    padding: 3px 0;
+}
+
+.foot-block {
+    padding-bottom: 15px;
+}
 
 
 
@@ -855,6 +1068,9 @@ body.shop_mypage a, body.shop_mypage a:hover, .list_popover, .shop_view .modal_p
 
 
 
+
+
+/* 취소 상세 모달 end */
 
 
 /* 미디어쿼리 */
@@ -868,6 +1084,20 @@ body.shop_mypage a, body.shop_mypage a:hover, .list_popover, .shop_view .modal_p
 @media (min-width: 768px){
     .col-sm-12 {
         width: 100%;
+    }
+}
+
+@media (min-width: 768px){
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 768px){
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+        box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
     }
 }
 

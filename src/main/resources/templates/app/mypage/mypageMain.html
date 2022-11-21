@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,17 @@
     <title>마이페이지 메인</title>
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/mypage/myPageMain.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
+    <link rel="stylesheet" href="/css/fix/footer1.css">
+    <link rel="stylesheet" href="/css/fix/footer2.css">
 </head>
-
 <body>
+<header th:replace="/app/fix/headerlogin.html :: header"></header>
 <div id="app-body">
     <div class="container container-md">
         <div data-v-086b5673="" class="mypage-container">
@@ -44,7 +52,7 @@
                     </div>
                     </li>
                     <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container soomgopay-list"><a
-                            data-v-69924ad4="" href="/mypage/soomgo-pay" class="sub-menu-list">
+                            data-v-69924ad4="" href="http://localhost:10001/mypage/badge" class="sub-menu-list">
                         <div data-v-69924ad4="" class="sub-content">
                             <div data-v-69924ad4="" class="sub-menu"><span data-v-69924ad4=""
                                                                            class="sub-menu-title updated">나의 쓰담배지</span></div>
@@ -58,7 +66,7 @@
                         <!---->
                     </a></li>
                     <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container soomgopay-list"><a
-                            data-v-69924ad4="" href="/mypage/soomgo-pay" class="sub-menu-list">
+                            data-v-69924ad4="" href="http://localhost:10001/mypage/course" class="sub-menu-list">
                         <div data-v-69924ad4="" class="sub-content">
                             <div data-v-69924ad4="" class="sub-menu"><span data-v-69924ad4=""
                                                                            class="sub-menu-title updated">나의 쓰담코스</span></div>
@@ -72,7 +80,7 @@
                         <!---->
                     </a></li>
                     <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container soomgopay-list"><a
-                            data-v-69924ad4="" href="/mypage/soomgo-pay" class="sub-menu-list">
+                            data-v-69924ad4="" href="http://localhost:10001/mypage/mypoint" class="sub-menu-list">
                         <div data-v-69924ad4="" class="sub-content">
                             <div data-v-69924ad4="" class="sub-menu"><span data-v-69924ad4=""
                                                                            class="sub-menu-title updated">나의 쓰담포인트</span></div>
@@ -92,7 +100,7 @@
                         <div data-v-3fa472b3="" class="sub-header"></div>
                     </li>
                     <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container pro-bucket"><a
-                            data-v-69924ad4="" href="/pro-bucket?from=mypage" class="sub-menu-list">
+                            data-v-69924ad4="" href="http://localhost:10001/mypage/orderlist" class="sub-menu-list">
                         <div data-v-69924ad4="" class="sub-content">
                             <div data-v-69924ad4="" class="sub-menu"><span data-v-69924ad4=""
                                                                            class="sub-menu-title">주문조회</span></div>
@@ -106,7 +114,7 @@
                         <!---->
                     </a></li>
                     <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container pro-bucket"><a
-                            data-v-69924ad4="" href="/pro-bucket?from=mypage" class="sub-menu-list">
+                            data-v-69924ad4="" href="http://localhost:10001/mypage/cancellist" class="sub-menu-list">
                         <div data-v-69924ad4="" class="sub-content">
                             <div data-v-69924ad4="" class="sub-menu"><span data-v-69924ad4=""
                                                                            class="sub-menu-title">주문취소</span></div>
@@ -119,20 +127,17 @@
                         </div>
                         <!---->
                     </a></li>
-                    <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container pro-bucket"><a
+                    <!-- <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container pro-bucket"><a
                             data-v-69924ad4="" href="/pro-bucket?from=mypage" class="sub-menu-list">
                         <div data-v-69924ad4="" class="sub-content">
                             <div data-v-69924ad4="" class="sub-menu"><span data-v-69924ad4=""
                                                                            class="sub-menu-title">장바구니</span></div>
-                            <!---->
                         </div>
-                        <!---->
                         <div data-v-69924ad4="" class="arrow"><span data-v-69924ad4="" class="right-arrow"><img
                                 data-v-69924ad4=""
                                 src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg"></span>
                         </div>
-                        <!---->
-                    </a></li>
+                    </a></li> -->
                 </ul>
                 <ul data-v-3fa472b3="" class="underline">
                     <li data-v-3fa472b3="" class="main-menu">나의 활동
@@ -140,7 +145,7 @@
                         <div data-v-3fa472b3="" class="sub-header"></div>
                     </li>
                     <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container my-ip-buy-orders"><a
-                            data-v-69924ad4="" href="/mypage/ip/orders" class="sub-menu-list">
+                            data-v-69924ad4="" href="http://localhost:10001/mypage/pickuplist" class="sub-menu-list">
                         <div data-v-69924ad4="" class="sub-content">
                             <div data-v-69924ad4="" class="sub-menu"><span data-v-69924ad4=""
                                                                            class="sub-menu-title badge">수거신청내역</span></div>
@@ -154,7 +159,7 @@
                         <!---->
                     </a></li>
                     <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container my-ip-qna"><a
-                            data-v-69924ad4="" href="/mypage/ip/qna" class="sub-menu-list">
+                            data-v-69924ad4="" href="http://localhost:10001/mypage/program" class="sub-menu-list">
                         <div data-v-69924ad4="" class="sub-content">
                             <div data-v-69924ad4="" class="sub-menu"><span data-v-69924ad4=""
                                                                            class="sub-menu-title">수강내역</span></div>
@@ -174,7 +179,7 @@
                         <div data-v-3fa472b3="" class="sub-header"></div>
                     </li>
                     <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container soomgo-life-activities"><a
-                            data-v-69924ad4="" href="/mypage/community/activities" class="sub-menu-list">
+                            data-v-69924ad4="" href="http://localhost:10001/mypage/community" class="sub-menu-list">
                         <div data-v-69924ad4="" class="sub-content">
                             <div data-v-69924ad4="" class="sub-menu"><span data-v-69924ad4=""
                                                                            class="sub-menu-title">쓰담글 / 쓰담댓글</span></div>
@@ -194,7 +199,7 @@
                         <div data-v-3fa472b3="" class="sub-header"></div>
                     </li>
                     <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container notification"><a
-                            data-v-69924ad4="" href="/setting/notification" class="sub-menu-list">
+                            data-v-69924ad4="" href="http://localhost:10001/mypage/myinfo" class="sub-menu-list">
                         <div data-v-69924ad4="" class="sub-content">
                             <div data-v-69924ad4="" class="sub-menu"><span data-v-69924ad4=""
                                                                            class="sub-menu-title">정보수정 / 탈퇴</span></div>
@@ -209,7 +214,7 @@
                     </a></li>
                     <li data-v-69924ad4="" data-v-3fa472b3="" class="sub-menu-container notice"><a
                             data-v-69924ad4=""
-                            href="https://help.soomgo.com/hc/ko/categories/360002081551-%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD"
+                            href="http://localhost:10001/test/notice"
                             class="sub-menu-list">
                         <div data-v-69924ad4="" class="sub-content">
                             <div data-v-69924ad4="" class="sub-menu"><span data-v-69924ad4=""
@@ -230,6 +235,7 @@
         </div>
     </div>
 </div>
+<!--<footer th:replace="/app/fix/footer.html :: footer"></footer>-->
 </body>
 
 </html>

@@ -8,9 +8,15 @@
     <title>게시판 글쓰기</title>
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/community/communityWrite.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
 </head>
-
 <body>
+<header th:replace="/app/fix/header.html :: header"></header>
 <div id="app-body">
     <div data-v-b31e1ebe="" class="community-container container">
         <div data-v-54d1e5f9="" data-v-b31e1ebe="" class="soomgo-life-container">
@@ -30,17 +36,19 @@
                                      class="btn btn-secondary disabled write-post-submit">등록</button></div>
                 </div>
                 <div data-v-6ac96585="" data-v-30483cb0="" class="attach-file-wrapper">
-                    <div data-v-6ac96585="" class="attach-file-area">
-                        <div data-v-6ac96585="" class="add-image-icon"></div>
-                        <div data-v-6ac96585="" class="custom-file b-form-file file-input" aria-required="false"
-                             aria-invalid="false" id="__BVID__4799__BV_file_outer_"><input type="file"
-                                                                                           name="uploadFile" accept="image/jpg,image/jpeg,image/png,image/gif,image/bmp"
-                                                                                           multiple="multiple" class="custom-file-input" id="__BVID__4799"
-                                                                                           style="z-index: -5;"><label data-browse="Browse" class="custom-file-label"
-                                                                                                                       for="__BVID__4799"><span class="d-block form-file-text"
-                                                                                                                                                style="pointer-events: none;">No file chosen</span></label></div><span
-                            data-v-6ac96585="" class="image-count sg-text-body2 sg-font-regular">0/4</span>
-                    </div>
+                    <label>
+                        <div data-v-6ac96585="" class="attach-file-area">
+                            <div data-v-6ac96585="" class="add-image-icon"></div>
+                            <div data-v-6ac96585="" class="custom-file b-form-file file-input" aria-required="false"
+                                 aria-invalid="false" id="__BVID__4799__BV_file_outer_"><input type="file"
+                                                                                               name="uploadFile" accept="image/jpg,image/jpeg,image/png,image/gif,image/bmp"
+                                                                                               multiple="multiple" class="custom-file-input" id="__BVID__4799"
+                                                                                               style="z-index: -5;"><!-- <label data-browse="Browse" class="custom-file-label"
+                                    for="__BVID__4799"><span class="d-block form-file-text"
+                                        style="pointer-events: none;">No file chosen</span></label> --></div><span
+                                data-v-6ac96585="" class="image-count sg-text-body2 sg-font-regular">0/4</span>
+                        </div>
+                    </label>
                 </div>
                 <div data-v-33cf7b62="" data-v-30483cb0="" class="editor-body-container is-bottom-margin">
                     <div data-v-33cf7b62="" class="editor-body-wrapper">
@@ -56,6 +64,10 @@
                         </div>
                         <div data-v-33cf7b62="" class="divider-wrapper">
                             <hr data-v-33cf7b62="" class="hr-divider">
+                        </div>
+                        <div data-v-7d0a628e="" data-v-33cf7b62="" class="editor-image-list-wrapper">
+                            <div data-v-7d0a628e="" class="editor-image-list">
+                            </div>
                         </div>
                         <!---->
                         <div data-v-486b7620="" data-v-33cf7b62="" class="editor-contents"><span data-v-486b7620=""
@@ -83,7 +95,8 @@
         <div class="modal-dialog modal-md modal-dialog-centered"><span tabindex="0"></span>
             <div id="__BVID__540___BV_modal_content_" tabindex="-1" class="modal-content">
                 <header id="__BVID__540___BV_modal_header_" class="modal-header">
-                    <h5 id="__BVID__540___BV_modal_title_" class="modal-title">이런 활동은<br>글쓰기 이용제한이 될 수 있어요</h5><button type="button" aria-label="Close" class="close">×</button>
+                    <h5 id="__BVID__540___BV_modal_title_" class="modal-title">이런 활동은<br>글쓰기 이용제한이 될 수 있어요</h5>
+                    <button type="button" aria-label="Close" class="close">×</button>
                 </header>
                 <div id="__BVID__540___BV_modal_body_"
                      class="modal-body community-first-activity-notice-modal-body">

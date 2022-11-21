@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/pickup/pickDetail.css">
+    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="stylesheet" href="/css/fix/header74.css">
+    <link rel="stylesheet" href="/css/fix/header51.css">
+    <link rel="stylesheet" href="/css/fix/header76.css">
+    <link rel="stylesheet" href="/css/fix/header77.css">
+    <link rel="stylesheet" href="/css/fix/header37.css">
+    <link rel="stylesheet" href="/css/fix/footer1.css">
+    <link rel="stylesheet" href="/css/fix/footer2.css">
 </head>
 <body class="received-quotes">
+<header th:replace="/app/fix/header.html :: header"></header>
     <div id="app-body">
         <div class="received-quote-list" data-v-adb80f6e="">
             <div data-v-c85c3b6a="" data-v-adb80f6e="" class="requested-service-header"
@@ -101,6 +110,7 @@
             <!---->
         </div>
     </div>
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
 
 </html>

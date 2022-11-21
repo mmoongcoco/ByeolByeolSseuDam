@@ -24,7 +24,7 @@ public class MypageController {
         return "/app/mypage/mypageCancelList";
     }
 
-    @GetMapping("/orderlistdetail")
+    @GetMapping("/orderdetail")
     public String orderlistdetail(){
         return "/app/mypage/mypageOrderDetail";
     }

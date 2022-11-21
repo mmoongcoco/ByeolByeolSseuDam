@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/test/*")
 public class NoticeController {
 
-    @GetMapping("/Notice")
+    @GetMapping("/notice")
     public String Notice(){
         return "app/Notice/Notice";
     }
 
-    @GetMapping("/NoticeDetail")
+    @GetMapping("/noticedetail")
     public String NoticeDetail(){
         return "app/Notice/NoticeDetail";
     }

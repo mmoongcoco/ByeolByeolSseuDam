@@ -16,7 +16,7 @@ public class RecyclingController {
     }
 
 
-    @GetMapping("/recyclingIntro")
+    @GetMapping("/recyclingintro")
     public  String recyclingIntro(){
         return "app/Recycling/recyclingIntro";
     }

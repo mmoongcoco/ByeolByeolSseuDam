@@ -36,6 +36,7 @@ input {
     font: inherit;
     margin: 0;
     line-height: normal;
+    outline: none;
 }
 
 input, button, select, textarea {
@@ -421,6 +422,15 @@ h1 {
     padding: 6px 12px;
 }
 
+.modifyInfo {
+    display: block;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #00c7ae;
+    padding-top: 10px;
+    width: 80%;
+}
+
 .no-margin {
     margin: 0 !important;
 }
@@ -435,6 +445,12 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
     border-color: #00c7ae;
     color: #fff;
     border-width: 0px;
+}
+
+.cancelModifyBtn {
+    margin-top: 40px;
+    background-color: #fff !important;
+    color: #646464 !important;
 }
 
 .col-xs-6 {
@@ -556,6 +572,7 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
     padding-right: 30px;
     border-width: 0px;
 }
+
 
 .margin-top-xl {
     margin-top: 8px;
@@ -830,13 +847,40 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
     background: radial-gradient(#00c7ae 35%, #FFFFFF 45%);
 }
 
+.doz_sys .checkbox-styled:not(ie8) input:checked ~ span:before, .admin #edit_wrap .checkbox-styled:not(ie8) input:checked ~ span:before {
+    background: #00c7ae;
+    border: 1px solid #00c7ae;
+}
+
+.checkbox-styled:not(ie8) input ~ span:before {
+    top: 0.175em;
+    height: 1.67em;
+    width: 1.67em;
+    font-size: 0.75em;
+    font-size: max(0.75em, 9px);
+}
+
+.radio-styled:not(ie8) input ~ span:before {
+    top: calc((1.6em - 1.375em) * 0.5);
+}
+
 .doz_sys .radio-styled:not(ie8) input ~ span:before, .admin #edit_wrap .radio-styled:not(ie8) input:checked ~ span:before, .doz_sys .checkbox-styled:not(ie8) input ~ span:before, .admin #edit_wrap .checkbox-styled:not(ie8) input:checked ~ span:before {
     border-color: rgb(100,100,100);
     border-color: rgba(100,100,100,0.4);
 }
 
-.radio-styled:not(ie8) input ~ span:before {
-    top: calc((1.6em - 1.375em) * 0.5);
+.checkbox-styled:not(ie8) input:checked ~ span:before {
+    content: '✔';
+    font-family: 'Black Tie';
+    vertical-align: -14.28571429%;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0,0);
+    background: #1A6DFF;
+    border: 1px solid #1A6DFF;
+    border-left-width: 2px;
+    border-right-width: 2px;
 }
 
 .radio-styled:not(ie8) input ~ span:before {
@@ -913,14 +957,6 @@ select.form-control option {
 
 .text-16 {
     font-size: 16px !important;
-}
-
-.checkbox-styled:not(ie8) input ~ span:before {
-    top: 0.175em;
-    height: 1.67em;
-    width: 1.67em;
-    font-size: 0.75em;
-    font-size: max(0.75em, 9px);
 }
 
 .doz_sys #s202001037c5d53c2ffaa5 .bg-brand, .doz_sys #s202001037c5d53c2ffaa5 .bg-brand span, .doz_sys #s202001037c5d53c2ffaa5 .btn-brand {

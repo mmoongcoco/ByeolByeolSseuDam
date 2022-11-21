@@ -15,7 +15,7 @@ public class ProgramController {
         return "app/Program/program";
     }
 
-    @GetMapping("/programDetail")
+    @GetMapping("/programdetail")
     public String  programDetail(){
         return "app/Program/programDetail";
     }

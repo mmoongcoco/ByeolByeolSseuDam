@@ -12,13 +12,13 @@ public class RecyclingController {
 
     @GetMapping("/recycling")
     public String recycling(){
-        return "app/Recycling/recycling";
+        return "app/recycling/recycling";
     }
 
 
     @GetMapping("/recyclingintro")
     public  String recyclingIntro(){
-        return "app/Recycling/recyclingIntro";
+        return "app/recycling/recyclingIntro";
     }
 
     @GetMapping("/question")

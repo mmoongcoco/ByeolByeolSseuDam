@@ -135,7 +135,7 @@ a {
 
 
 
-.search::before {
+/*.search::before {
     font-family: "copenhagen-icons";
     font-style: normal;
     font-weight: normal;
@@ -152,7 +152,7 @@ a {
     font-size: 18px;
     position: absolute;
     left: 15px;
-}
+}*/
 
 
 input {

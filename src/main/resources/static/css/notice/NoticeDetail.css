@@ -115,7 +115,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     position: relative;
 }
 
-.search::before {
+/*.search::before {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -125,7 +125,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-size: 18px;
     position: absolute;
     left: 15px;
-}
+}*/
 
 input {
     font-weight: 300;

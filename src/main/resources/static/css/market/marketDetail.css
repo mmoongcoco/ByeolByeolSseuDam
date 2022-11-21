@@ -1317,6 +1317,7 @@ section.no-space[data-v-08563466] {
     left: -1px;
     top: 1px;
     height: 28px;
+    cursor: pointer;
 }
 
 .textarea_block:after {
@@ -1675,7 +1676,7 @@ section.product-options::-webkit-scrollbar{
     position: relative;
 }
 
-.form-select-wrap .dropdown-toggle {
+.form-select-wrap .market-dropdown-toggle {
     display: block;
     font-size: 14px;
     padding: 8px 24px 8px 12px;
@@ -1692,7 +1693,7 @@ section.product-options::-webkit-scrollbar{
     cursor: pointer;
 }
 
-.dropdown-toggle:focus {
+.market-dropdown-toggle:focus {
     outline: 0;
 }
 
@@ -1730,6 +1731,19 @@ a:focus, a:hover, a:active {
     padding: 9px 12px;
     line-height: normal;
     border: 1px solid #ddd;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0 !important;
+    clear: both;
+    font-weight: 400;
+    color: #323232;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
 }
 
 .blocked {

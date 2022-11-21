@@ -191,10 +191,12 @@
         </div>
     </div>
 </div>
-<footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
+    let emailFilter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    let pwFilter = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W).{8,20}$/;
+
 
     $("#__BVID__267").on("blur", function () {
         let $inputName = $("#__BVID__267");
@@ -224,7 +226,7 @@
             $inputEmail.addClass("is-invalid")
             $inputEmail.siblings(".invalid-feedback").find(".error").css("display", "block")
             $inputEmail.siblings(".invalid-feedback").find(".error").text("이메일 주소를 입력해주세요.")
-        } else if (!$inputEmail.val().includes("@") || !$inputEmail.val().includes(".com")) {
+        } else if (!emailFilter.test($inputEmail.val())) {
             $inputEmail.addClass("is-invalid")
             $inputEmail.siblings(".invalid-feedback").find(".error").css("display", "block")
             $inputEmail.siblings(".invalid-feedback").find(".error").text("올바른 이메일 주소를 입력해주세요.")
@@ -240,7 +242,7 @@
         if(!$inputPw.val()){
             $inputPw.attr("class", "input-lg form-control is-invalid invalid")
             $inputPw.siblings(".invalid-feedback").find(".error").text("비밀번호를 입력해주세요.")
-        }else if(!(/^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$/.test($inputPw.val()))){
+        }else if(!pwFilter.test($inputPw.val())){
             $inputPw.attr("class", "input-lg form-control is-invalid invalid")
             $inputPw.siblings(".invalid-feedback").find(".error").text("영문+숫자 조합 8자리 이상 입력해주세요.")
         }else{
@@ -264,7 +266,7 @@
             $("p.validation").css("color", "#fa5963")
             $("p.validation").css("display", "block")
             $("p.validation").text("휴대전화 번호를 입력해주세요")
-        } else if (!$inputPhone.val().startsWith("010") || $inputPhone.val().length != 11 || $inputPhone.val().includes("-") || isNaN($inputPhone.val())) {
+        } else if (!$inputPhone.val().startsWith("010") || $inputPhone.val().length != 11 || isNaN($inputPhone.val())) {
             $inputPhone.siblings("div").find(".send-button").attr("disabled", true)
             $inputPhone.siblings("div").find(".send-button").addClass("disabled")
             $inputPhone.addClass("error")

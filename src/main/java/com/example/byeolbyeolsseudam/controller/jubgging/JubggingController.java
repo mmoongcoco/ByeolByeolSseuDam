@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/test/*")
+@RequestMapping("/jubgging/*")
 public class JubggingController {
 
     @GetMapping("/jubgging-intro")

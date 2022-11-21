@@ -2088,6 +2088,7 @@ a:focus, a:hover, a:active {
     overflow-y: scroll;
     margin-top: 20px;
     margin-bottom: 15px;
+    max-width: 100%;
 }
 
 #scroll::-webkit-scrollbar { display: none; }

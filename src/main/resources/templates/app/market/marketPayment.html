@@ -19,8 +19,8 @@
 </head>
 
 <body
-        class="doz_sys  _body_menu_m202001030f7c4943b091a  shop_payment  fixed-menu-on new_fixed_menu_on new_header_site  loggedin new_fixed_header_active"
-        id="doz_body">
+class="doz_sys  _body_menu_m202001030f7c4943b091a  shop_payment  fixed-menu-on new_fixed_menu_on new_header_site  loggedin new_fixed_header_active"
+id="doz_body">
 <header th:replace="/app/fix/header.html :: header"></header>
 <div doz_type="section"
      class="section_wrap  pc_section    section_first _section_first   mobile_section_first    side_ static_section"
@@ -34,7 +34,7 @@
          style="  position: absolute;left: 0;top: 0;right: 0; bottom: 0;"></div>
     <main>
         <div doz_type="inside" class="inside">
-            <div doz_type="row" doz_grid="12" class="doz_row">
+            <div doz_type="modify-row" doz_grid="12" class="doz_modify-row">
                 <div doz_type="grid" doz_grid="12" class="col-dz col-dz-12">
                     <div doz_type="widget" id="w2020010365afdaf6c2088">
                         <div class="_widget_data " data-widget-name="쇼핑 결제 완료" data-widget-type="shop_payment"
@@ -55,9 +55,9 @@
                                            value="https://jigushop.co.kr/shop_payment/?order_code=o202211116e39b947da4ea">
                                     <h1 class="shop-tit hidden-sm hidden-xs ">결제하기</h1>
                                     <div class="order_wrap _order_wrap ">
-                                        <div class="tip-off ">
+                                        <div class="modify-tip-off ">
                                             <h6>주문 상품 정보</h6>
-                                            <div class="row">
+                                            <div class="modify-row">
                                                 <div class="col-xs-12 col_ctr">
                                                     <div>
                                                         <div class="shop_item_thumb">
@@ -88,10 +88,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tip-off">
+                                        <div class="modify-tip-off">
                                             <div class="order_detail">
                                                 <h6>주문자 정보</h6>
-                                                <div class="row no-padding _orderer_preview_wrap">
+                                                <div class="modify-row no-padding _orderer_preview_wrap">
                                                     <div class="col-xs-12 ordererInfo">
                                                         <div class="info text-14 text-gray">성은지</div>
                                                         <div class="info text-14 text-gray">01065559107</div>
@@ -110,7 +110,7 @@
                                                         <a onclick="void(0);" href="javascript:" class="btn-primary btn btn-sm-padding text-13 btn_top_right _btn_orderer_edit" role="button">수정</a>
                                                     </div>
                                                 </script>
-                                                <div class="row _orderer_edit_wrap no-padding-bottom"
+                                                <div class="modify-row _orderer_edit_wrap no-padding-bottom"
                                                      style="display: none;">
                                                     <div class="col-xs-6 space_right _orderer_name_wrap error_box"
                                                          data-error="N" data-error_msg="주문자 이름을 입력해주세요">
@@ -137,7 +137,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="tip-off shipping_wrap" style="">
+                                        <div class="modify-tip-off shipping_wrap" style="">
                                             <div class="order_detail">
                                                 <h6>배송 정보</h6>
                                                 <div class="_deliv_wrap">
@@ -148,7 +148,7 @@
                                                            data-group="shipping" name="shipping_code_type"
                                                            value="default">
 
-                                                    <div class="row" style="padding:0;">
+                                                    <div class="modify-row" style="padding:0;">
                                                         <div id="paymentShippingWrap" data-mode="default"
                                                              data-member="member" data-list_count="1" data-code=""
                                                              data-type="default">
@@ -206,7 +206,7 @@
                                                                             <span class="text-13">주문자 정보와
                                                                                         동일</span>
                                                                         </label>
-                                                                            <div class="row no-padding">
+                                                                            <div class="modify-row no-padding">
                                                                                 <div class="col-xs-6 space_right error_box _deliv_name_wrap"
                                                                                      data-error="N"
                                                                                      data-error_alert_msg="배송지 정보의 수령인 이름을 2 글자 이상 입력해 주세요"
@@ -246,7 +246,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div
-                                                                                    class="row no-padding margin-bottom-xxl _input_form_wrap error_box">
+                                                                                    class="modify-row no-padding margin-bottom-xxl _input_form_wrap error_box">
                                                                                 <input type="hidden"
                                                                                        name="deliv_address_code"
                                                                                        value="a20221104cc895ebec17a3">
@@ -330,7 +330,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row _deliv_memo_wrap no-padding margin-top-xxxl">
+                                                <div class="modify-row _deliv_memo_wrap no-padding margin-top-xxxl">
                                                     <div class="col-xs-12">
                                                         <p class="text-14">배송메모</p>
                                                         <div class="form-select-wrap memo-select-wrap">
@@ -362,13 +362,13 @@
                                         </div>
 
                                         <!-- 쇼핑 입력폼 -->
-                                        <div class="tip-off _form_config_wrap" style="display: none;">
+                                        <div class="modify-tip-off _form_config_wrap" style="display: none;">
                                         </div>
 
 
-                                        <div class="tip-off coupon on _discount_wrap">
+                                        <div class="modify-tip-off coupon on _discount_wrap">
                                             <h6>포인트</h6>
-                                            <div class="row wrapper">
+                                            <div class="modify-row wrapper">
                                                 <div class="col-xs-12 _point_wrap">
                                                     <p class="text-14 margin-bottom-xl">포인트</p>
                                                     <div class="clearfix" style="display: flex; justify-content: space-around;">
@@ -377,14 +377,14 @@
                                                                    class="form-control text-brand _input_point"
                                                                    name="use_point" data-group="point"
                                                                    autocomplete="off" type="text" value="0"
-                                                                   data-apply_point="0" style="height: 20px;">
+                                                                   data-apply_point="0">
                                                             <!-- 비활성화시 disabled 추가-->
                                                             <a class="text-16 btn_close _btn_point_clear"
                                                                href="javascript:"><i
                                                                     class="btl bt-times-circle"></i></a>
                                                         </div>
                                                         <a href="javascript:useMypoint();"
-                                                           class="btn btn-primary btn-sm disabled _btn_point_all_use">전액사용
+                                                           class="btn btn-primary btn-sm _btn_point_all_use">전액사용
                                                         </a><!-- 비활성화시 disabled 추가-->
                                                     </div>
                                                     <p class="text-13 margin-top-xl no-margin-bottom holding-mypoint">
@@ -398,10 +398,10 @@
                                     </div>
                                     <div class="item_wrap _fixed_wrap scroll-to-fixed-fixed" style="z-index: auto; position: static; top: auto;">
                                         <div class="_item_wrap _payment_info_wrap margin-bottom-xxl">
-                                            <div class="tip-off pay_area item no-margin  point_on">
+                                            <div class="modify-tip-off pay_area item no-margin  point_on">
                                                 <!--포인트 제도 사용시 point_on class 추가 -->
                                                 <h6>주문 요약</h6>
-                                                <div class="row">
+                                                <div class="modify-row">
                                                     <div class="col-xs-6 pay-txt col_ctr">
                                                         <p class="text-gray">상품가격</p>
                                                         <p class="text-gray">배송비</p>
@@ -412,7 +412,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="row total margin-top-xxl no-padding-bottom">
+                                                <div class="modify-row total margin-top-xxl no-padding-bottom">
                                                     <div class="col-md-6 col-xs-6 col_ctr">
                                                         <p class="no-margin text-14">총 주문금액</p>
                                                     </div>
@@ -423,18 +423,18 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tip-off bg-gray pay_area">
+                                            <div class="modify-tip-off bg-gray pay_area">
                                                 <p class="no-margin text-13">
                                                     <span class="text-brand">56</span> 포인트 적립예정
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="tip-off payment_method _payment_type_wrap no-margin">
+                                        <div class="modify-tip-off payment_method _payment_type_wrap no-margin">
                                             <h6>결제수단</h6>
                                             <input type="hidden" value="inicis" id="pg_type" name="pg_type">
                                             <input type="hidden" value="real" id="pg_status" name="pg_status">
                                             <div data-type="default" class="_pay_type_wrap _pay_type_wrap_item">
-                                                <div class="pay_type_wrap row">
+                                                <div class="pay_type_wrap modify-row">
                                                     <div class="pay_type_item col-xs-6 ">
                                                         <label class="radio-inline radio-styled no-padding">
                                                             <input type="radio" name="pay_type" value="card"
@@ -463,7 +463,7 @@
                                                                 class="form-select-wrap margin-top-xxl margin-bottom-xl _cash_idx_wrap">
                                                             <select class="form-control"
                                                                     style="color: #000;  z-index: 10" name="cash_idx"
-                                                                    id="cash_idx" data-group="payment" title="입금계좌 안내">
+                                                                     data-group="payment" title="입금계좌 안내">
                                                                 <option value="0">우리은행 1006301467973 주식회사피스온테이블
                                                                 </option>
                                                             </select>
@@ -483,7 +483,7 @@
                                                         <p class="text-left cash_receipt_wrap _cash_receipt_wrap">
                                                             <label
                                                                     class="checkbox-inline checkbox-styled no-padding no-margin-bottom">
-                                                                <input type="checkbox" id="cash_receipt_request"
+                                                                <input type="checkbox"
                                                                        name="cash_receipt_request" data-group="payment"
                                                                        value="ok">
                                                                 <span class="text-14">현금영수증 신청</span>
@@ -499,8 +499,8 @@
                                                         </div>
 
                                                         <div class="_deposit_info_wrap">
-                                                            <input type="text" class="form-control text-brand" id="depositor_name" name="depositor_name" data-group="payment" placeholder="입금자명 (미입력시 주문자명)" style="z-index:10;position:relative;" title="입금자명 (미입력시 주문자명)">
-                                                            <p class="text-gray-bright text-13 margin-top-xl" id="auto_cancel_info" style="margin-bottom: 0;">주문 후 24시간 동안 미입금시 자동 취소됩니다.</p>
+                                                            <input type="text" class="form-control text-brand" name="depositor_name" data-group="payment" placeholder="입금자명 (미입력시 주문자명)" style="z-index:10;position:relative;" title="입금자명 (미입력시 주문자명)">
+                                                            <p class="text-gray-bright text-13 margin-top-xl" style="margin-bottom: 0;">주문 후 24시간 동안 미입금시 자동 취소됩니다.</p>
                                                         </div>
 
                                                         <p class="text-left cash_receipt_wrap _cash_receipt_wrap">
@@ -529,10 +529,10 @@
                                         </div>
                                         <div class="_pay_cash_receipt_wrap" data-platform="pc">
                                             <div
-                                                    class="tip-off bg-gray cash_receipt_type_wrap _cash_receipt_type_wrap">
+                                                    class="modify-tip-off bg-gray cash_receipt_type_wrap _cash_receipt_type_wrap">
                                                 <p class="text-left no-margin">
                                                     <label class="radio-inline radio-styled no-padding">
-                                                        <input type="radio" id="cash_receipt_type"
+                                                        <input type="radio"
                                                                name="cash_receipt_type" class="_cash_receipt_type"
                                                                value="deducation" data-group="payment" checked=""
                                                                data-placeholder="휴대전화번호 입력"><span class="text-14"
@@ -547,7 +547,7 @@
                                                                                                  for="cash_receipt_type"
                                                                                                  style="padding-left:30px;">지출증빙용</span>
                                                     </label>
-                                                    <input type="text" id="cash_receipt_value"
+                                                    <input type="text"
                                                            name="cash_receipt_value" class="form-control"
                                                            data-group="payment"
                                                            style="margin-top:15px; background: #fff;" title="휴대전화번호 입력"
@@ -556,19 +556,19 @@
                                             </div>
                                         </div>
                                         <script id="PAY_CASH_RECEIPT_TEMPLATE" type="application/template">
-                                            <div class="tip-off bg-gray cash_receipt_type_wrap _cash_receipt_type_wrap">
+                                            <div class="modify-tip-off bg-gray cash_receipt_type_wrap _cash_receipt_type_wrap">
                                                 <p class="text-left no-margin">
                                                     <label class="radio-inline radio-styled no-padding">
-                                                        <input type="radio" id="cash_receipt_type" name="cash_receipt_type" class="_cash_receipt_type" value="deducation" data-group="payment" checked data-placeholder="휴대전화번호 입력"><span class="text-14" for="cash_receipt_type" style="padding-left:30px;">소득공제용</span>
+                                                        <input type="radio" name="cash_receipt_type" class="_cash_receipt_type" value="deducation" data-group="payment" checked data-placeholder="휴대전화번호 입력"><span class="text-14" for="cash_receipt_type" style="padding-left:30px;">소득공제용</span>
                                                     </label>
                                                     <label class="radio-inline radio-styled no-padding">
-                                                        <input type="radio" id="cash_receipt_type" name="cash_receipt_type" class="_cash_receipt_type" value="proof" data-group="payment" data-placeholder="사업자번호 입력"><span class="text-14" for="cash_receipt_type" style="padding-left:30px;">지출증빙용</span>
+                                                        <input type="radio" name="cash_receipt_type" class="_cash_receipt_type" value="proof" data-group="payment" data-placeholder="사업자번호 입력"><span class="text-14" for="cash_receipt_type" style="padding-left:30px;">지출증빙용</span>
                                                     </label>
-                                                    <input type="text" id="cash_receipt_value" name="cash_receipt_value" class="form-control" data-group="payment" style="margin-top:15px; background: #fff;" title="휴대전화번호 입력" placeholder="휴대전화번호 입력">
+                                                    <input type="text" name="cash_receipt_value" class="form-control" data-group="payment" style="margin-top:15px; background: #fff;" title="휴대전화번호 입력" placeholder="휴대전화번호 입력">
                                                 </p>
                                             </div>
                                         </script>
-                                        <div class="tip-off no-margin-bottom margin-top-xxl agree_wrap _agree_wrap">
+                                        <div class="modify-tip-off no-margin-bottom margin-top-xxl agree_wrap _agree_wrap">
                                             <div class="checkbox-group _checkbox_group">
                                                 <div class="checkbox checkbox-styled">
                                                     <label>
@@ -585,11 +585,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="http://localhost:10001/market/paid"
+                                        <a href="http://localhost:10001/market/paid" style="width: 100%"
                                            class="btn_start_payment text-16 text-bold btn bg-brand to-order blocked btn-lg margin-bottom-xl _btn_start_payment">결제하기</a>
                                     </div>
                                     <div class="spacer"
-                                         style="display: block; width: 325px; height: 644.014px; float: left;">
+                                         style="display: block; width: 325px; float: left;">
                                     </div>
                                 </div>
                             </form>

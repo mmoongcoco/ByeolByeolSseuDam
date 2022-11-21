@@ -88,7 +88,7 @@ em {
     padding-left: 15px;
 }
 
-.static_section, .static_section .inside, .static_section .doz_row, .static_section .col-dz {
+.static_section, .static_section .inside, .static_section .doz_modify-row, .static_section .col-dz {
     position: static;
 }
 
@@ -117,22 +117,22 @@ div[doz_type="section"]:before {
     position: relative;
 }
 
-.doz_sys .doz_row {
+.doz_sys .doz_modify-row {
     margin-left: 0;
     margin-right: 0;
 }
 
-.doz_sys .inside .doz_row {
+.doz_sys .inside .doz_modify-row {
     margin-left: -20px;
     margin-right: -20px;
 }
 
-.doz_sys .doz_row:before, .doz_sys .doz_row:after {
+.doz_sys .doz_modify-row:before, .doz_sys .doz_modify-row:after {
     content: '';
     display: block;
 }
 
-div[doz_type="row"]:before, div[doz_type="row"]:after {
+div[doz_type="modify-row"]:before, div[doz_type="modify-row"]:after {
     display: block;
     content: " ";
     clear: both;
@@ -197,21 +197,21 @@ h1 {
     width: 520px;
 }
 
-.order_wrap .tip-off {
+.order_wrap .modify-tip-off {
     padding: 30px;
     margin-bottom: 30px;
 }
 
-.shop_payment .tip-off {
+.shop_payment .modify-tip-off {
     background: #fff;
 }
 
-.shop_payment .order_wrap .tip-of {
+.shop_payment .order_wrap .modify-tip-off {
     padding: 24px;
     margin-bottom: 16px;
 }
 
-.shop-content.payment > div .tip-off {
+.shop-content.payment > div .modify-tip-off {
     border-color: rgba(100,100,100,0.1);
 }
 
@@ -219,22 +219,22 @@ h1 {
     font-weight: bold;
 }
 
-.tip-off h6 {
+.modify-tip-off h6 {
     margin: 0;
     font-size: 16px;
     font-weight: bold;
 }
 
-.tip-off h6 {
+.modify-tip-off h6 {
     padding-bottom: 20px;
 }
 
-.row:before {
+.modify-row:before {
     display: table;
     content: " ";
 }
 
-.row {
+.modify-row {
     margin-right: -15px;
     margin-left: -15px;
 }
@@ -248,10 +248,10 @@ h1 {
 }
 
 .col-xs-12 {
-    width: 94%;
+    width: 100%;
 }
 
-.row:after {
+.modify-row:after {
     clear: both;
     display: table;
     content: " ";
@@ -352,16 +352,16 @@ h1 {
     line-height: 1.4;
 }
 
-.order_wrap .tip-off, .item_wrap .tip-off {
+.order_wrap .modify-tip-off, .item_wrap .modify-tip-off {
     padding: 30px;
     margin-bottom: 30px;
 }
 
-.shop_payment .tip-off {
+.shop_payment .modify-tip-off {
     background: #fff;
 }
 
-.shop_payment .order_wrap .tip-off, .shop_payment .item_wrap .tip-off {
+.shop_payment .order_wrap .modify-tip-off, .shop_payment .item_wrap .modify-tip-off {
     padding: 24px;
     margin-bottom: 16px;
 }
@@ -370,17 +370,17 @@ h1 {
     font-weight: bold;
 }
 
-.tip-off h6 {
+.modify-tip-off h6 {
     margin: 0;
     font-size: 16px;
     font-weight: bold;
 }
 
-.tip-off h6 {
+.modify-tip-off h6 {
     padding-bottom: 20px;
 }
 
-.row {
+.modify-row {
     margin-right: -15px;
     margin-left: -15px;
 }
@@ -389,16 +389,16 @@ h1 {
     padding: 0 !important;
 }
 
-.order_detail .row {
+.order_detail .modify-row {
     padding-bottom: 30px;
 }
 
-.row:before {
+.modify-row:before {
     display: table;
     content: " ";
 }
 
-.row:after {
+.modify-row:after {
     clear: both;
 }
 
@@ -564,15 +564,27 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
     top: 0;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #00c7ae;
+    border-color: #00c7ae;
+}
+
 .btn-primary, .btn.btn-primary, .design_setting_view .btn-primary:hover {
-    background-color: #00a18d;
-    border-color: #009481;
+    /*background-color: #00a18d;*/
+    /*border-color: #009481;*/
+    background-color: #00C7AE;
+    border-color: #00C7AE;
     color: #fff;
     padding-left: 30px;
     padding-right: 30px;
     border-width: 0px;
 }
 
+.btn:hover {
+    background-color: #00a18d;
+    color: #fff;
+}
 
 .margin-top-xl {
     margin-top: 8px;
@@ -598,22 +610,22 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
     width: 325px;
 }
 
-.order_wrap .tip-off, .item_wrap .tip-off {
+.order_wrap .modify-tip-off, .item_wrap .modify-tip-off {
     padding: 30px;
     margin-bottom: 30px;
 }
 
-.shop_payment .order_wrap .tip-off, .shop_payment .item_wrap .tip-off {
+.shop_payment .order_wrap .modify-tip-off, .shop_payment .item_wrap .modify-tip-off {
     padding: 24px;
     margin-bottom: 16px;
 }
 
-.item_wrap .tip-off.item .row, .shop-content.payment > div .tip-off, .shop-content.payment .bottom-btn, .shop-content.payment > div.item_wrap {
+.item_wrap .modify-tip-off.item .modify-row, .shop-content.payment > div .modify-tip-off, .shop-content.payment .bottom-btn, .shop-content.payment > div.item_wrap {
     border-color: rgb(100,100,100);
     border-color: rgba(100,100,100,0.1);
 }
 
-.item_wrap .tip-off.item .row {
+.item_wrap .modify-tip-off.item .modify-row {
     padding: 15px 0;
     border-width: 1px 0 0 0;
     border-style: solid;
@@ -621,17 +633,17 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
     border-color: #e5e5e5;
 }
 
-.item_wrap .tip-off.item .row:nth-child(2) {
+.item_wrap .modify-tip-off.item .modify-row:nth-child(2) {
     padding-top: 0;
     border-top: 0;
 }
 
-.item_wrap .tip-off.item .row .col_ctr {
+.item_wrap .modify-tip-off.item .modify-row .col_ctr {
     padding-right: 0;
     padding-left: 0;
 }
 
-.item_wrap .tip-off.item .row:nth-child(2) .col_ctr {
+.item_wrap .modify-tip-off.item .modify-row:nth-child(2) .col_ctr {
     margin-top: 0;
 }
 
@@ -639,21 +651,21 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
     font-size: 14px;
 }
 
-.item_wrap .tip-off.item .row p {
+.item_wrap .modify-tip-off.item .modify-row p {
     line-height: 20px;
 }
 
-.item_wrap .tip-off.item .row p.text-gray {
+.item_wrap .modify-tip-off.item .modify-row p.text-gray {
     color: #999 !important;
     margin-bottom: 8px;
 }
 
-.item_wrap .tip-off.item .row .col_ctr {
+.item_wrap .modify-tip-off.item .modify-row .col_ctr {
     padding-right: 0;
     padding-left: 0;
 }
 
-.item_wrap .tip-off.item .row:nth-child(2) .col_ctr {
+.item_wrap .modify-tip-off.item .modify-row:nth-child(2) .col_ctr {
     margin-top: 0;
 }
 
@@ -666,24 +678,24 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
     text-align: right;
 }
 
-.item_wrap .tip-off.item .row.total {
+.item_wrap .modify-tip-off.item .modify-row.total {
     line-height: 18px;
 }
 
-.item_wrap .tip-off.item .row .col_ctr {
+.item_wrap .modify-tip-off.item .modify-row .col_ctr {
     padding-right: 0;
     padding-left: 0;
 }
 
-.item_wrap .tip-off.item .row p {
+.item_wrap .modify-tip-off.item .modify-row p {
     line-height: 20px;
 }
 
-.item_wrap .tip-off.item .row p:last-child {
+.item_wrap .modify-tip-off.item .modify-row p:last-child {
     margin-bottom: 0 !important;
 }
 
-.item_wrap .tip-off.item .row.total .text-brand {
+.item_wrap .modify-tip-off.item .modify-row.total .text-brand {
     font-size: 16px;
     font-weight: bold;
 }
@@ -692,20 +704,20 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
     color: #00c7ae !important;
 }
 
-.shop_payment .tip-off.bg-gray {
+.shop_payment .modify-tip-off.bg-gray {
     background: #f9f9f9;
     padding: 12px 24px;
 }
 
-.tip-off.payment_method h6 {
+.modify-tip-off.payment_method h6 {
     padding-bottom: 15px;
 }
 
-.tip-off.payment_method ._pay_type_wrap {
+.modify-tip-off.payment_method ._pay_type_wrap {
     margin-bottom: 8px;
 }
 
-.doz_sys .tip-off.payment_method label {
+.doz_sys .modify-tip-off.payment_method label {
     margin-bottom: 10px;
 }
 
@@ -718,7 +730,7 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
     color: #646464;
 }
 
-.doz_sys .tip-off.payment_method label {
+.doz_sys .modify-tip-off.payment_method label {
     margin-bottom: 10px;
 }
 
@@ -908,7 +920,7 @@ div[data-widget-type="shop_payment"] .btn, div[data-widget-type="shop_payment"] 
 }
 
 .doz_sys .shop-content input.form-control, .doz_sys .shop-content select.form-control, .doz_sys .option_btn_tools input.form-control {
-    height: 36px;
+    height: 41px;
 }
 
 select.form-control option {
@@ -936,7 +948,7 @@ select.form-control option {
     border-radius: 6px;
 }
 
-.tip-off.coupon.on .wrapper .btn, .tip-off.privacy_no_member.on .wrapper .btn {
+.modify-tip-off.coupon.on .wrapper .btn, .modify-tip-off.privacy_no_member.on .wrapper .btn {
     height: 36px;
     border-radius: 3px;
     letter-spacing: 0;

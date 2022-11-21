@@ -155,6 +155,15 @@ input {
     overflow: hidden;
 }
 
+.market-keyword-search-form.open[data-v-78206d9f] {
+    position: fixed;
+    inset: 0px;
+    padding: 0.625rem 1rem;
+    margin: 0px;
+    z-index: 1030;
+    overflow: hidden;
+}
+
 .search-area[data-v-78206d9f] {
     display: flex;
     flex-direction: column;
@@ -271,6 +280,10 @@ input {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+#__BVID__183:focus {
+    background-color: #f4f4f4 !important;
+}
+
 .form-control[data-v-78206d9f] {
     border: 0;
     background: none;
@@ -340,7 +353,7 @@ ul.tab[data-v-e052d09c] {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    -ms-scroll-snap-type: x mandatory;
+    /*-ms-scroll-snap-type: x mandatory;*/
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -569,18 +582,18 @@ section[data-v-2ee8caa0] {
     }
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
     .keyword-box[data-v-78206d9f] {
         position: absolute;
         top: 4.5rem;
-        left: 0;
+        left: 0px;
         width: 100%;
         max-width: 25rem;
         height: 18.75rem;
         border-radius: 6px;
-        box-shadow: 0 0.125rem 0.625rem 0 rgb(0 0 0 / 10%);
-        padding: 0.75rem 0;
-        margin: 0;
+        /*box-shadow: rgb(0 0 0 1) 0px 0.125rem 0.625rem 0px;*/
+        padding: 0.75rem 0px;
+        margin: 0px;
         z-index: 2;
     }
 }

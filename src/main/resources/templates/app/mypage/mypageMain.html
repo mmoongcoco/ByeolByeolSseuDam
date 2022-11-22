@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이페이지 메인</title>
+    <link rel="icon" href="/images/fix/favicon.png">
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/mypage/myPageMain.css">
     <link rel="stylesheet" href="/css/fix/header68.css">
@@ -24,7 +25,7 @@
         <div data-v-086b5673="" class="mypage-container">
             <h1 data-v-086b5673="" class="mypage-title">마이페이지</h1>
             <div data-v-d535afec="" data-v-086b5673="" class="profile-container underline"><a data-v-d535afec=""
-                                                                                              href="/mypage/account-info" class="">
+                                                                                              href="http://localhost:10001/mypage/info" class="">
                 <div data-v-d535afec="" class="thumb">
                     <div data-v-0ee3c6fc="" data-v-d535afec="" class="user-profile-picture h-100">
                         <div data-v-0ee3c6fc="" data-name="image" class="is-square"
@@ -235,7 +236,8 @@
         </div>
     </div>
 </div>
-<!--<footer th:replace="/app/fix/footer.html :: footer"></footer>-->
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/fix/headerLogin.js"></script>
 </html>

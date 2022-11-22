@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>별별쓰담 - 관리자 페이지</title>
+    <title>별별쓰담 | 관리자 페이지</title>
+    <link rel="icon" href="/images/admin/0PBC.png">
     <link rel="stylesheet" href="/css/admin/adminCssAll.css">
 </head>
 <body>
@@ -93,26 +94,14 @@
                                                                     <div id="kt_ecommerce_products_table_wrapper"
                                                                          class="dataTables_wrapper dt-bootstrap4 no-footer">
                                                                         <div class="table-responsive">
-
                                                                         </div>
-
-
                                                                         <div style="width: 60%; margin: 0 auto 48px auto;">
                                                                             <div class="card-toolbar flex-row-fluid justify-content-end gap-5"
                                                                                  style="float: right; margin-left: 10px; height: 36px;margin-top: 7px;">
                                                                                 <div class="w-100 mw-150px">
                                                                                     <a href="http://localhost:10001/admin/adminnotice" style="padding: 9px 20px 9px 20px;"
                                                                                        class="btn btn-primary">추가 하기</a>
-                                                                                    <!--<a href="javascript:void(0)"
-                                                                                       class="btn btn-primary"
-                                                                                       style="background: #009ef7 ; margin-left: 10px;">수정</a>-->
                                                                                 </div>
-                                                                                <!--begin::Add product-->
-
-                                                                                <!--                                                                            <a href="javascript:void(0)"-->
-                                                                                <!--                                                                               class="btn btn-primary"-->
-                                                                                <!--                                                                               style="background: #f1416c ; margin-left: 10px;">삭제</a>-->
-                                                                                <!--end::Add product-->
                                                                             </div>
                                                                             <div class="dataTables_wrapper dt-bootstrap4 no-footer">
                                                                                 <div class="d-flex align-items-center position-relative my-1">
@@ -120,35 +109,19 @@
                                                                                            data-kt-ecommerce-product-filter="search"
                                                                                            class="form-control form-control-solid w-250px ps-14"
                                                                                            placeholder="공지사항 제목"
-                                                                                           style="width: 100%;">
+                                                                                           style="width: 88%;">
+                                                                                    <select class="form-control form-control-solid"
+                                                                                            style="width: 12%;padding-left: 12px; margin-left: 9px;color: #5E6278;">
+                                                                                        <option value="" disabled selected hidden>선택</option>
+                                                                                        <option value="일반">일반</option>
+                                                                                        <option value="중요">중요</option>
+                                                                                    </select>
                                                                                 </div>
                                                                                 <div class="d-flex align-items-center position-relative my-1">
                                                                                     <textarea class="form-control form-control-solid"
                                                                                            placeholder="공지사항 내용"
                                                                                            style="width: 100%; height: 200px;"></textarea>
                                                                                 </div>
-                                                                                <!--<div class="d-flex align-items-center position-relative my-1"
-                                                                                     style="background-color: #f5f8fa;
-                                                                                            border-color: #f5f8fa;
-                                                                                            color: #5E6278;
-                                                                                            transition: color 0.2s ease;
-                                                                                            font-size: inherit;
-                                                                                            font-family: inherit;
-                                                                                            padding: 8px;
-                                                                                            box-shadow: none;
-                                                                                            margin-bottom: 10px;">
-                                                                                    <label style=" margin: 0 auto; width: 100%; height: 130px;">
-                                                                                        <input type="file" id="icon_img"
-                                                                                               data-kt-ecommerce-product-filter="search"
-                                                                                               class="form-control form-control-solid w-250px ps-14"
-                                                                                               placeholder=""
-                                                                                               name="bannerName"
-                                                                                               accept="image/jpeg, image/jpg, image/png, image/gif, image/svg+xml"
-                                                                                               style="display:none;margin: 0 auto;">
-                                                                                        <img src="/images/admin/001.png"
-                                                                                             id="thumbnail" style="width: 100%; height: 100%;">
-                                                                                    </label>
-                                                                                </div>-->
                                                                             </div>
 
 

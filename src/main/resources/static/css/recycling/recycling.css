@@ -400,9 +400,9 @@ button{
   }
   
   .modal_content{
-    width:400px; height:400px;
+    width:400px; height:360px;
     background:#fff; border-radius:10px;
-    position:relative; top: 20%; left:50%;
+    position:relative; top: 30%; left:50%;
     margin-top:-100px; margin-left:-200px;
     text-align:center;
     box-sizing:border-box; padding: 20px;

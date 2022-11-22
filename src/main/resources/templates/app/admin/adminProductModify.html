@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>별별쓰담 - 관리자 페이지</title>
+    <title>별별쓰담 | 관리자 페이지</title>
+    <link rel="icon" href="/images/admin/0PBC.png">
     <link rel="stylesheet" href="/css/admin/adminCssAll.css">
 </head>
 <body>
@@ -57,7 +58,7 @@
                                                                     class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                                                                 <h1
                                                                         class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-                                                                    상품 수정</h1>
+                                                                    제품 수정</h1>
                                                             </div>
                                                         </div>
                                                     </div><!--/ 관련 제목 입력 부분-->
@@ -80,10 +81,6 @@
                                                                         </div>
                                                                     </div>
                                                                     <!--end::Card title-->
-
-                                                                    <!--begin::Card toolbar-->
-
-                                                                    <!--end::Card toolbar-->
                                                                 </div>
                                                                 <!--end::Card header-->
 
@@ -93,80 +90,85 @@
                                                                     <div id="kt_ecommerce_products_table_wrapper"
                                                                          class="dataTables_wrapper dt-bootstrap4 no-footer">
                                                                         <div class="table-responsive">
-
                                                                         </div>
 
-
-                                                                        <div style="width: 60%; margin: 0 auto 48px auto;">
-                                                                            <div class="card-toolbar flex-row-fluid justify-content-end gap-5"
-                                                                            style="float: right; margin-left: 10px; height: 36px;margin-top: 7px;">
-                                                                                <div class="w-100 mw-150px">
-                                                                                    <a href="http://localhost:10001/admin/adminproductlist" style="background: #009ef7; padding: 9px 20px 9px 20px;"
-                                                                                                               class="btn btn-primary">수정 하기</a>
+                                                                        <form action="http://localhost:10001/admin/adminproductlist" name="productForm">
+                                                                            <div style="width: 60%; margin: 0 auto 48px auto;">
+                                                                                <div class="card-toolbar flex-row-fluid justify-content-end gap-5"
+                                                                                     style="float: right; margin-left: 10px; height: 36px;margin-top: 7px;">
+                                                                                    <div class="w-100 mw-150px">
+                                                                                        <a type="submit" onclick="modifyProduct()"
+                                                                                           style="background: #009ef7; padding: 9px 20px 9px 20px;"
+                                                                                           class="btn btn-primary">수정 하기</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                                                                    <div class="d-flex align-items-center position-relative my-1">
+                                                                                        <input type="text" name="productName"
+                                                                                               data-kt-ecommerce-product-filter="search"
+                                                                                               class="form-control form-control-solid w-250px ps-14"
+                                                                                               placeholder="제품명"
+                                                                                               style="width: 100%;">
+                                                                                    </div>
+                                                                                    <div class="d-flex align-items-center position-relative my-1">
+                                                                                        <input type="text" name="productCategory"
+                                                                                               data-kt-ecommerce-product-filter="search"
+                                                                                               class="form-control form-control-solid w-250px ps-14"
+                                                                                               placeholder="카테 고리"
+                                                                                               style="width: 33.3%;">
+                                                                                        <input type="text" name="productPrice"
+                                                                                               data-kt-ecommerce-product-filter="search"
+                                                                                               class="form-control form-control-solid w-250px ps-14"
+                                                                                               placeholder="가격"
+                                                                                               style="width: 33.3%; margin: 0 10px 10px 10px;">
+                                                                                        <input type="text" name="productCount"
+                                                                                               data-kt-ecommerce-product-filter="search"
+                                                                                               class="form-control form-control-solid w-250px ps-14"
+                                                                                               placeholder="입고 수량"
+                                                                                               style="width: 33.3%;">
+                                                                                    </div>
+                                                                                    <div class="d-flex align-items-center position-relative my-1"
+                                                                                         style="background-color: #f5f8fa;
+                                                                                                border-color: #f5f8fa;
+                                                                                                color: #5E6278;
+                                                                                                transition: color 0.2s ease;
+                                                                                                font-size: inherit;
+                                                                                                font-family: inherit;
+                                                                                                padding: 8px;
+                                                                                                box-shadow: none;
+                                                                                                margin-bottom: 10px;">
+                                                                                        <label style=" margin: 0 auto; width: 49%; height: 239px;">
+                                                                                            <input type="file"
+                                                                                                   id="icon_img1"
+                                                                                                   data-kt-ecommerce-product-filter="search"
+                                                                                                   class="form-control form-control-solid w-250px ps-14"
+                                                                                                   placeholder=""
+                                                                                                   name="productFileProfile"
+                                                                                                   accept="image/jpeg, image/jpg, image/png, image/gif, image/svg+xml"
+                                                                                                   style="display:none;margin: 0 auto;">
+                                                                                            <img src="/images/admin/06.png"
+                                                                                                 id="thumbnail1"
+                                                                                                 style="width: 100%; height: 100%;">
+                                                                                        </label>
+                                                                                        <label style=" margin: 0 auto; width: 49%; height: 239px;">
+                                                                                            <input type="file"
+                                                                                                   id="icon_img2"
+                                                                                                   data-kt-ecommerce-product-filter="search"
+                                                                                                   class="form-control form-control-solid w-250px ps-14"
+                                                                                                   placeholder=""
+                                                                                                   name="productFileDetail"
+                                                                                                   accept="image/jpeg, image/jpg, image/png, image/gif, image/svg+xml"
+                                                                                                   style="display:none;margin: 0 auto;">
+                                                                                            <img src="/images/admin/05.png"
+                                                                                                 id="thumbnail2"
+                                                                                                 style="width: 100%; height: 100%;">
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="dataTables_wrapper dt-bootstrap4 no-footer">
-                                                                                <div class="d-flex align-items-center position-relative my-1">
-                                                                                    <input type="text"
-                                                                                           data-kt-ecommerce-product-filter="search"
-                                                                                           class="form-control form-control-solid w-250px ps-14"
-                                                                                           placeholder="상품 이름"
-                                                                                           style="width: 100%;">
-                                                                                </div>
-                                                                                <div class="d-flex align-items-center position-relative my-1">
-                                                                                    <input type="text"
-                                                                                           data-kt-ecommerce-product-filter="search"
-                                                                                           class="form-control form-control-solid w-250px ps-14"
-                                                                                           placeholder="카테 고리"
-                                                                                           style="width: 33.3%;">
-                                                                                    <input type="text"
-                                                                                           data-kt-ecommerce-product-filter="search"
-                                                                                           class="form-control form-control-solid w-250px ps-14"
-                                                                                           placeholder="가격"
-                                                                                           style="width: 33.3%; margin: 0 10px 10px 10px;">
-                                                                                    <input type="text"
-                                                                                           data-kt-ecommerce-product-filter="search"
-                                                                                           class="form-control form-control-solid w-250px ps-14"
-                                                                                           placeholder="입고 수량"
-                                                                                           style="width: 33.3%;">
-                                                                                </div>
-                                                                                <div class="d-flex align-items-center position-relative my-1"
-                                                                                     style="background-color: #f5f8fa;
-                                                                                            border-color: #f5f8fa;
-                                                                                            color: #5E6278;
-                                                                                            transition: color 0.2s ease;
-                                                                                            font-size: inherit;
-                                                                                            font-family: inherit;
-                                                                                            padding: 8px;
-                                                                                            box-shadow: none;
-                                                                                            margin-bottom: 10px;">
-                                                                                    <label style=" margin: 0 auto; width: 49%; height: 239px;">
-                                                                                    <input type="file" id="icon_img1"
-                                                                                           data-kt-ecommerce-product-filter="search"
-                                                                                           class="form-control form-control-solid w-250px ps-14"
-                                                                                           placeholder=""
-                                                                                           name="bannerName"
-                                                                                           accept="image/jpeg, image/jpg, image/png, image/gif, image/svg+xml"
-                                                                                           style="display:none;margin: 0 auto;">
-                                                                                    <img src="/images/admin/06.png"
-                                                                                         id="thumbnail1" style="width: 100%; height: 100%;">
-                                                                                    </label>
-                                                                                    <label style=" margin: 0 auto; width: 49%; height: 239px;">
-                                                                                    <input type="file" id="icon_img2"
-                                                                                           data-kt-ecommerce-product-filter="search"
-                                                                                           class="form-control form-control-solid w-250px ps-14"
-                                                                                           placeholder=""
-                                                                                           name="bannerName"
-                                                                                           accept="image/jpeg, image/jpg, image/png, image/gif, image/svg+xml"
-                                                                                           style="display:none;margin: 0 auto;">
-                                                                                    <img src="/images/admin/05.png"
-                                                                                         id="thumbnail2" style="width: 100%; height: 100%;">
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                            </div>
-                                                                        </div>
+                                                                        </form>
                                                                         <!--end::Table-->
                                                                     </div>
                                                                     <!--end::Card body-->
@@ -174,6 +176,8 @@
                                                                 <!--end::Products-->
                                                             </div>
                                                             <!--end::Content container-->
+
+
                                                         </div><!-- /관련 내용 입력 부분 -->
                                                     </div>
                                                 </div>
@@ -196,5 +200,47 @@
 <script>
     //리스트 체크박스
     var $checkboxes = $(".form-check-input.checkbox");
+
+    //제품 수정 유효성 검사
+    function modifyProduct() {
+        if($("input[name=productName]").val() == ""){
+            alert("제품명을 입력하세요!");
+            $("input[name=productName]").focus();
+            return;
+        }
+
+        if($("input[name=productCategory]").val() == ""){
+            alert("카테 고리를 입력하세요!");
+            $("input[name=productCategory]").focus();
+            return;
+        }
+
+        if($("input[name=productPrice]").val() == ""){
+            alert("가격을 입력하세요!");
+            $("input[name=productPrice]").focus();
+            return;
+        }
+
+        if($("input[name=productCount]").val() == ""){
+            alert("입고 수량을 입력하세요!");
+            $("input[name=productCount]").focus();
+            return;
+        }
+
+        if($("input[name=productFileProfile]").next().attr("src") == "/images/admin/06.png"){
+            alert("대표 이미지를 등록하세요!");
+            return;
+        }
+
+        if($("input[name=productFileDetail]").next().attr("src") == "/images/admin/05.png"){
+            alert("상세 설명 이미지를 등록하세요!");
+            return;
+        }
+
+        productForm.submit();
+
+    }
+
+
 </script>
 </html>

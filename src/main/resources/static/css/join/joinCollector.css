@@ -252,6 +252,7 @@ button, input {
 }
 
 .input-lg.form-control:focus {
+    border-color: #e1e1e1;
     box-shadow: 0px 0px 2px 2px #00c7acf5;
 }
 .input-lg.form-control.is-invalid:focus{
@@ -259,6 +260,7 @@ button, input {
 }
 
 .answer-input.form-control.is-invalid:focus{
+    border-color: #e1e1e1;
     box-shadow: 0px 0px 2px 2px #00c7acf5;
 }
 .answer-input.form-control.is-invalid.error:focus{

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="/images/fix/favicon.png">
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/join/joinNormal.css">
     <link rel="stylesheet" href="/css/fix/header68.css">
@@ -128,10 +129,22 @@
                                     </span></button>
                         </div>
                         <div data-v-79992f5d="" class="col-12">
-                            <button data-v-0edf7af4="" data-v-79992f5d=""
-                                    type="button" class="btn btn-signup btn-secondary"><img data-v-0edf7af4=""
-                                                                                            src="https://assets.cdn.soomgo.com/icons/icon-login-facebook-btn.svg"><span
-                                    data-v-0edf7af4="">Facebook으로 가입하기</span></button>
+                            <button data-v-6dfa1fbf="" data-v-79992f5d="" type="button" class="btn kakao-login-btn btn-secondary">
+                                <img data-v-6dfa1fbf="" src="https://assets.cdn.soomgo.com/icons/icon-login-kakaotalk-btn.svg">
+                                <span data-v-6dfa1fbf="">카카오로 가입하기</span>
+                            </button>
+                        </div>
+                        <div data-v-79992f5d="" class="col-12">
+                            <button data-v-d2f0a4f0="" data-v-79992f5d="" type="button" class="btn naver-id-login btn-secondary">
+                                <img data-v-d2f0a4f0="" src="https://assets.cdn.soomgo.com/icons/icon-login-naver-btn.svg">
+                                <span data-v-d2f0a4f0="">네이버로 가입하기</span>
+                            </button>
+                        </div>
+                        <div data-v-79992f5d="" class="col-12">
+                            <button data-v-0edf7af4="" data-v-79992f5d="" type="button" class="btn google-login-btn btn-secondary">
+                                <img data-v-0edf7af4="" src="/images/login/google.png">
+                                <span data-v-0edf7af4="">구글로 가입하기</span>
+                            </button>
                         </div>
                         <div data-v-79992f5d="" class="col-12"><a data-v-79992f5d="" href="/pro"
                                                                   class="pro-sign-up"> 고수로 가입하시나요? </a></div>
@@ -149,7 +162,11 @@
 <footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/fix/headerLogin.js"></script>
 <script>
+    let emailFilter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    let pwFilter = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W).{8,20}$/;
+
     $("#__BVID__75").on("blur", function () {
         let $inputName = $("#__BVID__75");
 
@@ -169,7 +186,7 @@
             $(this).siblings(".invalid-feedback").text("이메일 주소를 입력해주세요.");
             $(this).siblings(".invalid-feedback").css("display", "block");
             $inputEmail.addClass("invalid");
-        } else if (!$inputEmail.val().includes("@") || !$inputEmail.val().includes(".com")) {
+        } else if (!emailFilter.test($inputEmail.val())) {
             $(this).siblings(".invalid-feedback").text("올바른 이메일 주소를 입력해주세요.");
             $(this).siblings(".invalid-feedback").css("display", "block");
             $inputEmail.addClass("invalid");
@@ -186,8 +203,8 @@
             $(this).parent().siblings(".invalid-feedback").text("비밀번호를 입력해주세요.");
             $(this).parent().siblings(".invalid-feedback").css("display", "block");
             $inputPw.addClass("invalid");
-        } else if (!(/^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$/.test($inputPw.val()))) {
-            $(this).parent().siblings(".invalid-feedback").text("영문+숫자 조합 8자리 이상 입력해주세요.");
+        } else if (!pwFilter.test($inputPw.val())) {
+            $(this).parent().siblings(".invalid-feedback").text("영문+숫자+특수문자 조합 8자리 이상 입력해주세요.");
             $(this).parent().siblings(".invalid-feedback").css("display", "block");
             $inputPw.addClass("invalid");
         } else {
@@ -223,7 +240,7 @@
             $inputEmail.siblings(".invalid-feedback").text("이메일 주소를 입력해주세요.");
             $inputEmail.siblings(".invalid-feedback").css("display", "block");
             $inputEmail.addClass("invalid");
-        } else if (!$inputEmail.val().includes("@") || !$inputEmail.val().includes(".com")) {
+        } else if (!emailFilter.test($inputEmail.val())) {
             $inputEmail.siblings(".invalid-feedback").text("올바른 이메일 주소를 입력해주세요.");
             $inputEmail.siblings(".invalid-feedback").css("display", "block");
             $inputEmail.addClass("invalid");
@@ -239,7 +256,7 @@
             $inputPw.parent().siblings(".invalid-feedback").text("비밀번호를 입력해주세요.");
             $inputPw.parent().siblings(".invalid-feedback").css("display", "block");
             $inputPw.addClass("invalid");
-        } else if (!(/^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$/.test($inputPw.val()))) {
+        } else if (!pwFilter.test($inputPw.val())) {
             $inputPw.parent().siblings(".invalid-feedback").text("영문+숫자 조합 8자리 이상 입력해주세요.");
             $inputPw.parent().siblings(".invalid-feedback").css("display", "block");
             $inputPw.addClass("invalid");

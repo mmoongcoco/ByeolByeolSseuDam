@@ -22,6 +22,10 @@ public class PickupController {
     public String pickDetail(){
         return "/app/pickup/pickDetail";
     }
+    @GetMapping("/pickdetaildone")
+    public String pickDetailDone(){
+        return "/app/pickup/pickDetailDone";
+    }
     @GetMapping("/pickwantedlist")
     public String pickWantedList(){
         return "/app/pickup/pickWantedList";

@@ -69,6 +69,7 @@
 
 @media (min-width:768px) {
     .main-exhibition .exhibition-item[data-v-cb8f7044] {
+        margin-top: 4.6875rem;
         margin-bottom: 4.6875rem
     }
 }
@@ -125,7 +126,7 @@
 
 .main-exhibition .service-image[data-v-cb8f7044] {
     width: 100%;
-    height: 6.5625rem;
+    height: 9.5625rem;
     border-radius: 8px;
     margin-bottom: .5rem;
     border: .0625rem solid #f2f2f2
@@ -221,7 +222,7 @@
     height: 13.6875rem;
     border-radius: 8px;
     margin-bottom: .5rem;
-    border: .0625rem solid #f2f2f2
+    /*border: .0625rem solid #f2f2f2*/
 }
 
 @media (min-width:768px) {
@@ -251,7 +252,7 @@
 }
 
 .main-magazine .magazine-slide[data-v-0a3d71e7] .slick-arrow {
-    top: 6.4375rem
+    top: 10.4375rem
 }
 
 .main-pro-info[data-v-31a06ef8] {
@@ -502,12 +503,12 @@
     }
 }
 
-.main-pro-locations .location-item[data-v-06148408] {
+.location-item[data-v-06148408] {
     width: 20%;
     padding: .25rem
 }
 
-.main-pro-locations .location-item>a[data-v-06148408] {
+.location-item>a[data-v-06148408] {
     font-size: .875rem;
     background-color: #eafaf9;
     color: #00c7ae;
@@ -571,7 +572,7 @@
         margin-left: auto;
         margin-right: auto;
         padding: 1rem;
-        justify-content: space-between;
+        justify-content: space-around;
         height: unset
     }
 }
@@ -1553,6 +1554,7 @@
 
 @media (min-width:768px) {
     .main-community .header .title[data-v-d53abf48] {
+        margin-top: 4.6875rem;
         font-size: 1.5rem
     }
 }

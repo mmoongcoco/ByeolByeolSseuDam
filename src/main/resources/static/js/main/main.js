@@ -423,7 +423,7 @@ arrowNine.forEach(arrow => {
                 // nextBtn
             }else{
                 count9++;
-                if(count9 == 5) {
+                if(count9 == 3) {
                     bannerNine.style.transform = "translate(-" + 329 * count9 + "px)";
                     document.querySelector(".nineBtn.nineNext").style.display = 'none';
                 }else{

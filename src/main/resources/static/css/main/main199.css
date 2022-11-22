@@ -383,7 +383,8 @@ header[data-v-d30abf70] {
 
 .container.no-mobile-padding[data-v-1346aca8] {
     padding-left: 0;
-    padding-right: 0
+    padding-right: 0;
+    margin-bottom: 13px;
 }
 
 @media (min-width:768px) {

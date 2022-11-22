@@ -300,9 +300,9 @@ div[doz_type="grid"] {
     float: left;
 }
 
-.doz_sys a, .doz_sys a:hover {
-    color: #646464;
-}
+/*.doz_sys a, .doz_sys a:hover {*/
+/*    color: #646464;*/
+/*}*/
 
 @media (max-width: 767px){
     .doz_sys .inside .doz_row {

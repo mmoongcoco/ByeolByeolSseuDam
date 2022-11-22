@@ -6,17 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이페이지 | 정보수정</title>
-    <link rel="stylesheet" href="/css/fix/font.css">
-    <link rel="stylesheet" href="/css/mypage/mypageInfoUpdate.css">
-<!--    <link rel="stylesheet" href="/css/fix/header68.css">
+    <link rel="icon" href="/images/fix/favicon.png">
+    <link rel="stylesheet" href="/css/fix/header68.css">
     <link rel="stylesheet" href="/css/fix/header74.css">
     <link rel="stylesheet" href="/css/fix/header51.css">
     <link rel="stylesheet" href="/css/fix/header76.css">
     <link rel="stylesheet" href="/css/fix/header77.css">
-    <link rel="stylesheet" href="/css/fix/header37.css">-->
+    <link rel="stylesheet" href="/css/fix/header37.css">
+    <link rel="stylesheet" href="/css/fix/font.css">
+    <link rel="stylesheet" href="/css/mypage/mypageInfoUpdate.css">
 </head>
 <body>
-<!--<header th:replace="/app/fix/header.html :: header"></header>-->
+<header th:replace="/app/fix/header.html :: header"></header>
 <div id="app-body">
     <div class="container container-md">
         <main data-v-2825a58e="" class="account-info-container">
@@ -35,10 +36,10 @@
                     <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0" id="__BVID__138__BV_label_">
                         이름</legend>
                     <div><input data-v-521e9bc0="" name="username" type="text" placeholder="이름(실명)을 입력해주세요"
-                                autocomplete="off" class="form-control is-invalid" autocapitalize="off"
+                                autocomplete="off" class="mypage-form-control is-invalid" autocapitalize="off"
                                 spellcheck="true" maxlength="7" data-vv-validate-on="blur" aria-invalid="true"
                                 id="__BVID__139">
-                        <div data-v-521e9bc0="" class="invalid-feedback name">이름을 입력해주세요.</div>
+                        <div data-v-521e9bc0="" class="mypage-invalid-feedback name">이름을 입력해주세요.</div>
                         <!---->
                         <!---->
                         <!---->
@@ -51,9 +52,9 @@
                         이메일
                     </legend>
                     <div><input data-v-0c805f3b="" name="email" type="email" placeholder="example@soomgo.com"
-                                autocomplete="off" class="form-control is-invalid" autocapitalize="off"
+                                autocomplete="off" class="mypage-form-control is-invalid" autocapitalize="off"
                                 spellcheck="true" data-vv-validate-on="blur" aria-invalid="true" id="__BVID__157">
-                        <div data-v-0c805f3b="" class="invalid-feedback email">이메일 주소를 입력해주세요.</div>
+                        <div data-v-0c805f3b="" class="mypage-invalid-feedback email">이메일 주소를 입력해주세요.</div>
                         <!---->
                         <!---->
                         <!---->
@@ -68,13 +69,13 @@
                         <div>
                             <div data-v-5135e8da="" role="group" class="input-group current-password">
                                 <!----><input data-v-5135e8da="" name="currentPassword" type="password"
-                                              placeholder="현재 비밀번호를 입력해주세요" autocomplete="off" class="form-control is-invalid"
+                                              placeholder="현재 비밀번호를 입력해주세요" autocomplete="off" class="mypage-form-control is-invalid"
                                               autocapitalize="off" spellcheck="false" data-vv-validate-on="blur"
                                               aria-invalid="true" id="__BVID__175"><button data-v-5135e8da="" type="button"
                                                                                            class="btn btn-secondary">표시</button>
                                 <!---->
                             </div>
-                            <div data-v-5135e8da="" class="invalid-feedback current-password">비밀번호를 입력해주세요.</div>
+                            <div data-v-5135e8da="" class="mypage-invalid-feedback current-password">비밀번호를 입력해주세요.</div>
                             <!---->
                             <!---->
                             <!---->
@@ -87,9 +88,9 @@
                                 id="__BVID__176__BV_label_">새로운 비밀번호</legend>
                         <div><input data-v-5135e8da="" name="password" type="password"
                                     placeholder="영문+숫자+특수문자 조합 8자리 이상 입력해주세요" autocomplete="off"
-                                    class="form-control is-invalid" autocapitalize="off" spellcheck="false"
+                                    class="mypage-form-control is-invalid" autocapitalize="off" spellcheck="false"
                                     data-vv-validate-on="blur" aria-invalid="true" id="__BVID__177">
-                            <div data-v-5135e8da="" class="invalid-feedback new-password">비밀번호를 입력해주세요.</div>
+                            <div data-v-5135e8da="" class="mypage-invalid-feedback new-password">비밀번호를 입력해주세요.</div>
                             <!---->
                             <!---->
                             <!---->
@@ -101,9 +102,9 @@
                         <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0"
                                 id="__BVID__178__BV_label_">새로운 비밀번호 확인</legend>
                         <div><input data-v-5135e8da="" name="newPasswordConfirm" type="password"
-                                    placeholder="비밀번호를 한번 더 입력해주세요" autocomplete="off" class="form-control is-invalid"
+                                    placeholder="비밀번호를 한번 더 입력해주세요" autocomplete="off" class="mypage-form-control is-invalid"
                                     autocapitalize="off" spellcheck="false" aria-invalid="true" id="__BVID__179">
-                            <div data-v-5135e8da="" class="invalid-feedback new-password-confirm">비밀번호를 한번 더 입력해주세요.
+                            <div data-v-5135e8da="" class="mypage-invalid-feedback new-password-confirm">비밀번호를 한번 더 입력해주세요.
                             </div>
                             <!---->
                             <!---->
@@ -120,7 +121,7 @@
                             번호</legend>
                         <div data-v-84480e04="" role="group" class="input-group input-group">
                             <!----><input data-v-84480e04="" type="tel" placeholder="01012345678"
-                                          class="answer-input form-control complete-phone-auth" id="request-phone"
+                                          class="answer-input mypage-form-control complete-phone-auth" id="request-phone"
                                           maxlength="13" data-vv-validate-on="blur" disabled="disabled"
                                           data-testid="request-phone" aria-invalid="false" name="requestPhone"
                                           autocomplete="off"><input data-v-84480e04="" type="checkbox"
@@ -134,7 +135,7 @@
                             <p data-v-84480e04="" class="authentication"> 인증번호를 전송하였습니다. (재전송 가능 남은시간: 60초) </p>
                         </div>
                         <div data-v-84480e04="" class="validation-msg-wrapper phone-number">
-                            <p data-v-84480e04="" class="validation invalid-feedback phoneNumber"> 휴대전화 번호를 입력해주세요.
+                            <p data-v-84480e04="" class="validation mypage-invalid-feedback phoneNumber"> 휴대전화 번호를 입력해주세요.
                             </p>
                             <!---->
                         </div>
@@ -148,7 +149,7 @@
                     <div><label data-v-84480e04="" for="request-verify-phone" class="input-label">인증번호</label>
                         <div data-v-84480e04="" role="group" class="input-group input-group">
                             <!----><input data-v-84480e04="" id="request-verify-phone" name="requestVerifyPhone"
-                                          type="tel" placeholder="SMS 인증번호를 입력해주세요." class="answer-input form-control"
+                                          type="tel" placeholder="SMS 인증번호를 입력해주세요." class="answer-input mypage-form-control"
                                           maxlength="6" data-vv-validate-on="blur" data-testid="request-verify-phone"
                                           aria-required="true" aria-invalid="true"><input data-v-84480e04="" type="checkbox"
                                                                                           name="isClickedVerifyPhone" hidden="hidden" data-vv-name="isClickedVerifyPhone"
@@ -175,9 +176,9 @@
                                                  src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg"></div>
                 </li>
             </ul>
-            <footer data-v-2825a58e="" class="button-group"><a data-v-2825a58e="" href="http://localhost:10001/mypage/main"
+            <footer data-v-2825a58e="" class="button-group"><a data-v-2825a58e="" href="http://localhost:10001/mypage/info"
                                                                class="btn btn-cancel btn-active btn-outline-secondary" target="_self">취소</a><button
-                    data-v-2825a58e="" type="button" onclick="location.href='http://localhost:10001/mypage/main'" class="btn btn-primary modifyOK-info-btn">수정 완료</button>
+                    data-v-2825a58e="" type="button" onclick="location.href='http://localhost:10001/mypage/info'" class="btn btn-primary modifyOK-info-btn">수정 완료</button>
             </footer>
         </main>
     </div>
@@ -288,9 +289,9 @@
         <div class="swal2-footer" style="display: none;"></div>
     </div>
 </div>
-<!--<footer th:replace="/app/fix/footer.html :: footer"></footer>-->
+<footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/mypage/mypageInfoUpdate.js"></script>
-
+<script src="/js/fix/headerLogin.js"></script>
 </html>

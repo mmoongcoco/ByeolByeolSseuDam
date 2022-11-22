@@ -115,7 +115,7 @@ body {
 }
 
 #app-body {
-    height: 100%;
+    height: fit-content;
     position: relative;
     flex-grow: 1;
 }

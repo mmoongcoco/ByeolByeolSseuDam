@@ -34,6 +34,11 @@ public class MypageController {
         return "/app/mypage/mypageInfoUpdate";
     }
 
+    @GetMapping("/info")
+    public String info(){
+        return "/app/mypage/mypageInfo";
+    }
+
     @GetMapping("/mypoint")
     public String mypoint(){
         return "/app/mypage/mypagePoint";

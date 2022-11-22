@@ -165,7 +165,7 @@ body {
 }
 
 #app-body {
-    height: 100%;
+    height: fit-content;
     position: relative;
     flex-grow: 1;
 }
@@ -192,7 +192,7 @@ h1[data-v-2825a58e] {
     font-weight: 500;
     color: #323232;
     margin: 3rem 0;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -271,7 +271,7 @@ section[data-v-2825a58e] {
     line-height: 1.5;
 }
 
-.form-control {
+.mypage-form-control {
     display: block;
     width: 100%;
     height: calc(1.5em + 1.5rem);
@@ -287,19 +287,19 @@ section[data-v-2825a58e] {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.form-control.is-valid, .was-validated .form-control:valid {
+.mypage-form-control.is-valid, .was-validated .mypage-form-control:valid {
     border-color: #00c7ae;
 }
 
-.custom-select.is-valid, .form-control.is-valid, .was-validated .custom-select:valid, .was-validated .form-control:valid {
+.custom-select.is-valid, .mypage-form-control.is-valid, .was-validated .custom-select:valid, .was-validated .mypage-form-control:valid {
     border-color: #ccc;
 }
 
-.form-control.is-invalid, input.form-control.is-valid, textarea.form-control.is-valid {
+.mypage-form-control.is-invalid, input.mypage-form-control.is-valid, textarea.mypage-form-control.is-valid {
     background-image: none;
 }
 
-.invalid-feedback {
+.mypage-invalid-feedback {
     display: none;
     width: 100%;
     margin-top: 0.25rem;
@@ -323,7 +323,7 @@ section[data-v-2825a58e] {
     line-height: 1.5;
 }
 
-.form-control {
+.mypage-form-control {
     display: block;
     width: 100%;
     height: calc(1.5em + 1.5rem);
@@ -339,15 +339,15 @@ section[data-v-2825a58e] {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.form-control.is-valid, .was-validated .form-control:valid {
+.mypage-form-control.is-valid, .was-validated .mypage-form-control:valid {
     border-color: #00c7ae;
 }
 
-.custom-select.is-valid, .form-control.is-valid, .was-validated .custom-select:valid, .was-validated .form-control:valid {
+.custom-select.is-valid, .mypage-form-control.is-valid, .was-validated .custom-select:valid, .was-validated .mypage-form-control:valid {
     border-color: #ccc;
 }
 
-.form-control.is-invalid, input.form-control.is-valid, textarea.form-control.is-valid {
+.mypage-form-control.is-invalid, input.mypage-form-control.is-valid, textarea.mypage-form-control.is-valid {
     background-image: none;
 }
 
@@ -411,14 +411,14 @@ section[data-v-2825a58e] {
     position: relative;
 }
 
-.input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
+.input-group>.custom-file, .input-group>.custom-select, .input-group>.mypage-form-control, .input-group>.mypage-form-control-plaintext {
     position: relative;
     flex: 1 1 0%;
     min-width: 0;
     margin-bottom: 0;
 }
 
-.current-password .form-control[data-v-5135e8da] {
+.current-password .mypage-form-control[data-v-5135e8da] {
     padding-right: 3.125rem;
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
@@ -437,7 +437,7 @@ section[data-v-2825a58e] {
     border: none;
 }
 
-/* .current-password .invalid-feedback[data-v-5135e8da] {
+/* .current-password .mypage-invalid-feedback[data-v-5135e8da] {
     display: block;
     width: auto;
     font-size: .875rem;
@@ -498,7 +498,7 @@ section[data-v-2825a58e] {
     border: none;
 }
 
-.form-control {
+.mypage-form-control {
     display: block;
     width: 100%;
     height: calc(1.5em + 1.5rem);
@@ -514,11 +514,11 @@ section[data-v-2825a58e] {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.form-control:focus {
+.mypage-form-control:focus {
     box-shadow: 0px 0px 2px 2px #00c7acf5;
 }
 
-.input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
+.input-group>.custom-file, .input-group>.custom-select, .input-group>.mypage-form-control, .input-group>.mypage-form-control-plaintext {
     position: relative;
     flex: 1 1 0%;
     min-width: 0;
@@ -1212,7 +1212,7 @@ section[data-v-2825a58e] {
 .swal2-container.sg-swal .swal2-header .swal2-title {
     margin-bottom: 1rem;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #323232;
 }
 
@@ -1244,7 +1244,7 @@ section[data-v-2825a58e] {
     margin: 0;
     padding: 0;
     color: #545454;
-    font-size: 1.125em;
+    font-size: 0.8em;
     font-weight: 400;
     line-height: normal;
     text-align: center;

@@ -138,10 +138,10 @@ function modifyOKUserInfo(){
 /* 이름 유효성 검사 */
 function inputNameTest(){
     if(!$inputName.val()) {
-        $(".invalid-feedback.name").css('display', 'block');
+        $(".mypage-invalid-feedback.name").css('display', 'block');
         return false;
     }
-    $(".invalid-feedback.name").css('display', 'none');
+    $(".mypage-invalid-feedback.name").css('display', 'none');
     return true;
 }
 
@@ -150,24 +150,24 @@ function inputEmailTest(){
     var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
     if($inputEmail.val() == "") {
-        $(".invalid-feedback.email").css('display', 'block');
+        $(".mypage-invalid-feedback.email").css('display', 'block');
         return false;
     }else if(!filter.test($inputEmail.val())){
-        $(".invalid-feedback.email").html("올바른 이메일 주소를 입력해주세요.")
-        $(".invalid-feedback.email").css('display', 'block');
+        $(".mypage-invalid-feedback.email").html("올바른 이메일 주소를 입력해주세요.")
+        $(".mypage-invalid-feedback.email").css('display', 'block');
         return false;
     }
-    $(".invalid-feedback.email").css('display', 'none');
+    $(".mypage-invalid-feedback.email").css('display', 'none');
     return true;
 }
 
 /* 기존 비밀번호 유효성 검사 */
 function inputCurrentPasswordTest(){
     if(!$inputCurrentPassword.val()) {
-        $(".invalid-feedback.current-password").css('display', 'block');
+        $(".mypage-invalid-feedback.current-password").css('display', 'block');
         return false;
     }
-    $(".invalid-feedback.current-password").css('display', 'none');
+    $(".mypage-invalid-feedback.current-password").css('display', 'none');
     return true;
 }
 
@@ -187,29 +187,29 @@ function inputNewPasswordTest(){
     let pwFilter = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W).{8,20}$/;
 
     if(!$inputNewPassword.val()) {
-        $(".invalid-feedback.new-password").text("비밀번호를 입력하세요.");
-        $(".invalid-feedback.new-password").css('display', 'block');
+        $(".mypage-invalid-feedback.new-password").text("비밀번호를 입력하세요.");
+        $(".mypage-invalid-feedback.new-password").css('display', 'block');
         return false;
     }else if(!pwFilter.test($inputNewPassword.val())){
-        $(".invalid-feedback.new-password").text("비밀번호는 영문과 특수문자 숫자를 포함하며 8자 이상이어야 합니다.");
-        $(".invalid-feedback.new-password").css('display', 'block');
+        $(".mypage-invalid-feedback.new-password").text("비밀번호는 영문과 특수문자, 숫자를 포함하며 8자 이상이어야 합니다.");
+        $(".mypage-invalid-feedback.new-password").css('display', 'block');
         return false;
     }
-    $(".invalid-feedback.new-password").css('display', 'none');
+    $(".mypage-invalid-feedback.new-password").css('display', 'none');
     return true;
 }
 
 /* 새 비밀번호 확인 유효성 검사 */
 function inputNewPasswordConfirmTest(){
     if(!$inputNewPasswordConfirm.val()) {
-        $(".invalid-feedback.new-password-confirm").css('display', 'block');
+        $(".mypage-invalid-feedback.new-password-confirm").css('display', 'block');
         return false;
     }else if($inputNewPassword.val() != $inputNewPasswordConfirm.val()){
-        $(".invalid-feedback.new-password-confirm").text("비밀번호가 일치하지 않습니다.")
-        $(".invalid-feedback.new-password-confirm").css('display', 'block');
+        $(".mypage-invalid-feedback.new-password-confirm").text("비밀번호가 일치하지 않습니다.")
+        $(".mypage-invalid-feedback.new-password-confirm").css('display', 'block');
         return false;
     }
-    $(".invalid-feedback.new-password-confirm").css('display', 'none');
+    $(".mypage-invalid-feedback.new-password-confirm").css('display', 'none');
     return true;
 }
 
@@ -235,18 +235,18 @@ function inputDisabledTest(){
 /* 전화번호 입력 유효성 검사 */
 function inputPhoneNumberTest(){
     if(!$inputRestPhone.val()) {
-        $(".invalid-feedback.phoneNumber").css('display', 'block');
+        $(".mypage-invalid-feedback.phoneNumber").css('display', 'block');
         return false;
     }else if(isNaN($inputRestPhone.val())){
-        $(".invalid-feedback.phoneNumber").text("숫자만 입력해주세요.")
-        $(".invalid-feedback.phoneNumber").css('display', 'block');
+        $(".mypage-invalid-feedback.phoneNumber").text("숫자만 입력해주세요.")
+        $(".mypage-invalid-feedback.phoneNumber").css('display', 'block');
         return false;
     }else if($inputRestPhone.val().length != 11 || !$inputRestPhone.val().startsWith('010')){
-        $(".invalid-feedback.phoneNumber").text("올바른 전화번호를 입력해주세요.")
-        $(".invalid-feedback.phoneNumber").css('display', 'block');
+        $(".mypage-invalid-feedback.phoneNumber").text("올바른 전화번호를 입력해주세요.")
+        $(".mypage-invalid-feedback.phoneNumber").css('display', 'block');
         return false;
     }
-    $(".invalid-feedback.phoneNumber").css('display', 'none');
+    $(".mypage-invalid-feedback.phoneNumber").css('display', 'none');
     $(".send-button").removeAttr('disabled');
     $(".send-button").removeClass("disabled");
     return true;

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="/images/fix/favicon.png">
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/login/login.css">
     <link rel="stylesheet" href="/css/fix/header68.css">
@@ -69,18 +70,24 @@
                                                                           href="/sign-up?from=loginpage" class="">회원가입</a>
                         </div>
                     </div>
-                    <div data-v-149435f8="" class="col-12"><button data-v-6dfa1fbf="" data-v-149435f8=""
-                                                                   type="button" class="btn kakao-login-btn btn-secondary"><img data-v-6dfa1fbf=""
-                                                                                                                                src="https://assets.cdn.soomgo.com/icons/icon-login-kakaotalk-btn.svg"
-                                                                                                                                alt="카카오 로그인"><span data-v-6dfa1fbf="">카카오로 시작</span></button></div>
-                    <div data-v-149435f8="" class="col-12"><button data-v-d2f0a4f0="" data-v-149435f8=""
-                                                                   type="button" class="btn naver-id-login btn-secondary"><img data-v-d2f0a4f0=""
-                                                                                                                               src="https://assets.cdn.soomgo.com/icons/icon-login-naver-btn.svg"><span
-                            data-v-d2f0a4f0=""> 네이버로 시작 </span></button></div>
-                    <div data-v-149435f8="" class="col-12"><button data-v-0edf7af4="" data-v-149435f8=""
-                                                                   type="button" class="btn google-login-btn btn-secondary"><img data-v-0edf7af4=""
-                                                                                                                             src="/images/login/google.png"><span
-                            data-v-0edf7af4="">구글로 시작</span></button></div>
+                    <div data-v-149435f8="" class="col-12">
+                        <button data-v-6dfa1fbf="" data-v-149435f8="" type="button" class="btn kakao-login-btn btn-secondary">
+                            <img data-v-6dfa1fbf="" src="https://assets.cdn.soomgo.com/icons/icon-login-kakaotalk-btn.svg">
+                            <span data-v-6dfa1fbf="">카카오로 시작</span>
+                        </button>
+                    </div>
+                    <div data-v-149435f8="" class="col-12">
+                        <button data-v-d2f0a4f0="" data-v-149435f8="" type="button" class="btn naver-id-login btn-secondary">
+                            <img data-v-d2f0a4f0="" src="https://assets.cdn.soomgo.com/icons/icon-login-naver-btn.svg">
+                            <span data-v-d2f0a4f0=""> 네이버로 시작 </span>
+                        </button>
+                    </div>
+                    <div data-v-149435f8="" class="col-12">
+                        <button data-v-0edf7af4="" data-v-149435f8="" type="button" class="btn google-login-btn btn-secondary">
+                            <img data-v-0edf7af4="" src="/images/login/google.png">
+                            <span data-v-0edf7af4="">구글로 시작</span>
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -128,6 +135,7 @@
 <footer th:replace="/app/fix/footer.html :: footer"></footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/fix/headerLogin.js"></script>
 <script>
     let emailFilter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     let pwFilter = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W).{8,20}$/;

@@ -407,18 +407,13 @@ button.btn span[data-v-6dfa1fbf] {
     margin-left: 0.5rem;
 }
 
-
 button.btn[data-v-0edf7af4] {
     background-color: #fff;
     border-color: rgb(219 219 219);
     color: #000;
     width: 100%;
 }
-button.btn[data-v-0edf7af4]:hover {
-    color: #fff;
-    background-color: #0d64d6;
-    border-color: #0c5eca;
-}
+
 button.btn span[data-v-0edf7af4] {
     margin-left: 0.5rem;
 }

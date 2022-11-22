@@ -120,11 +120,11 @@ button, select {
     color: #fff;
     height: 7.9375rem;
 }
-@media (min-width: 768px){
-.requested-service-header .header-title[data-v-c85c3b6a] {
-    height: 9.0625rem;
-}
-}
+/*@media (min-width: 768px){*/
+/*.requested-service-header .header-title[data-v-c85c3b6a] {*/
+/*    height: 9.0625rem;*/
+/*}*/
+/*}*/
 .requested-service-header .header-title .badge-item[data-v-c85c3b6a] {
     margin-bottom: 0.5rem;
     display: inline-flex;

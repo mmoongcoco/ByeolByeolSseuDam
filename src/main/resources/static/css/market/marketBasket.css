@@ -824,6 +824,10 @@ div[doz_type="grid"] {
     padding: 7px 8px;
 }
 
+#shop_cart_list .shop-table .btn._modal_open_btn {
+    border: 1px solid #d2d2d2;
+}
+
 .no-margin-bottom {
     margin-bottom: 0 !important;
 }
@@ -1497,6 +1501,10 @@ div[doz_type="grid"] {
 
 .blocked {
     display: block;
+}
+
+._requireOption > span {
+    font-size : 12px;
 }
 
 .form-select-wrap .dropdown-menu .dropdown-item > a, .form-select-wrap .dropdown-menu .dropdown-item > .tabled {

@@ -29,13 +29,13 @@ public class MypageController {
         return "/app/mypage/mypageOrderDetail";
     }
 
-    @GetMapping("/myinfo")
-    public String myinfo(){
+    @GetMapping("/updateinfo")
+    public String myinfoupdate(){
         return "/app/mypage/mypageInfoUpdate";
     }
 
-    @GetMapping("/info")
-    public String info(){
+    @GetMapping("/myinfo")
+    public String myinfo(){
         return "/app/mypage/mypageInfo";
     }
 

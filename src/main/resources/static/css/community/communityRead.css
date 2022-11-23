@@ -155,7 +155,7 @@ body {
 
 .fixed .fixed-wrapper[data-v-77f4e41c] {
     width: 60.625rem;
-    margin: -0.0625rem auto 0;
+    margin: -0.0618rem auto 0;
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
@@ -855,6 +855,57 @@ body {
 
 .comment-input-box .write-comment-submit.one-line[data-v-60f50a1e] {
     margin-bottom: auto;
+}
+
+.comment-input-box .comment-body .image-preview[data-v-60f50a1e] {
+    display: inline-block;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin-top: 0.875rem;
+}
+
+.comment-input-box .comment-body .image-preview .delete-badge[data-v-60f50a1e] {
+    position: absolute;
+    top: -0.375rem;
+    right: -0.375rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.125rem;
+    border-radius: 16px;
+    background-color: #ff5861;
+    cursor: pointer;
+}
+
+.comment-input-box .comment-body .image-preview .image[data-v-60f50a1e] {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 8px;
+    border: 0.0625rem solid #f4f4f4;
+    -o-object-fit: fill;
+    object-fit: fill;
+}
+
+.sg-font-medium {
+    font-weight: 500;
+}
+
+.sg-text-buttonSlim {
+    font-size: 14px;
+    line-height: 1.14285714;
+}
+
+.comment-input-box .write-comment-submit[data-v-60f50a1e] {
+    display: none;
+    white-space: nowrap;
+    color: #00c7ae;
+}
+
+.comment-input-box .write-comment-submit.active[data-v-60f50a1e] {
+    display: block;
+    margin-top: auto;
+    margin-left: 0.875rem;
+    cursor: pointer;
 }
 
 .post-comments-list[data-v-e30e236e] {

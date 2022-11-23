@@ -1,20 +1,22 @@
+
+
 .main-app-banner .app-download-banner[data-v-1f45891b] {
     cursor: pointer;
     background-position: 50%;
     background-size: contain;
     background-repeat: no-repeat;
     height: 0;
-    padding-top: 22.15743%;
-    background-image: url(https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile.png);
-    background-image: -webkit-image-set(url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile.png") 1x, url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile@2x.png") 2x, url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile@3x.png") 3x);
-    background-image: image-set("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile.png"1x, "https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile@2x.png"2x, "https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile@3x.png"3x)
+    padding-bottom: 9.15743%;
+    /*background-image: url(https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile.png);*/
+    /*background-image: -webkit-image-set(url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile.png") 1x, url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile@2x.png") 2x, url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile@3x.png") 3x);*/
+    /*background-image: image-set("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile.png"1x, "https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile@2x.png"2x, "https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-mobile@3x.png"3x)*/
 }
 
 @media (min-width:768px) {
     .main-app-banner .app-download-banner[data-v-1f45891b] {
-        background-image: url(https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web.png);
-        background-image: -webkit-image-set(url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web.png") 1x, url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web@2x.png") 2x, url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web@3x.png") 3x);
-        background-image: image-set("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web.png"1x, "https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web@2x.png"2x, "https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web@3x.png"3x);
+        /*background-image: url(https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web.png);*/
+        /*background-image: -webkit-image-set(url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web.png") 1x, url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web@2x.png") 2x, url("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web@3x.png") 3x);*/
+        /*background-image: image-set("https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web.png"1x, "https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web@2x.png"2x, "https://assets.cdn.soomgo.com/images/banner/banner-downloadapp-web@3x.png"3x);*/
         width: 60.625rem;
         height: 5.625rem;
         padding: 0
@@ -410,31 +412,42 @@
 
 .main-pro-info .pro-info-slide[data-v-31a06ef8] {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     flex-wrap: wrap
 }
 
-@media (min-width:768px) {
+@media (max-width:768px) {
     .main-pro-info .pro-info-slide[data-v-31a06ef8] {
-        width: 40.0625rem
+        width: 40.0625rem;
+        display: flex;
+        flex-wrap: wrap
     }
 }
 
 .main-pro-info .image[data-v-31a06ef8] {
-    margin-bottom: 3.375rem
+    margin-bottom: 3.375rem;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main-pro-info .image[data-v-31a06ef8] {
+        margin-bottom: 3.375rem;
+        width: 70%;
+    }
 }
 
 .main-pro-info .desc[data-v-31a06ef8] {
     color: #737373;
     font-size: .875rem;
-    font-weight: 500
+    font-weight: 500;
+    padding-left: 35%;
 }
 
-@media (min-width:768px) {
+@media (max-width:768px) {
     .main-pro-info .desc[data-v-31a06ef8] {
         font-size: 1rem;
-        width: 100%;
-        text-align: center
+        width: 70%;
+        padding-left: 20%;
     }
 }
 
@@ -1590,4 +1603,11 @@
     .main-community.slide-knowhow-list .knowhow-list-slide[data-v-d53abf48] {
         display: flex
     }
+}
+
+@media (max-width: 768px) {
+    #app-body{
+        overflow-x: hidden;
+    }
+
 }

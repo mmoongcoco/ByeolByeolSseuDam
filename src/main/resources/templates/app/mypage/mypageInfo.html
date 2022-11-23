@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>별별쓰담 | 마이페이지</title>
+    <title>별별쓰담 | 나의 정보</title>
     <link rel="icon" href="/images/fix/favicon.png">
     <link rel="stylesheet" href="/css/fix/header68.css">
     <link rel="stylesheet" href="/css/fix/header74.css">
@@ -59,15 +59,16 @@
                         <div data-v-e476fdec=""><img data-v-e476fdec=""
                                                      src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
                         </div>
-                    </div><div data-v-e476fdec="" class="item-container">
-                    <div data-v-e476fdec="" class="item">
-                        <div data-v-e476fdec="" class="item-title">비밀번호</div>
-                        <div data-v-e476fdec="" class="item-info">•••••••</div>
                     </div>
-                    <div data-v-e476fdec=""><img data-v-e476fdec=""
-                                                 src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+                    <div data-v-e476fdec="" class="item-container">
+                        <div data-v-e476fdec="" class="item">
+                            <div data-v-e476fdec="" class="item-title">비밀번호</div>
+                            <div data-v-e476fdec="" class="item-info">•••••••</div>
+                        </div>
+                        <div data-v-e476fdec=""><img data-v-e476fdec=""
+                                                     src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+                        </div>
                     </div>
-                </div>
                     <li data-v-e476fdec="" class="item-container">
                         <div data-v-e476fdec="" class="item">
                             <div data-v-e476fdec="" class="item-title">휴대전화 번호</div>
@@ -78,10 +79,15 @@
                         </div>
                     </li>
                 </ul>
-                <div style="display: flex; justify-content: space-around;">
-                <button data-v-2825a58e="" type="button" onclick="location.href='http://localhost:10001/mypage/myinfo'"
-                        style="width: 25%;" class="btn btn-primary modifyOK-info-btn">수정하기
-                </button></div>
+                <footer data-v-2825a58e="" class="button-group"><a data-v-2825a58e=""
+                                                                   href="http://localhost:10001/mypage/main"
+                                                                   class="btn btn-cancel btn-active btn-outline-secondary"
+                                                                   target="_self">마이페이지 목록</a>
+                    <button data-v-2825a58e="" type="button"
+                            onclick="location.href='http://localhost:10001/mypage/updateinfo'"
+                            class="btn btn-primary modifyOK-info-btn">수정하기
+                    </button>
+                </footer>
             </section><!----></main>
     </div>
 </div>

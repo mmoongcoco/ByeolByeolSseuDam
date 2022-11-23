@@ -19,6 +19,17 @@ body {
     background-color: #fff;
 }
 
+#wrapper {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* opacity: 0; */
+    min-height: 100%;
+}
+
 #app-body {
     height: 100%;
     position: relative;
@@ -382,7 +393,7 @@ ul.tab>li[data-v-e052d09c] {
 
 ul.tab .btn.router-link-exact-active[data-v-e052d09c] {
     font-weight: 700;
-    border-bottom-color: #2d2d2d;
+    border-bottom-color: #00c7ae;
     border-radius: 0;
     color: #2d2d2d;
 }

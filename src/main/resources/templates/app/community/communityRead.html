@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시글</title>
+    <title>별별쓰담 | 게시판</title>
     <link rel="icon" href="/images/fix/favicon.png">
     <link rel="stylesheet" href="/css/fix/font.css">
     <link rel="stylesheet" href="/css/community/communityRead.css">
@@ -26,8 +25,9 @@
                       src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yMC43NyAxNS4xNzRjLjM3IDAgLjY3NS4yNzYuNzIzLjYzNGwuMDA3LjA5OXY1Ljg2YzAgLjM3MS0uMjc1LjY3OC0uNjMyLjcyNmwtLjA5OS4wMDdIMy4yMzFhLjczMi43MzIgMCAwIDEtLjcyNC0uNjMzbC0uMDA3LS4xdi01Ljg2YS43MzIuNzMyIDAgMCAxIDEuNDU1LS4xbC4wMDcuMXY1LjEyOGgxNi4wNzZ2LTUuMTI4YzAtLjM3LjI3NS0uNjc3LjYzMi0uNzI2bC4xLS4wMDd6TTEyLjQxMiAxLjYyOGwuMDkuMDcyIDYuMzc3IDYuMDVhLjczNC43MzQgMCAwIDEgLjAyOCAxLjAzNi43My43MyAwIDAgMS0uOTQ5LjA5OGwtLjA4NC0uMDY5LTUuMTQ1LTQuODgxdjExLjk3M2EuNzMyLjczMiAwIDAgMS0xLjQ1NC4xbC0uMDA3LS4xVjMuOTMzTDYuMTI1IDguODE1YS43My43MyAwIDAgMS0uOTUzLjA0NWwtLjA4LS4wNzRhLjczNC43MzQgMCAwIDEtLjA0NS0uOTU1bC4wNzMtLjA4IDYuMzc4LTYuMDUuMDQ2LS4wMzlhLjczNC43MzQgMCAwIDEgLjAxNC0uMDFsLS4wNi4wNDhhLjczLjczIDAgMCAxIC4yMTMtLjE0Yy4wMDUgMCAuMDA5LS4wMDIuMDEzLS4wMDRhLjcyNC43MjQgMCAwIDEgLjY5LjA3MnoiIGZpbGw9IiMyRDJEMkQiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPgo8L3N2Zz4K"
                       alt="공유하기" class="icon">
             <div data-v-77f4e41c="" class="dropdown b-dropdown show btn-group" id="__BVID__1564">
-                <!----><button aria-haspopup="true" aria-expanded="true" type="button"
-                               class="btn board-dropdown-toggle btn-secondary" id="__BVID__1564__BV_toggle_"></button>
+                <!---->
+                <button aria-haspopup="true" aria-expanded="true" type="button"
+                        class="btn board-dropdown-toggle btn-secondary" id="__BVID__1564__BV_toggle_"></button>
                 <ul role="menu" tabindex="-1" class="dropdown-menu dropdown-menu-right sticky-nav-menu"
                     aria-labelledby="__BVID__1564__BV_toggle_"
                     style="position: absolute; transform: translate3d(-116px, 24px, 0px); top: 0px; left: 0px; will-change: transform;"
@@ -48,14 +48,17 @@
                     <div data-v-01b8dd61="" data-v-77f4e41c="" class="post-category-subject">
                         <ol data-v-01b8dd61="" class="category-breadcrumb list-inline">
                             <li data-v-01b8dd61="" class="category-breadcrumb-item"><a data-v-01b8dd61=""
-                                                                                       href="/community/soomgo-life/?from=breadcrumb" class="breadcrumb-item"
-                                                                                       data-testid="soomgo-life-home-breadcrumb"><span data-v-01b8dd61=""
-                                                                                                                                       class="sg-text-body2 sg-font-regular sg-text-gray-400">커뮤니티</span></a></li>
+                                                                                       href="/community/soomgo-life/?from=breadcrumb"
+                                                                                       class="breadcrumb-item"
+                                                                                       data-testid="soomgo-life-home-breadcrumb"><span
+                                    data-v-01b8dd61=""
+                                    class="sg-text-body2 sg-font-regular sg-text-gray-400">커뮤니티</span></a></li>
                             <p data-v-01b8dd61="" class="breadcrumb-divider"></p>
                             <li data-v-01b8dd61="" class="category-breadcrumb-item"><a data-v-01b8dd61=""
                                                                                        href="/community/soomgo-life/find-provider?from=breadcrumb"
-                                                                                       class="breadcrumb-item"><span data-v-01b8dd61=""
-                                                                                                                     class="sg-text-body2 sg-font-regular sg-text-gray-400">고수찾아요</span></a></li>
+                                                                                       class="breadcrumb-item"><span
+                                    data-v-01b8dd61=""
+                                    class="sg-text-body2 sg-font-regular sg-text-gray-400">고수찾아요</span></a></li>
                         </ol>
                     </div>
                     <div data-v-77f4e41c="" class="post-header-title-wrapper has-service">
@@ -81,19 +84,25 @@
                             <div data-v-77f4e41c="" data-v-e0e63576="" class="post-actions"><img data-v-77f4e41c=""
                                                                                                  data-v-e0e63576=""
                                                                                                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yMC43NyAxNS4xNzRjLjM3IDAgLjY3NS4yNzYuNzIzLjYzNGwuMDA3LjA5OXY1Ljg2YzAgLjM3MS0uMjc1LjY3OC0uNjMyLjcyNmwtLjA5OS4wMDdIMy4yMzFhLjczMi43MzIgMCAwIDEtLjcyNC0uNjMzbC0uMDA3LS4xdi01Ljg2YS43MzIuNzMyIDAgMCAxIDEuNDU1LS4xbC4wMDcuMXY1LjEyOGgxNi4wNzZ2LTUuMTI4YzAtLjM3LjI3NS0uNjc3LjYzMi0uNzI2bC4xLS4wMDd6TTEyLjQxMiAxLjYyOGwuMDkuMDcyIDYuMzc3IDYuMDVhLjczNC43MzQgMCAwIDEgLjAyOCAxLjAzNi43My43MyAwIDAgMS0uOTQ5LjA5OGwtLjA4NC0uMDY5LTUuMTQ1LTQuODgxdjExLjk3M2EuNzMyLjczMiAwIDAgMS0xLjQ1NC4xbC0uMDA3LS4xVjMuOTMzTDYuMTI1IDguODE1YS43My43MyAwIDAgMS0uOTUzLjA0NWwtLjA4LS4wNzRhLjczNC43MzQgMCAwIDEtLjA0NS0uOTU1bC4wNzMtLjA4IDYuMzc4LTYuMDUuMDQ2LS4wMzlhLjczNC43MzQgMCAwIDEgLjAxNC0uMDFsLS4wNi4wNDhhLjczLjczIDAgMCAxIC4yMTMtLjE0Yy4wMDUgMCAuMDA5LS4wMDIuMDEzLS4wMDRhLjcyNC43MjQgMCAwIDEgLjY5LjA3MnoiIGZpbGw9IiMyRDJEMkQiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPgo8L3N2Zz4K"
-                                                                                                 alt="공유하기" class="icon">
+                                                                                                 alt="공유하기"
+                                                                                                 class="icon">
                                 <div data-v-77f4e41c="" class="dropdown b-dropdown btn-group" data-v-e0e63576=""
                                      id="__BVID__1550">
-                                    <!----><button aria-haspopup="true" aria-expanded="false" type="button"
-                                                   class="btn board-dropdown-toggle btn-secondary board-dropdownmenu-menuBtn"
-                                                   id="__BVID__1550__BV_toggle_"></button>
+                                    <!---->
+                                    <button aria-haspopup="true" aria-expanded="false" type="button"
+                                            class="btn board-dropdown-toggle btn-secondary board-dropdownmenu-menuBtn"
+                                            id="__BVID__1550__BV_toggle_"></button>
                                     <ul role="menu" tabindex="-1"
                                         class="dropdown-menu dropdown-menu-right board-menu"
                                         aria-labelledby="__BVID__1550__BV_toggle_">
                                         <li data-v-77f4e41c="" role="presentation"><a role="menuitem" href="#"
-                                                                                      target="_self" class="dropdown-item boardUpdate">수정</a></li>
+                                                                                      target="_self"
+                                                                                      class="dropdown-item boardUpdate">수정</a>
+                                        </li>
                                         <li data-v-77f4e41c="" role="presentation"><a role="menuitem" href="#"
-                                                                                      target="_self" class="dropdown-item boardDelete" style="color: red;">삭제</a></li>
+                                                                                      target="_self"
+                                                                                      class="dropdown-item boardDelete"
+                                                                                      style="color: red;">삭제</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -138,39 +147,47 @@
                     <ul data-v-2071676a="" class="body-tag-list"></ul>
                     <div data-v-c5cb681e="" data-v-2071676a="" class="post-react-state">
                         <div data-v-c5cb681e="" class="post-react-item comments"><span data-v-c5cb681e=""
-                                                                                       class="text sg-text-buttonSlim sg-font-medium">댓글 1</span></div>
+                                                                                       class="text sg-text-buttonSlim sg-font-medium">댓글 1</span>
+                        </div>
                     </div>
                 </div>
                 <hr data-v-7037b88b="" class="hr-divider wide-divider">
                 <div data-v-c4a04da8="" data-v-7037b88b="" class="post-comments-container">
                     <div data-v-60f50a1e="" data-v-c4a04da8="" class="comment-input-box"><label data-v-60f50a1e=""
-                                                                                                for="file-input" class="attach-file-label"><img data-v-60f50a1e=""
-                                                                                                                                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im0xMi43NSAyLjUgMS42NzggMS43NmgyLjkwNWMxLjAwOSAwIDEuODM0Ljc5IDEuODM0IDEuNzU5djEwLjU1NWMwIC45NjgtLjgyNSAxLjc2LTEuODM0IDEuNzZIMi42NjdjLTEuMDA5IDAtMS44MzQtLjc5Mi0xLjgzNC0xLjc2VjYuMDJjMC0uOTY4LjgyNS0xLjc2IDEuODM0LTEuNzZoMi45MDVMNy4yNSAyLjVoNS41ek0xMCA4LjE1NWMtMS44OTggMC0zLjQzOCAxLjUyLTMuNDM4IDMuMzkzIDAgMS44NzIgMS41NCAzLjM5MiAzLjQzOCAzLjM5MiAxLjg5OCAwIDMuNDM4LTEuNTIgMy40MzgtMy4zOTIgMC0xLjg3My0xLjU0LTMuMzkzLTMuNDM4LTMuMzkzeiIgZmlsbD0iIzJEMkQyRCIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo="
-                                                                                                                                                alt="이미지 첨부" class="attach-image-icon">
+                                                                                                for="file-input"
+                                                                                                class="attach-file-label"><img
+                            data-v-60f50a1e=""
+                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im0xMi43NSAyLjUgMS42NzggMS43NmgyLjkwNWMxLjAwOSAwIDEuODM0Ljc5IDEuODM0IDEuNzU5djEwLjU1NWMwIC45NjgtLjgyNSAxLjc2LTEuODM0IDEuNzZIMi42NjdjLTEuMDA5IDAtMS44MzQtLjc5Mi0xLjgzNC0xLjc2VjYuMDJjMC0uOTY4LjgyNS0xLjc2IDEuODM0LTEuNzZoMi45MDVMNy4yNSAyLjVoNS41ek0xMCA4LjE1NWMtMS44OTggMC0zLjQzOCAxLjUyLTMuNDM4IDMuMzkzIDAgMS44NzIgMS41NCAzLjM5MiAzLjQzOCAzLjM5MiAxLjg5OCAwIDMuNDM4LTEuNTIgMy40MzgtMy4zOTIgMC0xLjg3My0xLjU0LTMuMzkzLTMuNDM4LTMuMzkzeiIgZmlsbD0iIzJEMkQyRCIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo="
+                            alt="이미지 첨부" class="attach-image-icon">
                         <div data-v-60f50a1e="" id="file-input__BV_file_outer_"
                              class="custom-file b-form-file file-input" aria-required="false"
                              aria-invalid="false"><input type="file" id="file-input" name="uploadFile"
-                                                         disabled="disabled" accept="image/jpg,image/jpeg,image/png,image/gif,image/bmp"
-                                                         class="custom-file-input" style="z-index: -5;"><label for="file-input"
-                                                                                                               data-browse="Browse" class="custom-file-label"><span
+                                                         accept="image/jpg,image/jpeg,image/png,image/gif,image/bmp"
+                                                         class="custom-file-input" style="z-index: -5;"><label
+                                for="file-input"
+                                data-browse="Browse" class="custom-file-label"><span
                                 class="d-block form-file-text" style="pointer-events: none;">No file
                                             chosen</span></label></div>
                     </label>
                         <div data-v-60f50a1e="" class="comment-body">
                             <!----><textarea data-v-60f50a1e="" name="comment-input" placeholder="댓글을 남겨보세요"
                                              rows="1" wrap="soft"
-                                             class="sg-text-body2 sg-font-regular comment-input form-control" maxlength="500"
-                                             style="height: 22px; overflow: hidden; resize: none; outline: none;" id="__BVID__1499"></textarea>
+                                             class="sg-text-body2 sg-font-regular comment-input form-control"
+                                             maxlength="500"
+                                             style="height: 22px; overflow: hidden; resize: none; outline: none;"
+                                             id="__BVID__1499"></textarea>
                             <!---->
                         </div>
                         <div data-v-60f50a1e=""
-                             class="sg-text-buttonSlim sg-font-medium write-comment-submit one-line"> 등록 </div>
+                             class="sg-text-buttonSlim sg-font-medium write-comment-submit one-line"> 등록
+                        </div>
                     </div>
                     <ul data-v-e30e236e="" data-v-c4a04da8="" class="post-comments-list">
                         <li data-v-eb37dd0c="" data-v-e30e236e="" class="post-comments-list-item">
                             <div data-v-6f126738="" data-v-eb37dd0c="" class="post-comment-wrapper">
                                 <div data-v-6f126738="" class="profile-image provider"><img data-v-6f126738=""
-                                                                                            alt="⭐바른배관⭐ 하수구막힘+각종수전(고객은 내 가족이다)" class="image"
+                                                                                            alt="⭐바른배관⭐ 하수구막힘+각종수전(고객은 내 가족이다)"
+                                                                                            class="image"
                                                                                             data-src="https://static.cdn.soomgo.com/upload/profile/dce93681-1662-4df6-b116-bed3bc418d25.jpg?h=110&amp;w=110"
                                                                                             src="https://static.cdn.soomgo.com/upload/profile/dce93681-1662-4df6-b116-bed3bc418d25.jpg?h=110&amp;w=110"
                                                                                             lazy="loaded"></div>
@@ -201,24 +218,32 @@
                                     <div data-v-6f126738=""
                                          class="comment-action-group sg-text-description sg-font-regular">
                                         <div data-v-6f126738="" class="comment-react"><span data-v-6f126738=""
-                                                                                            class="text">1시간 전</span></div>
+                                                                                            class="text">1시간 전</span>
+                                        </div>
                                         <div data-v-6f126738="" class="more-action">
                                             <div data-v-6f126738="" class="dropdown b-dropdown show btn-group"
                                                  id="__BVID__1555">
-                                                <!----><button aria-haspopup="true" aria-expanded="true"
-                                                               type="button" class="btn board-dropdown-toggle btn-secondary btn-comment"
-                                                               id="__BVID__1555__BV_toggle_"></button>
+                                                <!---->
+                                                <button aria-haspopup="true" aria-expanded="true"
+                                                        type="button"
+                                                        class="btn board-dropdown-toggle btn-secondary btn-comment"
+                                                        id="__BVID__1555__BV_toggle_"></button>
                                                 <ul role="menu" tabindex="-1"
                                                     class="dropdown-menu dropdown-menu-right comment-menu"
                                                     aria-labelledby="__BVID__1555__BV_toggle_"
                                                     style="position: absolute; transform: translate3d(-116px, 22px, 0px); top: 0px; left: 0px; will-change: transform;"
                                                     x-placement="bottom-end">
                                                     <li data-v-77f4e41c="" role="presentation"><a role="menuitem"
-                                                                                                  href="#" target="_self"
-                                                                                                  class="dropdown-item commentUpdate">수정</a></li>
+                                                                                                  href="#"
+                                                                                                  target="_self"
+                                                                                                  class="dropdown-item commentUpdate">수정</a>
+                                                    </li>
                                                     <li data-v-77f4e41c="" role="presentation"><a role="menuitem"
-                                                                                                  href="#" target="_self"
-                                                                                                  class="dropdown-item commentDelete" style="color: red;">삭제</a></li>
+                                                                                                  href="#"
+                                                                                                  target="_self"
+                                                                                                  class="dropdown-item commentDelete"
+                                                                                                  style="color: red;">삭제</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -249,7 +274,8 @@
                         <div data-v-644ea9c9="" class="infinite-status-prompt"
                              style="color: rgb(102, 102, 102); font-size: 14px; padding: 10px 0px; display: none;">
 
-                            <br data-v-644ea9c9=""> <button data-v-644ea9c9="" class="btn-try-infinite"></button>
+                            <br data-v-644ea9c9="">
+                            <button data-v-644ea9c9="" class="btn-try-infinite"></button>
                         </div>
                     </div>
                     <!---->
@@ -273,28 +299,42 @@
             <div class="swal2-icon swal2-warning" style="display: none;"></div>
             <div class="swal2-icon swal2-info" style="display: none;"></div>
             <div class="swal2-icon swal2-success" style="display: none;">
-                <div class="swal2-success-circular-line-left"></div><span class="swal2-success-line-tip"></span>
+                <div class="swal2-success-circular-line-left"></div>
+                <span class="swal2-success-line-tip"></span>
                 <span class="swal2-success-line-long"></span>
                 <div class="swal2-success-ring"></div>
                 <div class="swal2-success-fix"></div>
                 <div class="swal2-success-circular-line-right"></div>
-            </div><img class="swal2-image" style="display: none;">
-            <h2 class="swal2-title" id="swal2-title" style="display: flex;">로그인 필요</h2><button type="button"
-                                                                                               class="swal2-close" aria-label="Close this dialog" style="display: none;">×</button>
+            </div>
+            <img class="swal2-image" style="display: none;">
+            <h2 class="swal2-title" id="swal2-title" style="display: flex;">로그인 필요</h2>
+            <button type="button"
+                    class="swal2-close" aria-label="Close this dialog" style="display: none;">×
+            </button>
         </div>
         <div class="swal2-content">
-            <div id="swal2-content" style="display: block;">로그인 후 서비스를 이용할 수 있습니다.</div><input class="swal2-input"
-                                                                                               style="display: none;"><input type="file" class="swal2-file" style="display: none;">
-            <div class="swal2-range" style="display: none;"><input type="range"><output></output></div><select
-                class="swal2-select" style="display: none;"></select>
-            <div class="swal2-radio" style="display: none;"></div><label for="swal2-checkbox" class="swal2-checkbox"
-                                                                         style="display: none;"><input type="checkbox"><span class="swal2-label"></span></label><textarea
+            <div id="swal2-content" style="display: block;">로그인 후 서비스를 이용할 수 있습니다.</div>
+            <input class="swal2-input"
+                   style="display: none;"><input type="file" class="swal2-file" style="display: none;">
+            <div class="swal2-range" style="display: none;"><input type="range">
+                <output></output>
+            </div>
+            <select
+                    class="swal2-select" style="display: none;"></select>
+            <div class="swal2-radio" style="display: none;"></div>
+            <label class="swal2-checkbox"
+                   style="display: none;"><input type="checkbox"><span class="swal2-label"></span></label><textarea
                 class="swal2-textarea" style="display: none;"></textarea>
             <div class="swal2-validation-message" id="swal2-validation-message"></div>
         </div>
-        <div class="swal2-actions"><button type="button" class="swal2-confirm btn" aria-label=""
-                                           style="display: inline-block;">로그인/회원가입</button><button type="button" class="swal2-cancel btn"
-                                                                                                   aria-label="" style="display: inline-block;">취소</button></div>
+        <div class="swal2-actions">
+            <button type="button" class="swal2-confirm btn" aria-label=""
+                    style="display: inline-block;">로그인/회원가입
+            </button>
+            <button type="button" class="swal2-cancel btn"
+                    aria-label="" style="display: inline-block;">취소
+            </button>
+        </div>
         <div class="swal2-footer" style="display: none;"></div>
     </div>
 </div>

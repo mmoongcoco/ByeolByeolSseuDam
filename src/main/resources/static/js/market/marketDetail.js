@@ -17,6 +17,11 @@ let $totalItemCount = $(".body_font_color_70.itemCount");
 let $totalCount = $totalItemCount.text().split('개')[0].split('(')[1];
 let $totalPrice = $(".total_price");
 
+/* 리뷰 사진 첨부 변수 선언 */
+const $file = $("#review_image_upload_btn_c202206217f7c30ccb91ca");
+let $deleteFileBtn = $("img.delete-badge");
+
+
 
 /* 장바구니 모달 열기 */
 function basketModalOpen(){
@@ -134,4 +139,61 @@ function totalPrice(){
     text += "원";
     $totalPrice.html(text);
 }
+
+/* 구매평 작성 클릭 시 리뷰 작성 영역 나오게 하기 */
+function openReview(){
+    let $status = $(".comment_textarea").css('display');
+    if($status == 'none'){
+        $(".comment_textarea").css('display', 'block');
+        $(".review-btn").text("구매평 닫기");
+    }else {
+        $(".comment_textarea").css('display', 'none');
+        $(".review-btn").text("구매평 작성");
+    }
+}
+
+/* 댓글 사진 첨부 시 div 생성 */
+$file.on('change', function (e) {
+    var reader = new FileReader();
+    let type = e.target.files[0].type;
+
+    reader.readAsDataURL(e.target.files[0]);
+
+    reader.onload = function (e) {
+        let url = e.target.result;
+        let text = "";
+
+        if (url.includes('image')) {
+            text += `<div data-v-60f50a1e="" class="image-preview">`;
+            text += `<img data-v-60f50a1e="" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik01LjM2NCA0LjIzNGEuNzk4Ljc5OCAwIDEgMC0xLjEzIDEuMTNMNi44NyA4LjAwMWwtMi42MzcgMi42MzZhLjguOCAwIDAgMCAxLjEzIDEuMTI5TDggOS4xM2wyLjYzNiAyLjYzNWEuNzk4Ljc5OCAwIDEgMCAxLjEzLTEuMTNMOS4xMyA4LjAwMmwyLjYzNy0yLjYzN2EuOC44IDAgMCAwLTEuMTMtMS4xMjlMOCA2Ljg3IDUuMzY0IDQuMjM0eiIgZmlsbD0iI0ZGRiIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=" class="delete-badge">`;
+            text += `<img data-v-60f50a1e="" src="` + url + `" alt="미리보기 이미지" class="image">`;
+            text += `</div>`;
+
+            $(".textarea_block").append(text);
+            $file.attr('disabled', 'true');
+            $(".attach-image-icon").css('cursor', 'default');
+            $(".attach-image-icon").attr('src', 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im0xMi43NSAyLjUgMS42NzggMS43NmgyLjkwNWMxLjAwOSAwIDEuODM0Ljc5IDEuODM0IDEuNzU5djEwLjU1NWMwIC45NjgtLjgyNSAxLjc2LTEuODM0IDEuNzZIMi42NjdjLTEuMDA5IDAtMS44MzQtLjc5Mi0xLjgzNC0xLjc2VjYuMDJjMC0uOTY4LjgyNS0xLjc2IDEuODM0LTEuNzZoMi45MDVMNy4yNSAyLjVoNS41ek0xMCA4LjE1NWMtMS44OTggMC0zLjQzOCAxLjUyLTMuNDM4IDMuMzkzIDAgMS44NzIgMS41NCAzLjM5MiAzLjQzOCAzLjM5MiAxLjg5OCAwIDMuNDM4LTEuNTIgMy40MzgtMy4zOTIgMC0xLjg3My0xLjU0LTMuMzkzLTMuNDM4LTMuMzkzeiIgZmlsbD0iI0M1QzVDNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=');
+        } else {
+            alert("사진파일만 업로드 가능합니다.");
+
+            return;
+        }
+    }
+});
+
+/* 첨부파일 x 클릭 시 div 삭제 */
+$(".textarea_block").on('click', '.delete-badge', function(){
+    $file.removeAttr('disabled');
+    $(".attach-image-icon").css('cursor', 'pointer');
+    $(".attach-image-icon").attr('src', 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Im0xMi43NSAyLjUgMS42NzggMS43NmgyLjkwNWMxLjAwOSAwIDEuODM0Ljc5IDEuODM0IDEuNzU5djEwLjU1NWMwIC45NjgtLjgyNSAxLjc2LTEuODM0IDEuNzZIMi42NjdjLTEuMDA5IDAtMS44MzQtLjc5Mi0xLjgzNC0xLjc2VjYuMDJjMC0uOTY4LjgyNS0xLjc2IDEuODM0LTEuNzZoMi45MDVMNy4yNSAyLjVoNS41ek0xMCA4LjE1NWMtMS44OTggMC0zLjQzOCAxLjUyLTMuNDM4IDMuMzkzIDAgMS44NzIgMS41NCAzLjM5MiAzLjQzOCAzLjM5MiAxLjg5OCAwIDMuNDM4LTEuNTIgMy40MzgtMy4zOTIgMC0xLjg3My0xLjU0LTMuMzkzLTMuNDM4LTMuMzkzeiIgZmlsbD0iIzJEMkQyRCIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=');
+    $(".image-preview").remove();
+});
+
+/* 포토리뷰 클릭 시 사진 확대하기 */
+$(".thumb_detail_img_wrap").on('click', function(){
+    let $flag = $(this).find('img').css('width');
+    $flag = $flag == '80px'? '350px' : '80px';
+
+    $(this).find('img').eq(0).css({'width':  $flag, 'height':  $flag});
+});
 

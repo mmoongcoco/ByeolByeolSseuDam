@@ -222,6 +222,7 @@ blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4,
 .tabCommonTit {
     margin-bottom: 12px;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .courseList {

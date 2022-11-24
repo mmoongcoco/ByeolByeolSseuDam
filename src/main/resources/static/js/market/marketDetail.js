@@ -140,17 +140,55 @@ function totalPrice(){
     $totalPrice.html(text);
 }
 
+/* 구매하지 않은 제품일 경우 구매평 작성 불가 모달 띄우기 */
+function openReviewModal(){
+    if(false){
+        $(".swal2-container").css('display', 'block');
+        return;
+    }
+    openReview();
+
+}
+
+/* 구매평 작성 불가 모달 닫기 */
+function closeReviewModal(){
+    $(".swal2-container").css('display', 'none');
+}
+
 /* 구매평 작성 클릭 시 리뷰 작성 영역 나오게 하기 */
 function openReview(){
     let $status = $(".comment_textarea").css('display');
     if($status == 'none'){
         $(".comment_textarea").css('display', 'block');
+        $(".star-rate-wrapper").css('display', 'block');
+        $(".phogo_review_btn").css('display', 'none');
         $(".review-btn").text("구매평 닫기");
     }else {
         $(".comment_textarea").css('display', 'none');
+        $(".star-rate-wrapper").css('display', 'none');
+        $(".phogo_review_btn").css('display', 'block');
         $(".review-btn").text("구매평 작성");
     }
 }
+
+/* 리뷰 별점 */
+$(".starRate").on('click', function(){
+    let $starRate = $(this).prop('classList')[1];
+    let text = "";
+    $(".starRate").attr('fill', 'rgb(225,225,225)');
+    if($starRate == '1') { text = "아쉬워요"; }
+    else if($starRate == '2') { text = "그저 그래요"; }
+    else if($starRate == '3') { text = "괜찮았어요"; }
+    else if($starRate == '4') { text = "좋았어요"; }
+    else if($starRate == '5') { text = "최고예요"; }
+
+    for(let i = 0; i < parseInt($starRate); i++){
+        $(".starRate." + (i + 1)).attr('fill', 'rgb(255,206,33)');
+    }
+    $(".score-text").css('display', 'block');
+    $(".score-text").html(text);
+
+});
 
 /* 댓글 사진 첨부 시 div 생성 */
 $file.on('change', function (e) {

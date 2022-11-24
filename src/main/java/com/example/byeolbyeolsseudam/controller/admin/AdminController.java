@@ -50,7 +50,7 @@ public class AdminController {
     @GetMapping("adminorderlist")
     public String adminOrdertList(){ return "/app/admin/adminOrderList.html"; }
 
-    /* 주문 관리 _ 리뷰 관리 */
+    /* 주문 관리 _ 리뷰 목록 */
     @GetMapping("adminreviewlist")
     public String adminReviewList(){ return "/app/admin/adminReviewList.html"; }
 
@@ -60,6 +60,12 @@ public class AdminController {
     @GetMapping("adminprogram")
     public String adminProgram(){
         return "/app/admin/adminProgram.html";
+    }
+
+    /* 프로그램 - 프로그램 세부 내역 */
+    @GetMapping("adminprogramdetail")
+    public String adminProgramDetail(){
+        return "/app/admin/adminProgramDetail.html";
     }
 
     /* 프로그램 관리 - 프로그램 목록 + 프로그램 추가 */
@@ -74,13 +80,8 @@ public class AdminController {
         return "/app/admin/adminProgramModify.html";
     }
 
-    /* 프로그램 - 프로그램 세부 내역 */
-    @GetMapping("adminprogramdetail")
-    public String adminProgramDetail(){
-        return "/app/admin/adminProgramDetail.html";
-    }
-
     /* ############################### 줍깅 관리 ################################ */
+
     /* 줍깅 관리 - 코스 목록 */
     @GetMapping("adminjubjubcourse")
     public String adminJubJubCourse(){
@@ -93,22 +94,10 @@ public class AdminController {
         return "/app/admin/adminJubJubCourseAdd.html";
     }
 
-    /* 줍깅 관리 - 코스 목록 + 스페셜 코스 추가 */
-    @GetMapping("adminjubjubcourseaddspecial")
-    public String adminJubJubCourseAddSpecial(){
-        return "/app/admin/adminJubJubCourseAddSpecial.html";
-    }
-
     /* 줍깅 관리 - 코스 목록 + 코스 수정 */
     @GetMapping("adminjubjubcoursemodify")
     public String adminJubJubCourseModify(){
         return "/app/admin/adminJubJubCourseModify.html";
-    }
-
-    /* 줍깅 관리 - 코스 목록 + 스페셜 코스 수정 */
-    @GetMapping("adminjubjubcoursemodifyspecial")
-    public String adminJubJubCourseModifySpecial(){
-        return "/app/admin/adminJubJubCourseModifySpecial.html";
     }
 
     /* 줍깅 관리 - 스팟 목록 */
@@ -210,6 +199,12 @@ public class AdminController {
     @GetMapping("adminbanneradd")
     public String adminBannerAdd(){
         return "/app/admin/adminBannerAdd.html";
+    }
+
+    /* 베너관리- 베너 수정 */
+    @GetMapping("adminbannermodify")
+    public String adminBannerModify(){
+        return "/app/admin/adminBannerModify.html";
     }
 
 

@@ -81,10 +81,6 @@
                                                                         </div>
                                                                     </div>
                                                                     <!--end::Card title-->
-
-                                                                    <!--begin::Card toolbar-->
-
-                                                                    <!--end::Card toolbar-->
                                                                 </div>
                                                                 <!--end::Card header-->
 
@@ -95,40 +91,55 @@
                                                                          class="dataTables_wrapper dt-bootstrap4 no-footer">
                                                                         <div class="table-responsive">
                                                                         </div>
-                                                                        <div style="width: 60%; margin: 0 auto 48px auto;">
-                                                                            <div class="card-toolbar flex-row-fluid justify-content-end gap-5"
-                                                                                 style="float: right; margin-left: 10px; height: 36px;margin-top: 7px;">
-                                                                                <div class="w-100 mw-150px">
-                                                                                    <a href="http://localhost:10001/admin/adminnotice" style="padding: 9px 20px 9px 20px;"
-                                                                                       class="btn btn-primary">추가 하기</a>
+                                                                        <form th:action="@{adminnotice}"
+                                                                              name="addAdminNoticeForm">
+                                                                            <div style="width: 60%; margin: 0 auto 48px auto;">
+                                                                                <div class="card-toolbar flex-row-fluid justify-content-end gap-5"
+                                                                                     style="float: right; margin-left: 10px; height: 36px;margin-top: 7px;">
+                                                                                    <div class="w-100 mw-150px">
+                                                                                        <a type="submit"
+                                                                                           onclick="addAdminNotice()"
+                                                                                           style="padding: 9px 20px 9px 20px;"
+                                                                                           class="btn btn-primary">추가
+                                                                                            하기</a>
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="dataTables_wrapper dt-bootstrap4 no-footer">
-                                                                                <div class="d-flex align-items-center position-relative my-1">
-                                                                                    <input type="text"
-                                                                                           data-kt-ecommerce-product-filter="search"
-                                                                                           class="form-control form-control-solid w-250px ps-14"
-                                                                                           placeholder="공지사항 제목"
-                                                                                           style="width: 88%;">
-                                                                                    <select class="form-control form-control-solid"
-                                                                                            style="width: 12%;padding-left: 12px; margin-left: 9px;color: #5E6278;">
-                                                                                        <option value="" disabled selected hidden>선택</option>
-                                                                                        <option value="일반">일반</option>
-                                                                                        <option value="중요">중요</option>
-                                                                                    </select>
+                                                                                <div class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                                                                    <div class="d-flex align-items-center position-relative my-1">
+                                                                                        <input hidden="hidden"/>
+                                                                                        <input type="text"
+                                                                                               name="noticeTitle"
+                                                                                               class="form-control form-control-solid"
+                                                                                               placeholder="공지사항 제목"
+                                                                                               style="width: 88%;">
+                                                                                        <select class="form-control form-control-solid"
+                                                                                                id="noticeImportant"
+                                                                                                style="width: 12%;padding-left: 19px; margin-left: 9px;color: #5E6278;">
+                                                                                            <option value="noticeSelect"
+                                                                                                    disabled selected
+                                                                                                    hidden>선택
+                                                                                            </option>
+                                                                                            <option value="일반">일반
+                                                                                            </option>
+                                                                                            <option value="중요">중요
+                                                                                            </option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="d-flex align-items-center position-relative my-1">
+                                                                                    <textarea
+                                                                                            class="form-control form-control-solid"
+                                                                                            name="noticeContent"
+                                                                                            placeholder="공지사항 내용"
+                                                                                            style="width: 100%; height: 200px;"></textarea>
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div class="d-flex align-items-center position-relative my-1">
-                                                                                    <textarea class="form-control form-control-solid"
-                                                                                           placeholder="공지사항 내용"
-                                                                                           style="width: 100%; height: 200px;"></textarea>
-                                                                                </div>
-                                                                            </div>
 
 
-                                                                            <div class="row">
+                                                                                <div class="row">
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <!--end::Table-->
+                                                                            <!--end::Table-->
+                                                                        </form>
                                                                     </div>
                                                                     <!--end::Card body-->
                                                                 </div>
@@ -156,8 +167,4 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/admin/admin.js"></script>
-<script>
-    //리스트 체크박스
-    var $checkboxes = $(".form-check-input.checkbox");
-</script>
 </html>

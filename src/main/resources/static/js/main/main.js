@@ -29,7 +29,7 @@ firstDiv.style.float = 'left';
 firstDiv.style.height = '100%';
 firstDiv.style.minHeight = '1px';
 firstDiv.style.display = 'block';
-firstDiv.innerHTML = `<img src="https://cdn.imweb.me/thumbnail/20221118/0a411718bbadb.png" alt="포트폴리오 전용 목록 진입 창구 배너" class="banner-image" data-v-e4caeaf8="" data-v-afb0bbd0="">`;
+firstDiv.innerHTML = `<img src="/images/main/earthgreen.png" alt="포트폴리오 전용 목록 진입 창구 배너" class="banner-image" data-v-e4caeaf8="" data-v-afb0bbd0="">`;
 banner.appendChild(firstDiv);
 
 
@@ -39,7 +39,7 @@ lastDiv.style.float = 'left';
 lastDiv.style.height = '100%';
 lastDiv.style.minHeight = '1px';
 lastDiv.style.display = 'block';
-lastDiv.innerHTML = `<img src="https://cdn.imweb.me/thumbnail/20221102/3ae73b13e9f2c.png" alt="이사 기획전" class="banner-image" data-v-e4caeaf8="" data-v-afb0bbd0="">`;
+lastDiv.innerHTML = `<img src="/images/main/togetherzero.png" alt="이사 기획전" class="banner-image" data-v-e4caeaf8="" data-v-afb0bbd0="">`;
 banner.insertBefore(lastDiv, document.querySelector("div.banner div"));
 
 banner.style.transform = "translate(-970px)";

@@ -239,23 +239,23 @@ input {
     z-index: 2;
 }
 
-.input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child) {
+.input-group>.custom-select:not(:first-child), .input-group>.pro-form-control:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-.input-group>.custom-file .custom-file-input:focus~.custom-file-label, .input-group>.custom-select:focus, .input-group>.form-control:focus {
+.input-group>.custom-file .custom-file-input:focus~.custom-file-label, .input-group>.custom-select:focus, .input-group>.pro-form-control:focus {
     z-index: 3;
 }
 
-.input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
+.input-group>.custom-file, .input-group>.custom-select, .input-group>.pro-form-control, .input-group>.pro-form-control-plaintext {
     position: relative;
     flex: 1 1 0%;
     min-width: 0;
     margin-bottom: 0;
 }
 
-.form-control {
+.pro-form-control {
     display: block;
     width: 100%;
     height: calc(1.5em + 1.5rem);
@@ -271,7 +271,7 @@ input {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.form-control[data-v-78206d9f] {
+.pro-form-control[data-v-78206d9f] {
     border: 0;
     background: none;
     padding: 0;

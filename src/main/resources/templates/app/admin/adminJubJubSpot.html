@@ -59,7 +59,7 @@
                                                                     class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                                                                 <h1
                                                                         class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-                                                                    스팟 관리</h1>
+                                                                    스팟 목록</h1>
                                                             </div>
                                                         </div>
                                                     </div><!--/ 관련 제목 입력 부분-->
@@ -296,8 +296,7 @@
                                                                                                aria-controls="kt_ecommerce_products_table"
                                                                                                data-dt-idx="0"
                                                                                                tabindex="0"
-                                                                                               class="page-link"><i
-                                                                                                    class="previous"></i></a>
+                                                                                               class="page-link"><</a>
                                                                                         </li>
                                                                                         <li class="paginate_button page-item active">
                                                                                             <a href="#"
@@ -340,8 +339,7 @@
                                                                                                aria-controls="kt_ecommerce_products_table"
                                                                                                data-dt-idx="6"
                                                                                                tabindex="0"
-                                                                                               class="page-link"><i
-                                                                                                    class="next"></i></a>
+                                                                                               class="page-link">></a>
                                                                                         </li>
                                                                                     </ul>
                                                                                 </div>
@@ -376,9 +374,6 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/admin/admin.js"></script>
 <script>
-    //리스트 체크박스
-    var $checkboxes = $(".form-check-input.checkbox");
-
     // 검색 _ 엔터로 submit 가능 / 빈칸 입력시 alert
     function searchList(theForm) {
         if (theForm.enter.value==""){
@@ -388,7 +383,7 @@
         theForm.submit();
     }
 
-    // 제품 삭제
+    // 스팟 삭제
     $("#deleteSpotBtn").on('click', function () {
         if ($checkboxes.filter(":checked").length == 0) {
             alert("삭제할 스팟을 선택하세요.");

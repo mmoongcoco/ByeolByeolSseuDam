@@ -1952,9 +1952,6 @@ input:focus{
 select:focus{
     outline-color: #00c7ae;
 }
-select:hover{
-    background: #00c7ae;
-}
 textarea:focus{
     outline-color: #00c7ae;
 }

@@ -15,6 +15,7 @@
     <div class="flexroot">
         <div class="app_page flex_column">
             <div class="app_wrapper">
+
                 <header class="app_header">
                     <div class="header_wrapper">
                         <div class="headerbar">
@@ -33,6 +34,7 @@
                         </div>
                     </div>
                 </header>
+
                 <main class="app_main flex_column">
                     <div class="app_main_context">
                         <div class="app_main_context_container">
@@ -129,14 +131,15 @@
                                                                     <div id="kt_customers_table_wrapper"
                                                                          class="dataTables_wrapper dt-bootstrap4 no-footer">
                                                                         <div class="table-responsive">
-                                                                            <table
-                                                                                    class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer"
+                                                                            <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer"
                                                                                     id="kt_customers_table">
+
                                                                                 <!--begin::Table head-->
                                                                                 <thead>
                                                                                 <!--begin::Table row-->
                                                                                 <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                                                                                    <th class="w-10px pe-2 sorting_disabled"
+                                                                                    <!-- memberCheckBoxTitle -->
+                                                                                    <th class="w-10px pe-2 sorting_disabled memberCheckboxTitle"
                                                                                         rowspan="1" colspan="1"
                                                                                         aria-label=""
                                                                                         style="width: 29.9px;">
@@ -148,7 +151,8 @@
                                                                                                    value="1">
                                                                                         </div>
                                                                                     </th>
-                                                                                    <th class="min-w-125px sorting"
+                                                                                    <!-- memberIdTitle -->
+                                                                                    <th class="min-w-125px sorting memberIdTitle"
                                                                                         tabindex="0"
                                                                                         aria-controls="kt_customers_table"
                                                                                         rowspan="1"
@@ -156,7 +160,8 @@
                                                                                         aria-label="">
                                                                                         No.
                                                                                     </th>
-                                                                                    <th class="min-w-125px sorting"
+                                                                                    <!-- memberCategoryTitle -->
+                                                                                    <th class="min-w-125px sorting memberCategoryTitle"
                                                                                         tabindex="0"
                                                                                         aria-controls="kt_customers_table"
                                                                                         rowspan="1"
@@ -164,7 +169,8 @@
                                                                                         aria-label="">
                                                                                         구분
                                                                                     </th>
-                                                                                    <th class="min-w-125px sorting"
+                                                                                    <!-- memberNameTitle -->
+                                                                                    <th class="min-w-125px sorting memberNameTitle"
                                                                                         tabindex="0"
                                                                                         aria-controls="kt_customers_table"
                                                                                         rowspan="1"
@@ -172,7 +178,8 @@
                                                                                         aria-label="">
                                                                                         이름
                                                                                     </th>
-                                                                                    <th class="min-w-125px sorting"
+                                                                                    <!-- memberPhoneTitle -->
+                                                                                    <th class="min-w-125px sorting memberPhoneTitle"
                                                                                         tabindex="0"
                                                                                         aria-controls="kt_customers_table"
                                                                                         rowspan="1"
@@ -180,7 +187,8 @@
                                                                                         aria-label="">
                                                                                         전화번호
                                                                                     </th>
-                                                                                    <th class="min-w-125px sorting"
+                                                                                    <!-- memberEmailTitle -->
+                                                                                    <th class="min-w-125px sorting memberEmailTitle"
                                                                                         tabindex="0"
                                                                                         aria-controls="kt_customers_table"
                                                                                         rowspan="1"
@@ -188,7 +196,8 @@
                                                                                         aria-label="">
                                                                                         Email
                                                                                     </th>
-                                                                                    <th class="min-w-125px sorting"
+                                                                                    <!-- memberAddressTitle -->
+                                                                                    <th class="min-w-125px sorting memberAddressTitle"
                                                                                         tabindex="0"
                                                                                         aria-controls="kt_customers_table"
                                                                                         rowspan="1"
@@ -196,7 +205,8 @@
                                                                                         aria-label="">
                                                                                         주소
                                                                                     </th>
-                                                                                    <th class="min-w-125px sorting"
+                                                                                    <!-- memberPointTitle -->
+                                                                                    <th class="min-w-125px sorting memberPointTitle"
                                                                                         tabindex="0"
                                                                                         aria-controls="kt_customers_table"
                                                                                         rowspan="1"
@@ -204,7 +214,8 @@
                                                                                         aria-label="">
                                                                                         포인트
                                                                                     </th>
-                                                                                    <th class="min-w-125px sorting"
+                                                                                    <!-- memberProfileFileTitle -->
+                                                                                    <th class="min-w-125px sorting memberProfileFileTitle"
                                                                                         tabindex="0"
                                                                                         aria-controls="kt_customers_table"
                                                                                         rowspan="1"
@@ -220,40 +231,50 @@
                                                                                 <!--begin::Table body-->
                                                                                 <tbody class="fw-semibold text-gray-600">
 
-                                                                                <!-- 회원1 -->
+                                                                                <!-- 회원 -->
                                                                                 <tr class="row_member">
-                                                                                    <td>
+                                                                                    <!-- memberCheckBox -->
+                                                                                    <td class="memberCheckbox">
                                                                                         <div class="form-check form-check-sm form-check-custom form-check-solid">
                                                                                             <input class="form-check-input checkbox" type="checkbox">
                                                                                         </div>
                                                                                     </td>
-                                                                                    <td class="member_list_value number">
+                                                                                    <!-- memberId -->
+                                                                                    <td class="member_list_value number memberId">
                                                                                         2022111301
                                                                                     </td>
-                                                                                    <td class="member_list_value">
+                                                                                    <!-- memberCategory -->
+                                                                                    <td class="member_list_value memberCategory">
                                                                                         일반회원
                                                                                     </td>
-                                                                                    <td class="member_list_value">
+                                                                                    <!-- memberName -->
+                                                                                    <td class="member_list_value memberName">
                                                                                         문승희
                                                                                     </td>
-                                                                                    <td class="member_list_value">
+                                                                                    <!-- memberPhone -->
+                                                                                    <td class="member_list_value memberPhone">
                                                                                         010-1234-5678
                                                                                     </td>
-                                                                                    <td class="member_list_value">
+                                                                                    <!-- memberEmail -->
+                                                                                    <td class="member_list_value memberEmail">
                                                                                         ans1234@naver.com
                                                                                     </td>
-                                                                                    <td class="member_list_value">
+                                                                                    <!-- memberAddress -->
+                                                                                    <td class="member_list_value memberAddress">
                                                                                         경기도 수원시
                                                                                     </td>
-                                                                                    <td class="member_list_value">
+                                                                                    <!-- memberPoint -->
+                                                                                    <td class="member_list_value memberPoint">
                                                                                         36800
                                                                                     </td>
-                                                                                    <td class="member_list_value">
+                                                                                    <!-- memberProfileFile -->
+                                                                                    <td class="member_list_value memberProfileFile">
                                                                                         photo.jpg
-                                                                                    </td>
                                                                                     </td>
                                                                                 </tr>
 
+
+                                                                            <!-- BEGIN : 삭제할 데이터 - 날리기 #########################-->
                                                                                 <!-- 회원2 -->
                                                                                 <tr class="row_member">
                                                                                     <td>
@@ -574,7 +595,9 @@
                                                                                     </td>
                                                                                 </tr>
 
-                                                                                <!-- 회원이 없을 때  -->
+                                                                             <!-- END : 삭제할 데이터 - 날리기 ########################### -->
+
+                                                                                <!-- 회원이 없을 때 - 주석 풀기 -->
                                                                                 <!--<tr>
                                                                                     <td colspan="9" align="center">가입된
                                                                                         회원이
@@ -586,6 +609,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <!--end::Table-->
+
                                                                     <!-- 우측 하단 페이징 처리 -->
                                                                     <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
                                                                         <div class="dataTables_paginate paging_simple_numbers"
@@ -597,8 +621,7 @@
                                                                                        aria-controls="kt_ecommerce_products_table"
                                                                                        data-dt-idx="0"
                                                                                        tabindex="0"
-                                                                                       class="page-link"><i
-                                                                                            class="previous"></i></a>
+                                                                                       class="page-link"><</a>
                                                                                 </li>
                                                                                 <li class="paginate_button page-item active">
                                                                                     <a href="#"
@@ -641,8 +664,7 @@
                                                                                        aria-controls="kt_ecommerce_products_table"
                                                                                        data-dt-idx="6"
                                                                                        tabindex="0"
-                                                                                       class="page-link"><i
-                                                                                            class="next"></i></a>
+                                                                                       class="page-link">></a>
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
@@ -671,83 +693,4 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/admin/admin.js"></script>
 
-<!-- Code injected by live-server -->
-<!--<script>-->
-<!--    // <![CDATA[  <&#45;&#45; For SVG support-->
-<!--    if ('WebSocket' in window) {-->
-<!--        (function () {-->
-<!--            function refreshCSS() {-->
-<!--                var sheets = [].slice.call(document-->
-<!--                    .getElementsByTagName("link"));-->
-<!--                var head = document.getElementsByTagName("head")[0];-->
-<!--                for (var i = 0; i < sheets.length; ++i) {-->
-<!--                    var elem = sheets[i];-->
-<!--                    var parent = elem.parentElement || head;-->
-<!--                    parent.removeChild(elem);-->
-<!--                    var rel = elem.rel;-->
-<!--                    if (elem.href && typeof rel != "string" || rel.length == 0-->
-<!--                        || rel.toLowerCase() == "stylesheet") {-->
-<!--                        var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/,-->
-<!--                            '');-->
-<!--                        elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?')-->
-<!--                            + '_cacheOverride=' + (new Date().valueOf());-->
-<!--                    }-->
-<!--                    parent.appendChild(elem);-->
-<!--                }-->
-<!--            }-->
-
-<!--            var protocol = window.location.protocol === 'http:' ? 'ws://'-->
-<!--                : 'wss://';-->
-<!--            var address = protocol + window.location.host-->
-<!--                + window.location.pathname + '/ws';-->
-<!--            var socket = new WebSocket(address);-->
-<!--            socket.onmessage = function (msg) {-->
-<!--                if (msg.data == 'reload')-->
-<!--                    window.location.reload();-->
-<!--                else if (msg.data == 'refreshcss')-->
-<!--                    refreshCSS();-->
-<!--            };-->
-<!--            if (sessionStorage-->
-<!--                && !sessionStorage-->
-<!--                    .getItem('IsThisFirstTime_Log_From_LiveServer')) {-->
-<!--                console.log('Live reload enabled.');-->
-<!--                sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer',-->
-<!--                    true);-->
-<!--            }-->
-<!--        })();-->
-<!--    } else {-->
-<!--        console-->
-<!--            .error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');-->
-<!--    }-->
-<!--</script>-->
-
-
-<script>
-    //리스트 체크박스
-    var $checkboxes = $(".form-check-input.checkbox");
-
-    // 회원 삭제
-    $("#deleteMemberButton").on('click', function () {
-        if ($checkboxes.filter(":checked").length == 0) {
-            alert("삭제할 회원을 선택하세요.");
-            return;
-        }
-
-        // var $deleteData = $checkboxes.filter(":checked").closest('.row_member').find('.member_list_value.number').text();
-        //
-        // console.log($deleteData);
-        //
-        // $.ajax({
-        //     url: "/member/deleteMember.me",
-        //     data: {
-        //         memberNumber: $deleteData
-        //     },
-        //     success: function (data) {
-        //         console.log("삭제")
-        //         location.reload();
-        //     }
-        // });
-    });
-
-</script>
 </html>

@@ -92,7 +92,7 @@
                                                                         <div class="table-responsive">
                                                                         </div>
 
-                                                                        <form action="http://localhost:10001/admin/adminproductlist" name="productForm">
+                                                                        <form th:action="@{adminproductlist}" name="productForm">
                                                                             <div style="width: 60%; margin: 0 auto 48px auto;">
                                                                                 <div class="card-toolbar flex-row-fluid justify-content-end gap-5"
                                                                                      style="float: right; margin-left: 10px; height: 36px;margin-top: 7px;">
@@ -197,50 +197,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/admin/admin.js"></script>
-<script>
-    //리스트 체크박스
-    var $checkboxes = $(".form-check-input.checkbox");
 
-    //
-    function addProduct() {
-        if($("input[name=productName]").val() == ""){
-            alert("제품명을 입력하세요!");
-            $("input[name=productName]").focus();
-            return;
-        }
-
-        if($("input[name=productCategory]").val() == ""){
-            alert("카테 고리를 입력하세요!");
-            $("input[name=productCategory]").focus();
-            return;
-        }
-
-        if($("input[name=productPrice]").val() == ""){
-            alert("가격을 입력하세요!");
-            $("input[name=productPrice]").focus();
-            return;
-        }
-
-        if($("input[name=productCount]").val() == ""){
-            alert("초기 입고 수량을 입력하세요!");
-            $("input[name=productCount]").focus();
-            return;
-        }
-
-        if($("input[name=productFileProfile]").next().attr("src") == "/images/admin/06.png"){
-            alert("대표 이미지를 등록하세요!");
-            return;
-        }
-
-        if($("input[name=productFileDetail]").next().attr("src") == "/images/admin/05.png"){
-            alert("상세 설명 이미지를 등록하세요!");
-            return;
-        }
-
-        productForm.submit();
-
-    }
-
-
-</script>
 </html>

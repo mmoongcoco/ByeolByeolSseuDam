@@ -243,6 +243,11 @@
     letter-spacing: -.0125rem;
 }
 
+.modalbadgeImg {
+    width: 70px;
+    margin-bottom: 15px;
+}
+
 .swal2-input {
     height: 2.625em;
     padding: 0 0.75em;

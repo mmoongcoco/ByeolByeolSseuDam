@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/css/fix/footer2.css">
 </head>
 <body class="received-quotes">
+<div>
 <header th:replace="/app/fix/header.html :: header"></header>
     <div id="app-body">
         <div class="received-quote-list" data-v-adb80f6e="">
@@ -45,11 +46,7 @@
                         <div data-v-c85c3b6a="" class="title"> 수거 신청 정보 </div>
                         <div data-v-c85c3b6a="" class="date">2022.11.01</div>
                     </div>
-                    <div data-v-c85c3b6a="" class="header-buttons"><span data-v-c85c3b6a="" role="button"
-                            class="show-request-mobile"> 내 요청서 보기 </span><button data-v-c85c3b6a="" type="button"
-                            class="btn btn-primary" onclick="location.href='http://localhost:10001/pickup/pickwantedlist'">목록 보기</button>
-                        <!---->
-                    </div>
+
                 </div>
                 <!---->
                 <!---->
@@ -58,7 +55,10 @@
                 <ul data-v-adb80f6e="" class="quote-pro-item-list">
                     <!---->
                     <li data-v-464dc29d="" data-v-adb80f6e="" data-usertype="provider"
-                        class="quote-pro-item has-quote-profile">
+                        class="quote-pro-item has-quote-profile" style="position: relative">
+                        <div id="abcdef">
+                            <img src="/images/pickup/kakaomap.PNG">
+                        </div>
 <!--                        <div data-v-464dc29d="" class="quote-badge">-->
 <!--                            &lt;!&ndash;&ndash;&gt;<span data-v-0ea43153="" data-v-464dc29d=""-->
 <!--                                class="badge hire-pro-badge hired-badge badge-primary badge-pill"> 고용 </span>-->
@@ -90,10 +90,10 @@
                         <div data-v-f32583c0="" data-v-464dc29d="" class="quote-info-wrapper">
                             <div data-v-f32583c0="" class="quote-info">
                                 <ul data-v-f32583c0="" class="user-detail has-quote-profile">
-                                    <li data-v-f32583c0="" class="address">신청자 주소</li>
+                                    <li data-v-f32583c0="" class="address">신청자 주소 들어올 자리</li>
                                     <li data-v-f32583c0="" class="career">페트병 2개</li>
                                     <li data-v-f32583c0="" class="career">유리병 5개</li>
-                                    <li data-v-f32583c0="" class="hired">수거 메시지</li>
+                                    <li data-v-f32583c0="" class="hired">수거 메시지 들어올 자리</li>
                                 </ul>
                                 <div data-v-f32583c0="" class="quote-price-wrapper">
                                     <div data-v-f32583c0="" class="quote-price">
@@ -102,8 +102,12 @@
 <!--                                            &lt;!&ndash;&ndash;&gt;-->
 <!--                                        </span>-->
                                     </div>
-                                    <div data-v-f32583c0="" class="quote-cta-wrapper"><button data-v-f32583c0="" type="button"
-                                            class="btn quote-cta btn-primary">수락하기</button></div>
+                                    <div data-v-f32583c0="" class="quote-cta-wrapper">
+                                        <button data-v-f32583c0="" type="button"
+                                            class="btn quote-cta btn-primary" onclick="location.href=`http://localhost:10001/pickup/pickwantedlist`">목록보기</button>
+                                        <button data-v-f32583c0="" type="button"
+                                                class="btn quote-cta btn-primary" onclick="location.href=`http://localhost:10001/pickup/pickacceptedlist`">수락하기</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -114,6 +118,7 @@
         </div>
     </div>
 <footer th:replace="/app/fix/footer.html :: footer"></footer>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/fix/headerLogin.js"></script>

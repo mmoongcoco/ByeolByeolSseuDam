@@ -1196,7 +1196,8 @@ textarea,
 }
 
 .widget.board._list_wrap{
-    margin: 0px 5%;
+    margin: 0px 5% 29px;
+
 }
 
 @media(max-width: 768px){

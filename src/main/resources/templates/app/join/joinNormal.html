@@ -30,6 +30,7 @@
             <div data-v-55fec228="">
                 <h1 data-v-55fec228="">숨고에 오신 것을 환영합니다</h1>
                 <div data-v-55fec228="" class="card">
+                    <form>
                     <div data-v-79992f5d="" data-v-55fec228="" no-gutters="" data-testid="signup-form"
                          class="form-row signup-form">
                         <div data-v-79992f5d="" class="col-12">
@@ -118,15 +119,17 @@
                         </div>
                         <div data-v-79992f5d="" class="col-12">
                             <button data-v-79992f5d="" data-testid="btn-signup"
-                                    type="submit" class="btn btn-signup btn-primary"><span
-                                    data-v-79992f5d="">회원가입</span><span data-v-79992f5d="" style="display: none;">
+                                    type="submit" class="btn btn-signup btn-primary">
+                                <span data-v-79992f5d="">회원가입</span>
+                                <span data-v-79992f5d="" style="display: none;">
                                         <div data-v-fc3fcce8="" data-v-79992f5d="" class="">
                                             <div data-v-fc3fcce8="" class="indicator-body"
                                                  style="width: 24px; height: 24px; border-width: 0.25rem; border-style: solid; border-color: rgb(255, 255, 255) rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.2); border-image: initial;">
                                             </div>
                                             <p data-v-fc3fcce8="" style="display: none;"></p>
                                         </div>
-                                    </span></button>
+                                    </span>
+                            </button>
                         </div>
                         <div data-v-79992f5d="" class="col-12">
                             <button data-v-6dfa1fbf="" data-v-79992f5d="" type="button" class="btn kakao-login-btn btn-secondary">
@@ -149,6 +152,7 @@
                         <div data-v-79992f5d="" class="col-12"><a data-v-79992f5d="" href="/pro"
                                                                   class="pro-sign-up"> 고수로 가입하시나요? </a></div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -163,143 +167,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/fix/headerLogin.js"></script>
-<script>
-    let emailFilter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    let pwFilter = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W).{8,20}$/;
-
-    $("#__BVID__75").on("blur", function () {
-        let $inputName = $("#__BVID__75");
-
-        if (!$inputName.val()) {
-            $(this).siblings(".invalid-feedback").text("이름을 입력해주세요.");
-            $(this).siblings(".invalid-feedback").css("display", "block");
-            $inputName.addClass("invalid");
-        } else {
-            $(this).siblings(".invalid-feedback").css("display", "none");
-            $inputName.removeClass("invalid");
-        };
-    })
-    $("#__BVID__77").on("blur", function () {
-        let $inputEmail = $("#__BVID__77");
-
-        if (!$inputEmail.val()) {
-            $(this).siblings(".invalid-feedback").text("이메일 주소를 입력해주세요.");
-            $(this).siblings(".invalid-feedback").css("display", "block");
-            $inputEmail.addClass("invalid");
-        } else if (!emailFilter.test($inputEmail.val())) {
-            $(this).siblings(".invalid-feedback").text("올바른 이메일 주소를 입력해주세요.");
-            $(this).siblings(".invalid-feedback").css("display", "block");
-            $inputEmail.addClass("invalid");
-        } else {
-            $(this).siblings(".invalid-feedback").css("display", "none");
-            $inputEmail.removeClass("invalid");
-        }
-        ;
-    })
-    $("#__BVID__79").on("blur", function () {
-        let $inputPw = $("#__BVID__79");
-
-        if (!$inputPw.val()) {
-            $(this).parent().siblings(".invalid-feedback").text("비밀번호를 입력해주세요.");
-            $(this).parent().siblings(".invalid-feedback").css("display", "block");
-            $inputPw.addClass("invalid");
-        } else if (!pwFilter.test($inputPw.val())) {
-            $(this).parent().siblings(".invalid-feedback").text("영문+숫자+특수문자 조합 8자리 이상 입력해주세요.");
-            $(this).parent().siblings(".invalid-feedback").css("display", "block");
-            $inputPw.addClass("invalid");
-        } else {
-            $(this).parent().siblings(".invalid-feedback").css("display", "none");
-            $inputPw.removeClass("invalid");
-        }
-        ;
-    })
-
-    $(".btn-primary").on("click", function (e) {
-        $(".btn-primary").attr("type", "button");
-        let name = false;
-        let email = false;
-        let pw = false;
-        let $agree = $("#agree-terms-checkbox-1667907552644").is(":checked");
-        let $moreThan14 = $("#more-than-14-checkbox-1667907552646").is(":checked");
-
-        let $inputName = $("#__BVID__75");
-
-        if (!$inputName.val()) {
-            $inputName.siblings(".invalid-feedback").text("이름을 입력해주세요.");
-            $inputName.siblings(".invalid-feedback").css("display", "block");
-            $inputName.addClass("invalid");
-        } else {
-            $inputName.siblings(".invalid-feedback").css("display", "none");
-            $inputName.removeClass("invalid");
-            name = !name;
-        };
-
-        let $inputEmail = $("#__BVID__77");
-
-        if (!$inputEmail.val()) {
-            $inputEmail.siblings(".invalid-feedback").text("이메일 주소를 입력해주세요.");
-            $inputEmail.siblings(".invalid-feedback").css("display", "block");
-            $inputEmail.addClass("invalid");
-        } else if (!emailFilter.test($inputEmail.val())) {
-            $inputEmail.siblings(".invalid-feedback").text("올바른 이메일 주소를 입력해주세요.");
-            $inputEmail.siblings(".invalid-feedback").css("display", "block");
-            $inputEmail.addClass("invalid");
-        } else {
-            $inputEmail.siblings(".invalid-feedback").css("display", "none");
-            $inputEmail.removeClass("invalid");
-            email = !email;
-        };
-
-        let $inputPw = $("#__BVID__79");
-
-        if (!$inputPw.val()) {
-            $inputPw.parent().siblings(".invalid-feedback").text("비밀번호를 입력해주세요.");
-            $inputPw.parent().siblings(".invalid-feedback").css("display", "block");
-            $inputPw.addClass("invalid");
-        } else if (!pwFilter.test($inputPw.val())) {
-            $inputPw.parent().siblings(".invalid-feedback").text("영문+숫자 조합 8자리 이상 입력해주세요.");
-            $inputPw.parent().siblings(".invalid-feedback").css("display", "block");
-            $inputPw.addClass("invalid");
-        } else {
-            $inputPw.parent().siblings(".invalid-feedback").css("display", "none");
-            $inputPw.removeClass("invalid");
-            pw = !pw;
-        };
-
-        if(!$agree){
-            $("#agree-terms-checkbox-1667907552644").siblings("p.error-message").css("display", "block")
-        }else{
-            $("#agree-terms-checkbox-1667907552644").siblings("p.error-message").css("display", "none")
-
-        }
-
-        if(!$moreThan14){
-            $("#more-than-14-checkbox-1667907552646").siblings("p.error-message").css("display", "block")
-        }else{
-            $("#more-than-14-checkbox-1667907552646").siblings("p.error-message").css("display", "none")
-        }
-
-        if(name && email && pw && $agree && $moreThan14){
-            $(".btn-primary").attr("type", "submit");
-        }
-
-    })
-
-
-    $(".password-show").on("click", function () {
-        if($(".password-show").text() == "표시"){
-            $(".password-show").text("숨김");
-            $(".password-show").siblings().attr("type", "text");
-        }else{
-            $(".password-show").text("표시");
-            $(".password-show").siblings().attr("type", "password");
-        }
-    })
-
-
-
-
-</script>
-
-
+<script src="/js/join/joinNormal.js"></script>
 </html>

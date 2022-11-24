@@ -21,6 +21,7 @@
 </head>
 
 <body class="fontLoaded">
+<div>
 <header th:replace="/app/fix/header.html :: header"></header>
 <div id="app" style="opacity: 1">
     <div class="App__AppWrapper-nc5ti6-0 idXWQn">
@@ -443,81 +444,9 @@
     </div>
 </div>
 <footer th:replace="/app/fix/footer.html :: footer"></footer>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/fix/headerLogin.js"></script>
-<script>
-
-    let $abc = $(".Padded-sc-1mbfr4n-0");
-    let $abc1 = $(".ToastContainer__BottomToastWrapper-sqfjqn-0");
-    let $abc2 = $(".GlobalNavigationBar__Wrapper-og74wb-0");
-    let $abc3 = $(".CategoryList__Wrapper-l9zk8m-0");
-    let $abc4 = $(".Left__LeftPageTitle-sc-12djr3w-0");
-
-
-    window.matchMedia("(max-width: 768px)").addListener(function (e) {
-        if (e.matches) {
-            $abc.removeClass("KOZEV");
-            $abc.addClass("hMNBwb");
-            $abc1.removeClass("boEfOZ")
-            $abc1.addClass("boEfRG")
-            $abc2.removeClass("dPJHWR")
-            $abc2.addClass("bHgsOZ")
-            $abc3.removeClass("hWBKQy")
-            $abc3.addClass("hWBKQE")
-            $abc4.removeClass("cqeeCQ")
-            $abc4.addClass("RMzhy")
-
-        } else {
-            $abc.removeClass("hMNBwb");
-            $abc.addClass("KOZEV");
-            $abc1.removeClass("boEfRG")
-            $abc1.addClass("boEfOZ")
-            $abc2.removeClass("bHgsOZ")
-            $abc2.addClass("dPJHWR")
-            $abc3.removeClass("hWBKQE")
-            $abc3.addClass("hWBKQy")
-            $abc4.removeClass("RMzhy")
-            $abc4.addClass("cqeeCQ")
-
-        }
-    })
-
-    $( window ).resize(function() {
-        getHeight();
-        $(".acd_collapse.collapse.in").attr("style", `height:` + getHeight() + `px`)
-
-    });
-
-    function getHeight(){
-        return $(".acd_body").outerHeight() + 20;
-    }
-
-
-    $(".accordion").on("click", function(){
-        let $collapse = $(this).find(".acd_collapse.collapse");
-
-        if(!$collapse.hasClass("in")){
-            $collapse.addClass("in")
-            $(this).siblings(".accordion").find(".acd_collapse.collapse").removeClass("in")
-            $(this).siblings(".accordion").find(".acd_collapse.collapse").attr("style", "height: 1px")
-            
-            $collapse.attr("style", `height:` + getHeight() + `px`)
-        }else{
-            $collapse.removeClass("in");
-
-            $collapse.attr("style", "height: 1px")
-
-        }
-
-    })
-
-
-
-
-
-
-
-</script>
-
+<script src="/js/pickup/pickMain.js"></script>
 </html>

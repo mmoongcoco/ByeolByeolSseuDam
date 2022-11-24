@@ -1090,10 +1090,6 @@ section.no-space[data-v-08563466] {
     color: #FF472D !important;
 }
 
-.bt-star:before {
-    content: "★";
-}
-
 .review_summary_wrap .rating_graph_wrap {
     text-align: left;
     min-width: 220px;
@@ -1210,6 +1206,11 @@ section.no-space[data-v-08563466] {
     font-size: 14px !important;
 }
 
+.review_top {
+    display: flex;
+    flex-direction: row;
+}
+
 .review_top > a {
     display: inline-block;
 }
@@ -1219,6 +1220,60 @@ section.no-space[data-v-08563466] {
     top: 2px;
     margin-right: 5px;
     font-size: 18px;
+}
+
+.star-rate-wrapper[data-v-46ebf5ea] {
+    width: 100%;
+    display: none;
+}
+
+.provider-star-rate[data-v-5bd6bb59] {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.title[data-v-5bd6bb59] {
+    font-size: 13px;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #646464;
+    margin: 0;
+    margin-right: 10px;
+    letter-spacing: .03125rem;
+}
+
+.star-rate[data-v-a0be80fc] {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    display: table-row;
+}
+
+.star-rate li[data-v-a0be80fc] {
+    display: table-cell;
+    vertical-align: middle;
+    width: auto;
+    cursor: pointer;
+    line-height: 0;
+    transition: opacity .2s ease-in-out;
+}
+
+.star-rate li+li[data-v-a0be80fc] {
+    padding-left: 8px;
+}
+
+.score-text[data-v-5bd6bb59] {
+    display: none;
+    line-height: 1.5rem;
+    margin-left: 10px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #646464;
 }
 
 .text-16 {
@@ -1486,8 +1541,8 @@ section.no-space[data-v-08563466] {
     font-size: 12px;
 }
 
-.bt-star:before {
-    content: "★";
+.bt-star svg {
+    margin: 0;
 }
 
 .list_review_inner .txt_wrap > div.text-14 {
@@ -2238,18 +2293,152 @@ a:focus, a:hover, a:active {
     border-radius: 0 0 5px 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* 장바구니 모달 css end */
+
+/* 리뷰 모달 css start */
+
+.swal2-container {
+    display: flex;
+    position: fixed;
+    z-index: 1060;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625em;
+    overflow-x: hidden;
+    transition: background-color .1s;
+    background-color: transparent;
+    -webkit-overflow-scrolling: touch;
+}
+
+.swal2-container.swal2-shown {
+    background-color: rgba(0,0,0,.4);
+}
+
+.swal2-container.swal2-center {
+    align-items: center;
+    display: none;
+}
+
+.swal2-popup {
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    width: 32em;
+    max-width: 100%;
+    padding: 1.25em;
+    border: none;
+    border-radius: 0.3125em;
+    background: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.swal2-show {
+    -webkit-animation: swal2-show .3s;
+    animation: swal2-show .3s;
+}
+
+.swal2-container.sg-swal .swal2-popup {
+    max-width: 17.5rem;
+    padding: 2.25rem 1rem 1.25rem;
+    border-radius: 0;
+}
+
+.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal {
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.swal2-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swal2-container.sg-swal .swal2-header .swal2-title {
+    font-size: 1.375rem;
+    line-height: 2.0625rem;
+    font-weight: 500;
+    letter-spacing: -.025rem;
+}
+
+.swal2-container.sg-swal .swal2-header .swal2-title {
+    margin-bottom: 1rem;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: #323232;
+}
+
+.swal2-content {
+    z-index: 1;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #545454;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.swal2-container.sg-swal .swal2-content {
+    margin-bottom: 1.25rem;
+    color: #323232;
+}
+
+.swal2-container.sg-swal .swal2-content #swal2-content {
+    font-size: .875rem;
+    line-height: 1.3125rem;
+    font-weight: 400;
+    letter-spacing: -.0125rem;
+}
+
+.swal2-actions {
+    display: flex;
+    z-index: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1.25em auto 0;
+}
+
+.swal2-container.sg-swal .swal2-actions {
+    width: 100%;
+    margin-top: 0;
+}
+
+.swal2-container.sg-swal .swal2-actions button.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: .875rem;
+}
+
+.swal2-container.sg-swal .swal2-actions button.btn.swal2-confirm {
+    border-radius: 0.25rem;
+    height: 2.75rem;
+    background-color: #00c7ae;
+    color: #fff;
+}
+
+/* 리뷰 모달 css end */
 
 /* 미디어쿼리 */
 

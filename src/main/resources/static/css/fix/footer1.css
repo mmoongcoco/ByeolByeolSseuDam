@@ -1305,6 +1305,35 @@ div.created-date p[data-v-4e430d78] {
     }
 }
 
+@media (max-width:768px) {
+    .list-middle{
+        display: none !important;
+    }
+}
+
+@media (max-width:768px) {
+    .col-content-guide{
+        display: none !important;
+    }
+}
+
+#Layer_2{
+    width: 28px;
+    float: right;
+    margin-right: 12px;
+    filter: contrast(0.5);
+}
+
+
+@media (max-width:768px) {
+    #Layer_2{
+        width: 7%;
+        float: none;
+        margin-right: 0;
+        filter: contrast(0.5);
+    }
+}
+
 .footer-container-row .col-content .col-content-list-term .term[data-v-2afc0573] {
     font-weight: 500
 }

@@ -656,6 +656,15 @@
         line-height: 1.25rem
     }
 }
+#Layer_1{
+    width: 87%;
+}
+
+@media (max-width:768px) {
+    #Layer_1{
+        width: 45%;
+    }
+}
 
 .main-service-card .service-image[data-v-aadb48aa] {
     width: 9.9375rem;
@@ -975,10 +984,11 @@
     background-color: #f2f2f2
 }
 
-@media (min-width:768px) {
+@media (max-width:768px) {
     .meet-provider[data-v-78b11936] {
-        width: 11.375rem;
-        height: 11.375rem
+        /*width: 11.375rem;*/
+        /*height: 11.375rem*/
+        display: none;
     }
 }
 
@@ -1580,7 +1590,7 @@
 }
 
 .main-community .header.short-bottom[data-v-d53abf48] {
-    margin-bottom: 1rem
+    margin: 2rem 0;
 }
 
 .main-community.slide-knowhow-list[data-v-d53abf48] {
@@ -1597,7 +1607,7 @@
 
 @media (max-width:991.98px) {
     .main-community.slide-knowhow-list .header[data-v-d53abf48] {
-        padding: 0 1rem
+        padding: 0 1rem;
     }
 
     .main-community.slide-knowhow-list .knowhow-list-slide[data-v-d53abf48] {

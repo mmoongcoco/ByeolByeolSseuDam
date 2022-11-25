@@ -1,10 +1,32 @@
+
+let autoSlideWidth = 970;
+
 const banner = document.querySelector("div.slick-track");
 let count = 0;
 let current = document.querySelector(".current-slide-no");
 let firstDiv = document.createElement("div.banner-item");
 let lastDiv = document.createElement("div.banner-item");
-
 current.innerHTML = 1;
+
+resizeWindow();
+
+window.onresize = function(event){
+    resizeWindow();
+}
+
+// window width 감지
+function resizeWindow(){
+    let $resize = $(window).width();
+    $resize = $resize > 970 ? 970 : $resize;
+    console.log($resize);
+    $(".slick-slide.slide-banner").css('width', $resize);
+    $(".slide-banner.banner-item").css('width', $resize);
+    $(".banner-image").css('width', $resize);
+    $(".first-slick-list").css('width', $resize * 9);
+
+    autoSlideWidth = $resize;
+}
+
 
 // 자동 슬라이드
 function autoSlide(){
@@ -12,19 +34,19 @@ function autoSlide(){
     count ++;
     if(count == 7){
 
-        banner.style.transform = "translate(-" + 970 * (count + 1) + "px)";
+        banner.style.transform = "translate(-" + autoSlideWidth * (count + 1) + "px)";
         setTimeout(function(){
             banner.style.transition = "transform 0s"
-            banner.style.transform = "translate(-970px)";
+            banner.style.transform = "translate(-" + autoSlideWidth + "px)";
         }, 500);
         count = 0;
     }else{
-        banner.style.transform = "translate(-" + 970 * (count + 1) + "px)";
+        banner.style.transform = "translate(-" + autoSlideWidth * (count + 1) + "px)";
     }
     current.innerHTML = count + 1;
 }
 firstDiv.style.outline = 'none';
-firstDiv.style.width = '970px';
+firstDiv.style.width = autoSlideWidth + 'px';
 firstDiv.style.float = 'left';
 firstDiv.style.height = '100%';
 firstDiv.style.minHeight = '1px';
@@ -34,7 +56,7 @@ banner.appendChild(firstDiv);
 
 
 lastDiv.style.outline = 'none';
-lastDiv.style.width = '970px';
+lastDiv.style.width = autoSlideWidth + 'px';
 lastDiv.style.float = 'left';
 lastDiv.style.height = '100%';
 lastDiv.style.minHeight = '1px';
@@ -42,9 +64,9 @@ lastDiv.style.display = 'block';
 lastDiv.innerHTML = `<img src="/images/main/togetherzero.png" alt="이사 기획전" class="banner-image" data-v-e4caeaf8="" data-v-afb0bbd0="">`;
 banner.insertBefore(lastDiv, document.querySelector("div.banner div"));
 
-banner.style.transform = "translate(-970px)";
+banner.style.transform = "translate(-" + autoSlideWidth + "px)";
 
-var inter = setInterval(autoSlide, 4000);
+var inter = setInterval(autoSlide, 3000);
 
 
 

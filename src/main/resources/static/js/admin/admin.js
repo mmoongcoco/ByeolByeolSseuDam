@@ -124,13 +124,54 @@ $("#deleteProductBtn").on('click', function () {
 	}
 });
 
-// 주문 관리 - 주문 목록 + 주문 취소
+// 주문 관리 - 주문 목록 + 주문 삭제
 $("#deleteOrderBtn").on('click', function () {
 	if ($checkboxes.filter(":checked").length == 0) {
 		alert("삭제할 주문을 선택하세요.");
 		return;
 	}
 });
+
+// 수거서비스 + 신청내역 삭제
+$("#deleteCollectServiceBtn").on('click', function () {
+	if ($checkboxes.filter(":checked").length == 0) {
+		alert("삭제할 신청내역을 선택하세요.");
+		return;
+	}
+});
+
+// 배너 관리 - 배너 목록 + 배너 삭제
+$("#deleteBannerBtn").on('click', function () {
+	if ($checkboxes.filter(":checked").length == 0) {
+		alert("삭제할 배너를 선택하세요.");
+		return;
+	}
+});
+
+// 게시판 관리 - 댓글 목록 + 댓글 삭제
+$("#deleteCommentBtn").on('click', function () {
+	if ($checkboxes.filter(":checked").length == 0) {
+		alert("삭제할 댓글을 선택하세요.");
+		return;
+	}
+});
+// 게시판 관리 - 게시판 목록 + 게시글 삭제
+$("#deleteCommunityBtn").on('click', function () {
+	if ($checkboxes.filter(":checked").length == 0) {
+		alert("삭제할 게시글을 선택하세요.");
+		return;
+	}
+});
+
+// 줍깅 관리 - 배지 목록 + 배지 삭제
+$("#deleteBadgeBtn").on('click', function () {
+	if ($checkboxes.filter(":checked").length == 0) {
+		alert("삭제할 배지을 선택하세요.");
+		return;
+	}
+});
+
+
 
 /* ############################################################################# */
 /* ########### submit 유효성 검사 ################################################ */
@@ -144,9 +185,9 @@ function addProduct() {
 		return;
 	}
 
-	if($("input[name=productCategory]").val() == ""){
-		alert("카테 고리를 입력하세요!");
-		$("input[name=productCategory]").focus();
+	if ($('#productCategory option:selected').val() == "CategoryStatus") {
+		alert("카테고리를 선택하세요!");
+		$("#productCategory").focus();
 		return;
 	}
 
@@ -176,7 +217,166 @@ function addProduct() {
 
 }
 
+// 주문 관리 - 제품 목록 + 제품 수정
+function modifyProduct() {
+	if($("input[name=productName]").val() == ""){
+		alert("제품명을 입력하세요!");
+		$("input[name=productName]").focus();
+		return;
+	}
 
+	if ($('#productCategory option:selected').val() == "CategoryStatus") {
+		alert("카테고리를 선택하세요!");
+		$("#productCategory").focus();
+		return;
+	}
+
+	if($("input[name=productPrice]").val() == ""){
+		alert("가격을 입력하세요!");
+		$("input[name=productPrice]").focus();
+		return;
+	}
+
+	if($("input[name=productCount]").val() == ""){
+		alert("입고 수량을 입력하세요!");
+		$("input[name=productCount]").focus();
+		return;
+	}
+
+	if($("input[name=productFileProfile]").next().attr("src") == "/images/admin/06.png"){
+		alert("대표 이미지를 등록하세요!");
+		return;
+	}
+
+	if($("input[name=productFileDetail]").next().attr("src") == "/images/admin/05.png"){
+		alert("상세 설명 이미지를 등록하세요!");
+		return;
+	}
+
+	productForm.submit();
+
+}
+
+
+// 프로그램 관리 - 프로그램 목록 + 프로그램 추가
+
+function addProgram() {
+	if($("input[name=programName]").val() == ""){
+		alert("강좌명을 입력하세요!");
+		$("input[name=programName]").focus();
+		return;
+	}
+
+	if($("input[name=programPlace]").val() == ""){
+		alert("장소를 입력하세요!");
+		$("input[name=programPlace]").focus();
+		return;
+	}
+
+	if($("input[name=programTime]").val() == ""){
+		alert("수강시간을 입력하세요!");
+		$("input[name=programTime]").focus();
+		return;
+	}
+
+	if($("input[name=programLimitCount]").val() == ""){
+		alert("인원수를 입력하세요!");
+		$("input[name=programLimitCount]").focus();
+		return;
+	}
+
+	if($('#programStatus option:selected').val() == "status"){
+		alert("프로그램 상태를 선택하세요!");
+		$("#programStatus").focus();
+		return;
+	}
+
+	if($("input[name=programOpeningDate]").val() == "2022-07-22T12:00"){
+		alert("시작일을 입력하세요!");
+		$("input[name=programOpeningDate]").focus();
+		return;
+	}
+
+	if($("input[name=programClosingDate]").val() == "2022-07-22T12:00"){
+		alert("마감일을 입력하세요!");
+		$("input[name=programClosingDate]").focus();
+		return;
+	}
+
+	if($("textarea[name=programDetail]").val() == ""){
+		alert("상세설명을 입력하세요!");
+		$("textarea[name=programDetail]").focus();
+		return;
+	}
+
+	if($("input[name=programFile]").next().attr("src") == "/images/admin/001.png"){
+		alert("첨부파일을 등록하세요!");
+		return;
+	}
+
+	programForm.submit();
+
+}
+
+// 프로그램 관리 - 프로그램 목록 + 프로그램 수정
+
+function modifyProgram() {
+	if($("input[name=programName]").val() == ""){
+		alert("강좌명을 입력하세요!");
+		$("input[name=programName]").focus();
+		return;
+	}
+
+	if($("input[name=programPlace]").val() == ""){
+		alert("장소를 입력하세요!");
+		$("input[name=programPlace]").focus();
+		return;
+	}
+
+	if($("input[name=programTime]").val() == ""){
+		alert("수강시간을 입력하세요!");
+		$("input[name=programTime]").focus();
+		return;
+	}
+
+	if($("input[name=programLimitCount]").val() == ""){
+		alert("인원수를 입력하세요!");
+		$("input[name=programLimitCount]").focus();
+		return;
+	}
+
+	if($('#programStatus option:selected').val() == "status"){
+		alert("프로그램 상태를 선택하세요!");
+		$("#programStatus").focus();
+		return;
+	}
+
+	if($("input[name=programOpeningDate]").val() == "2022-07-22T12:00"){
+		alert("시작일을 입력하세요!");
+		$("input[name=programOpeningDate]").focus();
+		return;
+	}
+
+	if($("input[name=programClosingDate]").val() == "2022-07-22T12:00"){
+		alert("마감일을 입력하세요!");
+		$("input[name=programClosingDate]").focus();
+		return;
+	}
+
+	if($("textarea[name=programDetail]").val() == ""){
+		alert("상세설명을 입력하세요!");
+		$("textarea[name=programDetail]").focus();
+		return;
+	}
+
+	if($("input[name=programFile]").next().attr("src") == "/images/admin/001.png"){
+		alert("첨부파일을 등록하세요!");
+		return;
+	}
+
+	programForm.submit();
+
+}
 
 // 줍깅 관리 - 코스 목록 + 코스 추가
 
@@ -273,14 +473,14 @@ function addJubJubCourseSpot() {
 		return;
 	}
 	if ($("input[name=spotAddress]").val() == "") {
-		alert("스팟 위치를 입력하세요!");
+		alert("스팟 주소를 입력하세요!");
 		$("input[name=spotAddress]").focus();
 		return;
 	}
 
-	if ($('#spotStatus option:selected').val() == "spot") {
-		alert("스팟 상태를 선택하세요!");
-		$("#spotStatus").focus();
+	if ($('#spotNumber option:selected').val() == "spot") {
+		alert("스팟 번호를 선택하세요!");
+		$("#spotNumber").focus();
 		return;
 	}
 
@@ -306,14 +506,14 @@ function modifyJubJubCourseSpot() {
 		return;
 	}
 	if ($("input[name=spotAddress]").val() == "") {
-		alert("스팟 위치를 입력하세요!");
+		alert("스팟 주소를 입력하세요!");
 		$("input[name=spotAddress]").focus();
 		return;
 	}
 
-	if ($('#spotStatus option:selected').val() == "spot") {
-		alert("스팟 상태를 선택하세요!");
-		$("#spotStatus").focus();
+	if ($('#spotNumber option:selected').val() == "spot") {
+		alert("스팟 번호를 선택하세요!");
+		$("#spotNumber").focus();
 		return;
 	}
 

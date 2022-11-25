@@ -212,6 +212,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .watch-all{
+        display: none;
+    }
+}
+
 .product-hr-scroll[data-v-d8635bf2] {
     padding: 0 1rem
 }

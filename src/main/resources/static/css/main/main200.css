@@ -20,6 +20,15 @@
     border-radius: 8px
 }
 
+@media (min-width:768px) {
+    .main-banner .banner-image[data-v-afb0bbd0] {
+        width: 100%;
+        border-radius: 8px
+    }
+}
+
+
+
 .main-banner .banner-item[data-v-afb0bbd0] {
     overflow: hidden
 }

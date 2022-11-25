@@ -50,6 +50,10 @@ public class AdminController {
     @GetMapping("adminorderlist")
     public String adminOrdertList(){ return "/app/admin/adminOrderList.html"; }
 
+    /* 주문 관리 _ 주문 목록 + 주문 상세 내역 */
+    @GetMapping("adminorderdetail")
+    public String adminOrderDetail(){ return "/app/admin/adminOrderDetail.html"; }
+
     /* 주문 관리 _ 리뷰 목록 */
     @GetMapping("adminreviewlist")
     public String adminReviewList(){ return "/app/admin/adminReviewList.html"; }
